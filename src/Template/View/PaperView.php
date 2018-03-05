@@ -16,7 +16,7 @@
  use \App\View\AppView;
  // use \Cake\Core\App;
  // use \Cake\Utility\Inflector;
- 
+
 /**
  * Application View
  *
@@ -39,5 +39,7 @@ class PaperView extends AppView
     public function initialize() {
       // EXAMPLE Always enable the MyUtils Helper
       // $this->loadHelper('MyUtils');
+      // CakeDc Users Helper
+      // $this->loadHelper('CakeDC/Users.User');
     }
 }

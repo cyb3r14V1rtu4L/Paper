@@ -1,6 +1,5 @@
 <!-- Set the notification -->
 <?= $this->Html->script('xmf/notifications/notify.js', ['block' => true]); ?>
-
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-4 col-sm-12">

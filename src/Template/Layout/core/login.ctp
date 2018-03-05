@@ -52,13 +52,7 @@ $cakeDescription = '.:: XMF Cristina ::.';
 
     <div id="content" class="wrapper">
 
-        <div class="sidebar" data-background-color="white" data-active-color="danger">
-           <?= $this->element('Paper.xmf/sidebar'); ?>
-        </div>
-
         <div class="main-panel">
-
-          <div id="navbar-xmf" class="noprint"> <?= $this->element('Paper.xmf/navbar'); ?> </div>
 
           <div class="content"><?= $this->fetch('content') ?>  </div>
 
@@ -84,15 +78,6 @@ $cakeDescription = '.:: XMF Cristina ::.';
         $(document).ready(function(){
 
             demo.initChartist();
-
-            // $.notify({
-            //     icon: 'ti-package',
-            //     message: "<b>XMF Cristina</b> - Proceso Electoral Local."
-            //
-            //   },{
-            //       type: 'warning',
-            //       timer: 2000
-            //   });
 
         });
     </script>
