@@ -1188,8 +1188,8 @@ textarea.form-control {
 }
 
 .alert-info {
-  background-color: #7CE4FE;
-  color: #3091B2;
+  background-color: rgb(48, 85, 153);
+  color: #FFFFFF;
 }
 
 .alert-success {
@@ -1821,7 +1821,7 @@ textarea.form-control {
 }
 
 .navbar-ct-info {
-  background-color: #7CE4FE;
+  background-color: #4267b2;
 }
 
 .navbar-ct-success {
@@ -3337,3 +3337,4 @@ textarea.form-control {
   padding: 0 0 3px;
   display: block;
 }
+

@@ -19,12 +19,32 @@ demo = {
     initChartist: function(){
 
       var dataSales = {
-        labels: ['7:00AM', '7:30AM', '8:00AM', '8:30AM', '9:00AM', '10:00AM', '11:00AM', '11:59AM'],
+        labels: ['8:00', '10:00', '12:00', '14:00', '16:00', '18:00','CIERRE'],
         series: [
-           [0,287, 385, 490, 562, 594, 626, 698, 895, 952],
-          [0,67, 152, 193, 240, 387, 435, 535, 642, 744],
+          [67, 152, 193, 240, 387, 435,684],
+          [10,287, 385, 490, 562, 594, 726]
+           ,
         ]
       };
+
+      var dataChart8_12 = {
+        labels: ['8:00', '9:00', '10:00', '11:00', '12:00'],
+        series: [
+          [67, 152, 193, 240, 387],
+          [10,287, 385, 490, 562]
+           ,
+        ]
+      };
+
+      var dataChart8_16 = {
+        labels: ['8:00', '12:00', '14:00', '15:00', '16:00'],
+        series: [
+          [67, 152, 193, 240, 387],
+          [10,287, 385, 490, 562]
+           ,
+        ]
+      };
+
 
       var dataSales2 = {
         labels: ['12:00HRS', '13:00HRS', '14:00HRS', '15:00HRS', '16:00HRS', '17:00HRS', '17:30AM', '17:59AM'],
@@ -75,8 +95,23 @@ demo = {
           }]
         ];
 
-        Chartist.Line('#chartHours', dataSales, optionsSales, responsiveSales);
-        Chartist.Line('#chartHours2', dataSales2, optionsSales2, responsiveSales);
+        Chartist.Bar('#chartHours', dataSales, optionsSales, responsiveSales);
+        Chartist.Bar('#chartHours2', dataSales2, optionsSales2, responsiveSales);
+
+        Chartist.Bar('#chartResFinales', {
+          labels: ['PAN', 'PRI', 'PRD', 'VER', 'PT', 'MOC', 'NA','MOR','PES'],
+          series: [620, 560, 420, 500, 680, 120, 110,420,215]
+        }, {
+          distributeSeries: true
+        });
+
+        Chartist.Bar('#chartResFinalesCOAS', {
+          labels: ['COA1', 'COA2', 'COA3', 'COA4'],
+          series: [680, 120,420,215]
+        }, {
+          distributeSeries: true
+        });
+
 
 
         var data = {
@@ -132,6 +167,9 @@ demo = {
           labels: ['9,220','850'],
           series: [80, 20]
         });
+
+        Chartist.Bar('#chart8-12', dataChart8_12, optionsSales, responsiveSales);
+        Chartist.Bar('#chart8-16', dataChart8_16, optionsSales, responsiveSales);
     },
 
     initGoogleMaps: function(){

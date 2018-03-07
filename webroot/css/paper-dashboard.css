@@ -960,7 +960,7 @@ textarea.form-control {
     padding-left: 65px; }
 
 .alert-info {
-  background-color: #7CE4FE;
+  background-color: rgb(32, 72, 204);
   color: #3091B2; }
 
 .alert-success {
@@ -1243,13 +1243,13 @@ textarea.form-control {
   background-color: #8ECFD5; }
 
 .navbar-ct-info {
-  background-color: #7CE4FE; }
+  background-color: #4267b2; }
 
 .navbar-ct-success {
   background-color: #8EF3C5; }
 
 .navbar-ct-warning {
-  background-color: #FFE28C; }
+  background-color: rgb(235, 180, 15); }
 
 .navbar-ct-danger {
   background-color: #FF8F5E; }
