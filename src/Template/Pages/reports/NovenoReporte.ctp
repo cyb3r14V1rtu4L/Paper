@@ -10,60 +10,44 @@
 <!-- UI Kit Plugins -->
 <?= $this->Html->script('ct-paper-radio', ['block' => true]); ?>
 <?= $this->Html->script('bootstrap-select', ['block' => true]); ?>
-<?= $this->Html->script('bootstrap-datepicker', ['block' => true]); ?>
-<?= $this->Html->script('ct-paper', ['block' => true]); ?>
-
 
 
 
 <div class="container-fluid">
+<div class="row">
         <div class="row">
-                <div class="col-lg-4 col-md-5">
-                    <div class="card card-user">
-                        <div class="image">
-                            <img src="<?php echo $this->request->webroot?>Paper/img/background.jpg" alt="...">
-                        </div>
-                        <div class="content">
-                            <div class="author">
-                                <img class="avatar border-white" src="<?php echo $this->request->webroot?>Paper/img/faces/face-2.jpg" alt="...">
-                                <h4 class="title">NOMBRE REPRESENTANTE<br>
-                                    <div class="col-md-6 ">
-                                            <h5><input type="text" size="3"><br><small>DISTRITO</small></h5>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <h5><input type="text" size="3"><br><small>AGRUPAMIENTO</small></h5>
-                                        </div>
-                                </h4>
-                            </div>
-
-                        </div>
-                        <hr>
-                        <div class="text-center">
-                            <div class="row">
-                                <h5>INFORMACIÓN DE LA CASILLA</h2>
-                                <div class="col-md-6 ">
-                                    <h5><input type="text" size="1"><br><small>DISTRITO</small></h5>
-                                </div>
-                                <div class="col-md-6">
-                                    <h5><input type="text" size="1"><br><small>SECCIÓN</small></h5>
-                                </div>
-                                <div class="col-md-8 col-sm-offset-2">
-                                        <div class="form-group">
-                                            <label>TIPO</label><br>
-                                            <select name="country" class="form-control">
-                                                <option value="1"> BÁSICA </option>
-                                                <option value="2"> CONTIGÜA </option>
-                                                <option value="3"> EXTRAORDINARIA </option>
-                                            </select>
-                                        </div>
-                                        <h5><input type="text" size="1" placeholder="No."></h5>
-                                </div>
-                            </div>
-                        </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    
+                    <div class="content">
+                        <h5>CB206</h5>
+                        708 - URBANA - BÁSICA - IX
+                        <h5><small>REPRESENTANTE</small></h5>
+                        <a href="tel:9999999999">(999)999-9999</a>
+                        <hr/>
+                        <h5><small>NOMBRE ABOGADO</small></h5>
+                        <a href="tel:9999999999">(999)999-9999</a>
+                        <hr/>
+                        
                     </div>
 
                 </div>
-                <div class="col-sm-8">
+            </div>
+            <div class="col-sm-9">
+                <?= $this->element('Paper.xmf/reportes/agregar_incidencias'); ?> 
+            </div>
+        </div>
+        <div class=row>
+            <div class="col-md-12 text-center">
+                <button type="button" class="btn btn-info">PRESENCIA</button>
+                <button type="button" class="btn btn-warning">INICIO VOTACIÓN</button>
+            </div>
+        </div>
+        
+        <div class="row">
+                
+
+                <div class="col-sm-12">
 
                     <!--      Wizard container        -->
                     <div class="wizard-container">
@@ -82,7 +66,7 @@
                                     </div>
                                     <ul>
                                         <li>
-                                            <a href="#location" data-toggle="tab">
+                                            <a href="#primer_reporte" data-toggle="tab">
                                                 <div class="icon-circle">
                                                     <i class="ti-package"></i>
                                                 </div>
@@ -90,7 +74,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#type" data-toggle="tab">
+                                            <a href="#segundo_reporte" data-toggle="tab">
                                                 <div class="icon-circle">
                                                     <i class="ti-user"></i>
                                                 </div>
@@ -98,25 +82,33 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#facilities" data-toggle="tab">
+                                            <a href="#tercer_reporte" data-toggle="tab">
                                                 <div class="icon-circle">
-                                                    <i class="ti-hand-stop"></i>
+                                                    <i class="ti-user"></i>
                                                 </div>
                                                 TERCER REPORTE
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#description" data-toggle="tab">
+                                            <a href="#cuarto_reporte" data-toggle="tab">
+                                                <div class="icon-circle">
+                                                    <i class="ti-hand-stop"></i>
+                                                </div>
+                                                CUARTO REPORTE
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#resultados_finales" data-toggle="tab">
                                                 <div class="icon-circle">
                                                     <i class="ti-stats-up"></i>
                                                 </div>
-                                                CUARTO REPORTE
+                                                RESULTADOS FINALES
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="tab-content">
-                                    <div class="tab-pane" id="location">
+                                    <div class="tab-pane" id="primer_reporte">
                                         <div class="row">
                                             <div class="col-sm-12">
                                                 <h5 class="info-text">INTALACIÓN DE LA CASILLA</h5>
@@ -168,25 +160,24 @@
                                         <hr/>
                                         <div class="row">
                                                 <h5 class="text-center">REPRESENTANTES PRESENTES:</h5>
-                                                    <div class="col-lg-6">
+                                                    <div class="col-lg-4">
                                                             <div class="card">
-
                                                                 <div class="content">
                                                                     <ul class="list-unstyled team-members">
                                                                         <li>
                                                                             <div class="row">
                                                                                 <div class="col-xs-3">
                                                                                     <div class="avatar">
-                                                                                        <img src="<?php echo $this->request->webroot?>Paper/img/partidos/PRD.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                                                                        <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PAN.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="col-xs-5">
-                                                                                    PROPIETARIO
-                                                                                    <br>
-                                                                                    <span class="text-success"><small><input type="text" size="8"/></small></span>
+                                                                                    Nombre Representante
                                                                                 </div>
                                                                                 <div class="col-xs-2 text-right">
-                                                                                    <btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-check"></i></btn>
+                                                                                    <label class="checkbox" for="checkbox1">
+                                                                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input value="" id="checkbox1" data-toggle="checkbox" type="checkbox">
+                                                                                    </label>
                                                                                 </div>
                                                                             </div>
                                                                         </li>
@@ -194,16 +185,16 @@
                                                                             <div class="row">
                                                                                 <div class="col-xs-3">
                                                                                     <div class="avatar">
-                                                                                        <img src="<?php echo $this->request->webroot?>Paper/img/partidos/PRI.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                                                                        <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PRI.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="col-xs-5">
-
-                                                                                    <br>
-                                                                                    <span class="text-success"><small><input type="text" size="8"/></small></span>
+                                                                                    Nombre Representante
                                                                                 </div>
                                                                                 <div class="col-xs-2 text-right">
-                                                                                    <btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-check"></i></btn>
+                                                                                    <label class="checkbox" for="checkbox2">
+                                                                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input value="" id="checkbox2" data-toggle="checkbox" type="checkbox">
+                                                                                    </label>
                                                                                 </div>
                                                                             </div>
                                                                         </li>
@@ -211,16 +202,16 @@
                                                                             <div class="row">
                                                                                 <div class="col-xs-3">
                                                                                     <div class="avatar">
-                                                                                        <img src="<?php echo $this->request->webroot?>Paper/img/partidos/PT.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                                                                        <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PRD.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="col-xs-5">
-                                                                                    Resultados
-                                                                                    <br>
-                                                                                    <span class="text-success"><small><input type="text" size="8"/></small></span>
+                                                                                    Nombre Representante
                                                                                 </div>
                                                                                 <div class="col-xs-2 text-right">
-                                                                                    <btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-check"></i></btn>
+                                                                                    <label class="checkbox" for="checkbox1">
+                                                                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input value="" id="checkbox1" data-toggle="checkbox" type="checkbox">
+                                                                                    </label>
                                                                                 </div>
                                                                             </div>
                                                                         </li>
@@ -229,25 +220,24 @@
                                                                 </div>
                                                             </div>
                                                     </div>
-                                                    <div class="col-lg-6">
+                                                    <div class="col-lg-4">
                                                         <div class="card">
-
                                                             <div class="content">
                                                                 <ul class="list-unstyled team-members">
                                                                     <li>
                                                                         <div class="row">
                                                                             <div class="col-xs-3">
                                                                                 <div class="avatar">
-                                                                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos/VER.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                                                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PVE.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-xs-5">
-                                                                                No.
-                                                                                <br>
-                                                                                <span class="text-success"><small><input type="text" size="8"/></small></span>
-                                                                            </div>
-                                                                            <div class="col-xs-2 text-right">
-                                                                                <btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-check"></i></btn>
+                                                                                    Nombre Representante
+                                                                                </div>
+                                                                                <div class="col-xs-2 text-right">
+                                                                                    <label class="checkbox" for="checkbox1">
+                                                                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input value="" id="checkbox1" data-toggle="checkbox" type="checkbox">
+                                                                                    </label>
                                                                             </div>
                                                                         </div>
                                                                     </li>
@@ -255,16 +245,16 @@
                                                                         <div class="row">
                                                                             <div class="col-xs-3">
                                                                                 <div class="avatar">
-                                                                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos/MOV.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                                                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-xs-5">
-                                                                                No.
-                                                                                <br>
-                                                                                <span class="text-success"><small><input type="text" size="8"/></small></span>
-                                                                            </div>
-                                                                            <div class="col-xs-2 text-right">
-                                                                                <btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-check"></i></btn>
+                                                                                    Nombre Representante
+                                                                                </div>
+                                                                                <div class="col-xs-2 text-right">
+                                                                                    <label class="checkbox" for="checkbox1">
+                                                                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input value="" id="checkbox1" data-toggle="checkbox" type="checkbox">
+                                                                                    </label>
                                                                             </div>
                                                                         </div>
                                                                     </li>
@@ -272,16 +262,16 @@
                                                                         <div class="row">
                                                                             <div class="col-xs-3">
                                                                                 <div class="avatar">
-                                                                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos/NAL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                                                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/MOV.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-xs-5">
-                                                                                No.
-                                                                                <br>
-                                                                                <span class="text-success"><small><input type="text" size="8"/></small></span>
-                                                                            </div>
-                                                                            <div class="col-xs-2 text-right">
-                                                                                <btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-check"></i></btn>
+                                                                                    Nombre Representante
+                                                                                </div>
+                                                                                <div class="col-xs-2 text-right">
+                                                                                    <label class="checkbox" for="checkbox1">
+                                                                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input value="" id="checkbox1" data-toggle="checkbox" type="checkbox">
+                                                                                    </label>
                                                                             </div>
                                                                         </div>
                                                                     </li>
@@ -290,88 +280,218 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                            </div>
-                                        <h5 class="text-center">ESTUVIERON LOS FUNCIONARIOS DESIGNADOS POR EL IEQROO:</h5>
-                                        <div class="row">
-                                            <div class="col-sm-8  col-sm-offset-2">
-                                                <div class="col-sm-4 col-sm-offset-2">
-                                                    <div class="choice" data-toggle="wizard-checkbox">
-                                                        <input type="checkbox" name="jobb" value="Design">
-                                                        <div class="card card-checkboxes card-hover-effect">
-                                                            <i class="ti-user"></i>
-                                                            <p><small>PRESIDENTE</small></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div class="choice" data-toggle="wizard-checkbox">
-                                                        <input type="checkbox" name="jobb" value="Design">
-                                                        <div class="card card-checkboxes card-hover-effect">
-                                                            <i class="ti-user"></i>
-                                                            <p><small>SECRETARIO</small></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4 col-sm-offset-2">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Design">
-                                                            <div class="card card-checkboxes card-hover-effect">
-                                                                <i class="ti-user"></i>
-                                                                <p><small>ESTRUC 1</small></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-4">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Design">
-                                                            <div class="card card-checkboxes card-hover-effect">
-                                                                <i class="ti-user"></i>
-                                                                <p><small>ESTRUCT 2</small></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                        </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="card">
+                                                            <div class="content">
+                                                                <ul class="list-unstyled team-members">
+                                                                    <li>
+                                                                        <div class="row">
+                                                                            <div class="col-xs-3">
+                                                                                <div class="avatar">
+                                                                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/NA.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-5">
+                                                                                    Nombre Representante
+                                                                                </div>
+                                                                                <div class="col-xs-2 text-right">
+                                                                                    <label class="checkbox" for="checkbox1">
+                                                                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input value="" id="checkbox1" data-toggle="checkbox" type="checkbox">
+                                                                                    </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="row">
+                                                                            <div class="col-xs-3">
+                                                                                <div class="avatar">
+                                                                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/MOR.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-5">
+                                                                                    Nombre Representante
+                                                                                </div>
+                                                                                <div class="col-xs-2 text-right">
+                                                                                    <label class="checkbox" for="checkbox1">
+                                                                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input value="" id="checkbox1" data-toggle="checkbox" type="checkbox">
+                                                                                    </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="row">
+                                                                            <div class="col-xs-3">
+                                                                                <div class="avatar">
+                                                                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/SOL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-5">
+                                                                                    Nombre Representante
+                                                                                </div>
+                                                                                <div class="col-xs-2 text-right">
+                                                                                    <label class="checkbox" for="checkbox1">
+                                                                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input value="" id="checkbox1" data-toggle="checkbox" type="checkbox">
+                                                                                    </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
 
-
-                                        <div class="row">
-                                                <div class="col-sm-9 col-sm-offset-1">
-                                                    <div class="col-sm-3 col-sm-offset-2">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Design">
-                                                            <div class="card card-checkboxes card-hover-effect">
-                                                                <i class="ti-user"></i>
-                                                                <p><small>SUPLENTE 1</small></p>
+                                                                </ul>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-sm-3">
-                                                        <div class="choice" data-toggle="wizard-checkbox">
-                                                            <input type="checkbox" name="jobb" value="Design">
-                                                            <div class="card card-checkboxes card-hover-effect">
-                                                                <i class="ti-user"></i>
-                                                                <p><small>SUPLENTE 2</small></p>
+                                                    <div class="col-lg-4">
+                                                        <div class="card">
+                                                            <div class="content">
+                                                                <ul class="list-unstyled team-members">
+                                                                    <li>
+                                                                        <div class="row">
+                                                                            <div class="col-xs-3">
+                                                                                <div class="avatar">
+                                                                                    <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-5">
+                                                                                    Presidente
+                                                                                </div>
+                                                                                <div class="col-xs-2 text-right">
+                                                                                    <label class="checkbox" for="checkbox1">
+                                                                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input value="" id="checkbox1" data-toggle="checkbox" type="checkbox">
+                                                                                    </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="row">
+                                                                            <div class="col-xs-3">
+                                                                                <div class="avatar">
+                                                                                    <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-5">
+                                                                                    Secretario
+                                                                                </div>
+                                                                                <div class="col-xs-2 text-right">
+                                                                                    <label class="checkbox" for="checkbox1">
+                                                                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input value="" id="checkbox1" data-toggle="checkbox" type="checkbox">
+                                                                                    </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-sm-3">
-                                                            <div class="choice" data-toggle="wizard-checkbox">
-                                                                <input type="checkbox" name="jobb" value="Design">
-                                                                <div class="card card-checkboxes card-hover-effect">
-                                                                    <i class="ti-user"></i>
-                                                                    <p><small>SUPLENTE 3</small></p>
-                                                                </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="card">
+                                                            <div class="content">
+                                                                <ul class="list-unstyled team-members">
+                                                                    <li>
+                                                                        <div class="row">
+                                                                            <div class="col-xs-3">
+                                                                                <div class="avatar">
+                                                                                    <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-5">
+                                                                                    Escrutador I
+                                                                                </div>
+                                                                                <div class="col-xs-2 text-right">
+                                                                                    <label class="checkbox" for="checkbox1">
+                                                                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input value="" id="checkbox1" data-toggle="checkbox" type="checkbox">
+                                                                                    </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="row">
+                                                                            <div class="col-xs-3">
+                                                                                <div class="avatar">
+                                                                                    <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-5">
+                                                                                    Escrutador II
+                                                                                </div>
+                                                                                <div class="col-xs-2 text-right">
+                                                                                    <label class="checkbox" for="checkbox1">
+                                                                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input value="" id="checkbox1" data-toggle="checkbox" type="checkbox">
+                                                                                    </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    
+                                                                </ul>
                                                             </div>
                                                         </div>
-                                                </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="card">
+                                                            <div class="content">
+                                                                <ul class="list-unstyled team-members">
+                                                                    <li>
+                                                                        <div class="row">
+                                                                            <div class="col-xs-3">
+                                                                                <div class="avatar">
+                                                                                    <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-5">
+                                                                                    Suplente I
+                                                                                </div>
+                                                                                <div class="col-xs-2 text-right">
+                                                                                    <label class="checkbox" for="checkbox1">
+                                                                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input value="" id="checkbox1" data-toggle="checkbox" type="checkbox">
+                                                                                    </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="row">
+                                                                            <div class="col-xs-3">
+                                                                                <div class="avatar">
+                                                                                    <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-5">
+                                                                                    Suplente II
+                                                                                </div>
+                                                                                <div class="col-xs-2 text-right">
+                                                                                    <label class="checkbox" for="checkbox1">
+                                                                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input value="" id="checkbox1" data-toggle="checkbox" type="checkbox">
+                                                                                    </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="row">
+                                                                            <div class="col-xs-3">
+                                                                                <div class="avatar">
+                                                                                    <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-xs-5">
+                                                                                    Suplente III
+                                                                                </div>
+                                                                                <div class="col-xs-2 text-right">
+                                                                                    <label class="checkbox" for="checkbox1">
+                                                                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input value="" id="checkbox1" data-toggle="checkbox" type="checkbox">
+                                                                                    </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                                    
                                             </div>
-
                                         <hr/>
 
 
                                     </div>
-                                    <div class="tab-pane" id="type">
-                                        <h5 class="info-text">FLUJO DE VOTACIÓN </h5>
+                                    <div class="tab-pane" id="segundo_reporte">
+                                        <h5 class="info-text">FLUJO DE VOTACIÓN 8:00 - 12:00 HRS</h5>
                                         <div class="row">
 
                                                 <div class="col-sm-6 text-center">
@@ -390,7 +510,27 @@
 
                                             </div>
                                     </div>
-                                    <div class="tab-pane" id="facilities">
+                                    <div class="tab-pane" id="tercer_reporte">
+                                        <h5 class="info-text">FLUJO DE VOTACIÓN 8:00 - 16:00 HRS</h5>
+                                        <div class="row">
+
+                                                <div class="col-sm-6 text-center">
+                                                    <div class="form-group">
+                                                        <label>VOTANTES</label>
+                                                        <input class="form-control valid"  aria-invalid="false" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 text-center ">
+                                                        <div class="form-group">
+                                                            <label>PROMOIDOS</label>
+                                                            <input class="form-control valid"  aria-invalid="false" type="text">
+                                                        </div>
+                                                    </div>
+
+
+                                            </div>
+                                    </div>
+                                    <div class="tab-pane" id="cuarto_reporte">
                                         <h5 class="info-text">CIERRE DE LA CASSILLA Y FLUJO DE VOTACIÓN FINAL. </h5>
                                         <div class="row">
 
@@ -434,13 +574,20 @@
 
                                             </div>
                                     </div>
-                                    <div class="tab-pane" id="description">
+                                    <div class="tab-pane" id="resultados_finales">
                                         <div class="row">
-                                            <h5 class="info-text"> RESULTADO DE LA ELECCIÓN. </h5>
+                                            <h5 class="info-text"> CAPTURAR RESULTADO DE LAS ELECCIONES. </h5>
+                                            <div class="col-md-12 text-center">
+                                                <button type="button" class="btn btn-info">PRESIDENTE</button>
+                                                <button type="button" class="btn btn-info">SENADOR</button>
+                                                <button type="button" class="btn btn-info">DIPUTADO</button>
+                                                <button type="button" class="btn btn-info">AYUNTAMIENTO</button>
+
+                                            </div>
 
                                         </div>
                                         <div class="row">
-                                            <div class="col-lg-6">
+                                            <div class="col-lg-4">
                                                 <div class="card">
                                                     <div class="header">
                                                         <h4 class="title"></h4>
@@ -449,53 +596,47 @@
                                                         <ul class="list-unstyled team-members">
                                                             <li>
                                                                 <div class="row">
-                                                                    <div class="col-xs-3">
+                                                                    <div class="col-xs-4">
                                                                         <div class="avatar">
-                                                                            <img src="<?php echo $this->request->webroot?>Paper/img/partidos/PAN.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                                                            <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PAN.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-xs-5">
+                                                                    <div class="col-xs-4">
                                                                         Resultados
                                                                         <br>
                                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                                     </div>
-                                                                    <div class="col-xs-2 text-right">
-                                                                        <btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-times"></i></btn>
-                                                                    </div>
+                                                                   
                                                                 </div>
                                                             </li>
                                                             <li>
                                                                 <div class="row">
-                                                                    <div class="col-xs-3">
+                                                                    <div class="col-xs-4">
                                                                         <div class="avatar">
-                                                                            <img src="<?php echo $this->request->webroot?>Paper/img/partidos/PRI.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                                                            <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PRI.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-xs-5">
+                                                                    <div class="col-xs-4">
                                                                         Resultados
                                                                         <br>
                                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                                     </div>
-                                                                    <div class="col-xs-2 text-right">
-                                                                        <btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-times"></i></btn>
-                                                                    </div>
+                                                                    
                                                                 </div>
                                                             </li>
                                                             <li>
                                                                 <div class="row">
-                                                                    <div class="col-xs-3">
+                                                                    <div class="col-xs-4">
                                                                         <div class="avatar">
-                                                                            <img src="<?php echo $this->request->webroot?>Paper/img/partidos/PRD.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                                                            <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PRD.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-xs-5">
+                                                                    <div class="col-xs-4">
                                                                         Resultados
                                                                         <br>
                                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                                     </div>
-                                                                    <div class="col-xs-2 text-right">
-                                                                        <btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-times"></i></btn>
-                                                                    </div>
+                                                                    
                                                                 </div>
                                                             </li>
 
@@ -503,7 +644,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-6">
+                                            <div class="col-lg-4">
                                                 <div class="card">
                                                     <div class="header">
                                                         <h4 class="title"></h4>
@@ -512,53 +653,47 @@
                                                         <ul class="list-unstyled team-members">
                                                             <li>
                                                                 <div class="row">
-                                                                    <div class="col-xs-3">
+                                                                    <div class="col-xs-4">
                                                                         <div class="avatar">
-                                                                            <img src="<?php echo $this->request->webroot?>Paper/img/partidos/VER.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                                                            <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PVE.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-xs-5">
+                                                                    <div class="col-xs-4">
                                                                         Resultados
                                                                         <br>
                                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                                     </div>
-                                                                    <div class="col-xs-2 text-right">
-                                                                        <btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-times"></i></btn>
-                                                                    </div>
+                                                                    
                                                                 </div>
                                                             </li>
                                                             <li>
                                                                 <div class="row">
-                                                                    <div class="col-xs-3">
+                                                                    <div class="col-xs-4">
                                                                         <div class="avatar">
-                                                                            <img src="<?php echo $this->request->webroot?>Paper/img/partidos/PT.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                                                            <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-xs-5">
+                                                                    <div class="col-xs-4">
                                                                         Resultados
                                                                         <br>
                                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                                     </div>
-                                                                    <div class="col-xs-2 text-right">
-                                                                        <btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-times"></i></btn>
-                                                                    </div>
+                                                                    
                                                                 </div>
                                                             </li>
                                                             <li>
                                                                 <div class="row">
-                                                                    <div class="col-xs-3">
+                                                                    <div class="col-xs-4">
                                                                         <div class="avatar">
-                                                                            <img src="<?php echo $this->request->webroot?>Paper/img/partidos/MOV.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                                                            <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/MOV.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-xs-5">
+                                                                    <div class="col-xs-4">
                                                                         Resultados
                                                                         <br>
                                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                                     </div>
-                                                                    <div class="col-xs-2 text-right">
-                                                                        <btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-times"></i></btn>
-                                                                    </div>
+                                                                    
                                                                 </div>
                                                             </li>
 
@@ -566,7 +701,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-6">
+                                            <div class="col-lg-4">
                                                 <div class="card">
                                                     <div class="header">
                                                         <h4 class="title"></h4>
@@ -575,365 +710,110 @@
                                                         <ul class="list-unstyled team-members">
                                                             <li>
                                                                 <div class="row">
-                                                                    <div class="col-xs-3">
+                                                                    <div class="col-xs-4">
                                                                         <div class="avatar">
-                                                                            <img src="<?php echo $this->request->webroot?>Paper/img/partidos/NAL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                                                            <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/NA.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-xs-5">
+                                                                    <div class="col-xs-4">
                                                                         Resultados
                                                                         <br>
                                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                                     </div>
-                                                                    <div class="col-xs-2 text-right">
-                                                                        <btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-times"></i></btn>
-                                                                    </div>
+                                                                    
                                                                 </div>
                                                             </li>
                                                             <li>
                                                                 <div class="row">
-                                                                    <div class="col-xs-3">
+                                                                    <div class="col-xs-4">
                                                                         <div class="avatar">
-                                                                            <img src="<?php echo $this->request->webroot?>Paper/img/partidos/SOL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                                                            <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/MOR.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-xs-5">
+                                                                    <div class="col-xs-4">
                                                                         Resultados
                                                                         <br>
                                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                                     </div>
-                                                                    <div class="col-xs-2 text-right">
-                                                                        <btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-times"></i></btn>
-                                                                    </div>
+                                                                    
                                                                 </div>
                                                             </li>
                                                             <li>
                                                                 <div class="row">
-                                                                    <div class="col-xs-3">
+                                                                    <div class="col-xs-4">
                                                                         <div class="avatar">
-                                                                            <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                                                            <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/SOL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-xs-5">
-                                                                        No Registrados
+                                                                    <div class="col-xs-4">
+                                                                        Resultados
                                                                         <br>
                                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                                     </div>
-                                                                    <div class="col-xs-2 text-right">
-                                                                        <btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-times"></i></btn>
-                                                                    </div>
+                                                                    
                                                                 </div>
                                                             </li>
-                                                            <li>
-                                                                <div class="row">
-                                                                    <div class="col-xs-3">
-                                                                        <div class="avatar">
-                                                                            <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-xs-5">
-                                                                        Votos Nulos
-                                                                        <br>
-                                                                        <span class="text-success"><small><input type="text" size="8"/></small></span>
-                                                                    </div>
-                                                                    <div class="col-xs-2 text-right">
-                                                                        <btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-times"></i></btn>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-
+                                                            
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <hr/>
-                                        <div class="alert alert-info">
-                                            <span>ELECCIÓN DE PRESIDENTE MUNICIPAL</span>
-                                        </div>
-                                        <div class="row">
-                                                <div class="col-lg-6">
-                                                    <div class="card">
-                                                        <div class="header">
-                                                            <h4 class="title"></h4>
-                                                        </div>
-                                                        <div class="content">
-                                                            <ul class="list-unstyled team-members">
-                                                                <li>
-                                                                    <div class="row">
-                                                                        <div class="col-xs-3">
-                                                                            <div class="avatar">
-                                                                                <img src="<?php echo $this->request->webroot?>Paper/img/partidos/PRI.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-xs-5">
-                                                                            Resultados
-                                                                            <br>
-                                                                            <span class="text-success"><small><input type="text" size="8"/></small></span>
-                                                                        </div>
-                                                                        <div class="col-xs-2 text-right">
-                                                                            <btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-times"></i></btn>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="row">
-                                                                        <div class="col-xs-3">
-                                                                            <div class="avatar">
-                                                                                <img src="<?php echo $this->request->webroot?>Paper/img/partidos/PRD.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-xs-5">
-                                                                            Resultados
-                                                                            <br>
-                                                                            <span class="text-success"><small><input type="text" size="8"/></small></span>
-                                                                        </div>
-                                                                        <div class="col-xs-2 text-right">
-                                                                            <btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-times"></i></btn>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="row">
-                                                                        <div class="col-xs-3">
-                                                                            <div class="avatar">
-                                                                                <img src="<?php echo $this->request->webroot?>Paper/img/partidos/VER.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-xs-5">
-                                                                            Resultados
-                                                                            <br>
-                                                                            <span class="text-success"><small><input type="text" size="8"/></small></span>
-                                                                        </div>
-                                                                        <div class="col-xs-2 text-right">
-                                                                            <btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-times"></i></btn>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-
-                                                            </ul>
-                                                        </div>
-                                                    </div>
+                                            
+                                            
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="card">
+                                                <div class="header">
+                                                    <h4 class="title"></h4>
                                                 </div>
-                                                <div class="col-lg-6">
-                                                    <div class="card">
-                                                        <div class="header">
-                                                            <h4 class="title"></h4>
-                                                        </div>
-                                                        <div class="content">
-                                                            <ul class="list-unstyled team-members">
-                                                                <li>
-                                                                    <div class="row">
-                                                                        <div class="col-xs-3">
-                                                                            <div class="avatar">
-                                                                                <img src="<?php echo $this->request->webroot?>Paper/img/partidos/PT.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-xs-5">
-                                                                            Resultados
-                                                                            <br>
-                                                                            <span class="text-success"><small><input type="text" size="8"/></small></span>
-                                                                        </div>
-                                                                        <div class="col-xs-2 text-right">
-                                                                            <btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-times"></i></btn>
-                                                                        </div>
+                                                <div class="content">
+                                                    <ul class="list-unstyled team-members">
+                                                        <li>
+                                                            <div class="row">
+                                                                <div class="col-xs-4">
+                                                                    <div class="avatar">
+                                                                        <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                                                                     </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="row">
-                                                                        <div class="col-xs-3">
-                                                                            <div class="avatar">
-                                                                                <img src="<?php echo $this->request->webroot?>Paper/img/partidos/MOV.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-xs-5">
-                                                                            Resultados
-                                                                            <br>
-                                                                            <span class="text-success"><small><input type="text" size="8"/></small></span>
-                                                                        </div>
-                                                                        <div class="col-xs-2 text-right">
-                                                                            <btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-times"></i></btn>
-                                                                        </div>
+                                                                </div>
+                                                                <div class="col-xs-4">
+                                                                    No Registrados
+                                                                    <br>
+                                                                    <span class="text-success"><small><input type="text" size="8"/></small></span>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="row">
+                                                                <div class="col-xs-4">
+                                                                    <div class="avatar">
+                                                                        <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                                                                     </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="row">
-                                                                        <div class="col-xs-3">
-                                                                            <div class="avatar">
-                                                                                <img src="<?php echo $this->request->webroot?>Paper/img/partidos/NAL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-xs-5">
-                                                                            Resultados
-                                                                            <br>
-                                                                            <span class="text-success"><small><input type="text" size="8"/></small></span>
-                                                                        </div>
-                                                                        <div class="col-xs-2 text-right">
-                                                                            <btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-times"></i></btn>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="card">
-                                                        <div class="header">
-                                                            <h4 class="title"></h4>
-                                                        </div>
-                                                        <div class="content">
-                                                            <ul class="list-unstyled team-members">
-                                                                <li>
-                                                                    <div class="row">
-                                                                        <div class="col-xs-3">
-                                                                            <div class="avatar">
-                                                                                <img src="<?php echo $this->request->webroot?>Paper/img/partidos/CID.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-xs-5">
-                                                                            Resultados
-                                                                            <br>
-                                                                            <span class="text-success"><small><input type="text" size="8"/></small></span>
-                                                                        </div>
-                                                                        <div class="col-xs-2 text-right">
-                                                                            <btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-times"></i></btn>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="row">
-                                                                        <div class="col-xs-3">
-                                                                            <div class="avatar">
-                                                                                <img src="<?php echo $this->request->webroot?>Paper/img/partidos/SOL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-xs-5">
-                                                                            Resultados
-                                                                            <br>
-                                                                            <span class="text-success"><small><input type="text" size="8"/></small></span>
-                                                                        </div>
-                                                                        <div class="col-xs-2 text-right">
-                                                                            <btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-times"></i></btn>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="row">
-                                                                        <div class="col-xs-3">
-                                                                            <div class="avatar">
-                                                                                <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-xs-5">
-                                                                            No Registrados
-                                                                            <br>
-                                                                            <span class="text-success"><small><input type="text" size="8"/></small></span>
-                                                                        </div>
-                                                                        <div class="col-xs-2 text-right">
-                                                                            <btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-times"></i></btn>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="row">
-                                                                        <div class="col-xs-3">
-                                                                            <div class="avatar">
-                                                                                <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-xs-5">
-                                                                            Votos Nulos
-                                                                            <br>
-                                                                            <span class="text-success"><small><input type="text" size="8"/></small></span>
-                                                                        </div>
-                                                                        <div class="col-xs-2 text-right">
-                                                                            <btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-times"></i></btn>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="card">
-                                                        <div class="header">
-                                                            <h5 class="title"><small>PARTIDOS QUE PRESENTARON INCIDENCIAS</small></h5>
-                                                        </div>
-                                                        <div class="content">
-                                                            <ul class="list-unstyled team-members">
-                                                                <li>
-                                                                    <div class="row">
-                                                                        <div class="col-xs-3">
-                                                                            <div class="avatar">
-                                                                                <img src="<?php echo $this->request->webroot?>Paper/img/partidos/PT.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-xs-5">
-                                                                            Incidencias
-                                                                            <br>
-                                                                            <span class="text-success"><small>1</small></span>
-                                                                        </div>
-                                                                        <div class="col-xs-2 text-right">
-                                                                            <btn class="btn btn-sm btn-danger btn-icon"><i class="fa ti-pulse"></i></btn>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="row">
-                                                                        <div class="col-xs-3">
-                                                                            <div class="avatar">
-                                                                                <img src="<?php echo $this->request->webroot?>Paper/img/partidos/PAN.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-xs-5">
-                                                                            Incidencias
-                                                                            <br>
-                                                                            <span class="text-success"><small>3</small></span>
-                                                                        </div>
-                                                                        <div class="col-xs-2 text-right">
-                                                                            <btn class="btn btn-sm btn-danger btn-icon"><i class="fa ti-pulse"></i></btn>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="row">
-                                                                        <div class="col-xs-3">
-                                                                            <div class="avatar">
-                                                                                <img src="<?php echo $this->request->webroot?>Paper/img/partidos/VER.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-xs-5">
-                                                                            Incidencias
-                                                                            <br>
-                                                                            <span class="text-success"><small>1</small></span>
-                                                                        </div>
-                                                                        <div class="col-xs-2 text-right">
-                                                                            <btn class="btn btn-sm btn-danger btn-icon"><i class="fa ti-pulse"></i></btn>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="row">
-                                                                        <div class="text-center">
-                                                                            <button type="button" class="btn btn-warning btn-fill btn-wd">Agregar Partido</button>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-
-                                                            </ul>
-                                                        </div>
-                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-4">
+                                                                    Votos Nulos
+                                                                    <br>
+                                                                    <span class="text-success"><small><input type="text" size="8"/></small></span>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </li>
+                                                        
+                                                    </ul>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                        <?= $this->element('Paper.xmf/reportes/agregar_incidencias'); ?> 
+                                        </div>
+                                        
                                     </div>
                                 </div>
                                 <div class="wizard-footer">
+                                    <hr/>
                                     <div class="pull-right">
-                                        <button type="button" class="btn btn-success btn-fill btn-wd">Generar Reporte</button>
+                                        
                                         <input type='button' class='btn btn-next btn-fill btn-success btn-wd' name='next' value='Enviar' />
                                         <input type='button' class='btn btn-finish btn-fill btn-success btn-wd' name='finish' value='Enviar' />
 

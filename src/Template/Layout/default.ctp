@@ -52,15 +52,13 @@ $cakeDescription = '.:: XMF Cristina ::.';
 
     <div id="content" class="wrapper">
 
-        <div class="sidebar" data-background-color="white" data-active-color="danger">
-           <?= $this->element('Paper.xmf/sidebar'); ?>
-        </div>
+        <div id="sidebar-xmf" class="noprint"> <?= $this->element('Paper.xmf/sidebar'); ?> </div>
 
         <div class="main-panel">
 
           <div id="navbar-xmf" class="noprint"> <?= $this->element('Paper.xmf/navbar'); ?> </div>
 
-          <div class="content"><?= $this->fetch('content') ?>  </div>
+          <div class="content"><?= $this->fetch('content') ?></div>
 
           <div id="footer-xmf" class="noprint"> <?= $this->element('Paper.xmf/footer'); ?> </div>
 

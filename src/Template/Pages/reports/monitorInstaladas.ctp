@@ -1,22 +1,21 @@
 <!-- Set the notification -->
 <?= $this->Html->script('xmf/notifications/notify.js', ['block' => true]); ?>
-
-<div class="container-fluid">
 <?= $this->element('Paper.xmf/counter_head'); ?> 
+<div class="container-fluid">
     <div class="row" id="resMonitorCasillas">
     <div class="nav-tabs-navigation">
     <div class="nav-tabs-wrapper">
         <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-            <li class="active"><a href="#home" data-toggle="tab" style="color:blue" >PRESENCIAS (130)</a></li>
-            <li><a href="#profile" data-toggle="tab" style="color:red" >AUSENCIAS (110)</a></li>
-            <li><a href="#messages" data-toggle="tab" style="color:orange" >INCIDENCIAS (5)</a></li>
+            <li class="active"><a href="#instaladas" data-toggle="tab" style="color:blue" >INSTALADAS (30)</a></li>
+            <li><a href="#ini_votacion" data-toggle="tab" style="color:blue" >INICIO VOTACIÓN (10)</a></li>
+            <li><a href="#incidencias" data-toggle="tab" style="color:orange" >ICIDENCIAS (7)</a></li>
         </ul>
     </div>
 </div>
 <div id="my-tab-content" class="tab-content text-center">
-    <div class="tab-pane active" id="home">
+    <div class="tab-pane active" id="instaladas">
         <p>
-            <h4>CASILLAS PRESSENTES</h4>   
+            <h4>CASILLAS INSTALADAS</h4>   
             <hr/>
             <?php
             for($x=0;$x<=50;$x++){
@@ -51,9 +50,9 @@
             ?>
         </p>
     </div>
-    <div class="tab-pane" id="profile">
+    <div class="tab-pane" id="ini_votacion">
         <p>
-        <h4>CASILLAS AUSENTES</h4>   
+        <h4>INICIO VOTACIÓN CASILLAS</h4>   
             <hr/>
         <?php
             for($x=0;$x<=15;$x++){
@@ -88,7 +87,7 @@
             ?>
         </p>
     </div>
-    <div class="tab-pane" id="messages">
+    <div class="tab-pane" id="incidencias">
         <?= $this->element('Paper.xmf/reportes/incidencias'); ?>
     </div>
 </div>

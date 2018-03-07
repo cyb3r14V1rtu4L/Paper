@@ -1,204 +1,71 @@
 <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="header">
-                        <h4 class="title">COMPORTAMIENTO INSTALACIÓN DE CASILLAS</h4>
-                        <p class="category">24 Hours performance</p>
-                    </div>
-                    <div class="content">
-                        <div id="chartHours" class="ct-chart"></div>
-                        <div class="footer">
-                            <div class="chart-legend">
-                                <i class="fa fa-circle text-info"></i> Instaladas
-                                <i class="fa fa-circle text-warning"></i> Cerradas
-                                <i class="fa fa-circle text-danger"></i> Incidencias
-                            </div>
-                            <hr>
-                            <div class="stats">
-                                <i class="ti-reload"></i> Updated 3 minutes ago
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <?= $this->element('Paper.xmf/counter_head'); ?> 
         </div>
-
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="header">
-                        <h4 class="title">GRÁFICA PRIMER REPORTE</h4>
-                        <p class="category">Instalación de Casilla</p>
-                    </div>
-                    <div class="content">
-                        <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
-
-                        <div class="footer">
-                            <div class="chart-legend">
-                                <i class="fa fa-circle text-warning"></i> Instaladas
-                                <i class="fa fa-circle text-info"></i> Cerradas
-
-                            </div>
-                            <hr>
-                            <div class="stats">
-                                <i class="ti-timer"></i> Información Actualizada
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card ">
-                    <div class="header">
-                        <h4 class="title">INSTALACIÓN CASILLAS</h4>
-                        <p class="category"></p>
-                    </div>
-                    <div class="content">
-                        <div id="chartActivity" class="ct-chart"></div>
-
-                        <div class="footer">
-                            <div class="chart-legend">
-                                <i class="fa fa-circle text-warning"></i> VOTANTES
-                                <i class="fa fa-circle text-info"></i> PROMOVIDOS
-
-                            </div>
-                            <hr>
-                            <div class="stats">
-                                <i class="ti-check"></i> Información Actualizada
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-sm-offset-2 text-center">
+            <?= $this->element('Paper.xmf/graficas/abierta_cerrada_pastel'); ?> 
         </div>
-        <div class="row">
-            <div class="col-md-12">
+    </div>
+    <div class="row">
+        <div class="col-md-12">
             <div class="card">
                 <div class="header">
-                    <h4 class="title">DATOS GENRALES DE CASILLAS</h4>
-                    <p class="category">Relación general de casillas</p>
+                    <h4 class="title">PRIMER REPORTE - INSTALACIÓN DE CASILLAS</h4>
+                    <p class="category">
+                        <div class="pull-right">
+                            <button type="submit" class="btn btn-info btn-fill btn-wd">Exportar XLS</button>
+                        </div>
+                    </p>
                 </div>
-                    <div class="content table-responsive table-full-width">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th><i class="ti-package"></i> CASILLA ID</th>
-                                    <th><i class="ti-time"></i> INSTALACIÓN</th>
-                                    <th><i class="ti-time"></i> INICIO VOTACIÓN</th>
-                                    <th><i class="ti-user"></i> IEQROO</th>
-                                    <th><i class="ti-user"></i> DETALLE</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>CA023</td>
-                                    <td>7:03</td>
-                                    <td>7:03</td>
-                                    <td>SI</td>
-                                    <td><a <?php echo $this->Url->build('/pages/reports/SeptimoReporte'); ?><btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-pencil-square"></i></btn></a></td>
-                                </tr>
-                                <tr>
-                                    <td>CA023</td>
-                                    <td>7:03</td>
-                                    <td>7:03</td>
-                                    <td>SI</td>
-                                    <td><a <?php echo $this->Url->build('/pages/reports/SeptimoReporte'); ?><btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-pencil-square"></i></btn></a></td>
-                                </tr>
-                                <tr>
-                                    <td>CA023</td>
-                                    <td>7:03</td>
-                                    <td>7:03</td>
-                                    <td>SI</td>
-                                    <td><a <?php echo $this->Url->build('/pages/reports/SeptimoReporte'); ?><btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-pencil-square"></i></btn></a></td>
-                                </tr>
-                                <tr>
-                                    <td>CA023</td>
-                                    <td>7:03</td>
-                                    <td>7:03</td>
-                                    <td>SI</td>
-                                    <td><a <?php echo $this->Url->build('/pages/reports/SeptimoReporte'); ?><btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-pencil-square"></i></btn></a></td>
-                                </tr>
-                                <tr>
-                                    <td>CA023</td>
-                                    <td>7:03</td>
-                                    <td>7:03</td>
-                                    <td>SI</td>
-                                    <td><a <?php echo $this->Url->build('/pages/reports/SeptimoReporte'); ?><btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-pencil-square"></i></btn></a></td>
-                                </tr>
-                                <tr>
-                                    <td>CA023</td>
-                                    <td>7:03</td>
-                                    <td>7:03</td>
-                                    <td>SI</td>
-                                    <td><a <?php echo $this->Url->build('/pages/reports/SeptimoReporte'); ?><btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-pencil-square"></i></btn></a></td>
-                                </tr>
-                                <tr>
-                                    <td>CA023</td>
-                                    <td>7:03</td>
-                                    <td>7:03</td>
-                                    <td>SI</td>
-                                    <td><a <?php echo $this->Url->build('/pages/reports/SeptimoReporte'); ?><btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-pencil-square"></i></btn></a></td>
-                                </tr>
-                                <tr>
-                                    <td>CA023</td>
-                                    <td>7:03</td>
-                                    <td>7:03</td>
-                                    <td>SI</td>
-                                    <td><a <?php echo $this->Url->build('/pages/reports/SeptimoReporte'); ?><btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-pencil-square"></i></btn></a></td>
-                                </tr>
-                                <tr>
-                                    <td>CA023</td>
-                                    <td>7:03</td>
-                                    <td>7:03</td>
-                                    <td>SI</td>
-                                    <td><a <?php echo $this->Url->build('/pages/reports/SeptimoReporte'); ?><btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-pencil-square"></i></btn></a></td>
-                                </tr>
-                                <tr>
-                                    <td>CA023</td>
-                                    <td>7:03</td>
-                                    <td>7:03</td>
-                                    <td>SI</td>
-                                    <td><a <?php echo $this->Url->build('/pages/reports/SeptimoReporte'); ?><btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-pencil-square"></i></btn></a></td>
-                                </tr>
-                                <tr>
-                                    <td>CA023</td>
-                                    <td>7:03</td>
-                                    <td>7:03</td>
-                                    <td>SI</td>
-                                    <td><a <?php echo $this->Url->build('/pages/reports/SeptimoReporte'); ?><btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-pencil-square"></i></btn></a></td>
-                                </tr>
-                                <tr>
-                                    <td>CA023</td>
-                                    <td>7:03</td>
-                                    <td>7:03</td>
-                                    <td>SI</td>
-                                    <td><a <?php echo $this->Url->build('/pages/reports/SeptimoReporte'); ?><btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-pencil-square"></i></btn></a></td>
-                                </tr>
-                                <tr>
-                                    <td>CA023</td>
-                                    <td>7:03</td>
-                                    <td>7:03</td>
-                                    <td>SI</td>
-                                    <td><a <?php echo $this->Url->build('/pages/reports/SeptimoReporte'); ?><btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-pencil-square"></i></btn></a></td>
-                                </tr>
-                                <tr>
-                                    <td>CA023</td>
-                                    <td>7:03</td>
-                                    <td>7:03</td>
-                                    <td>SI</td>
-                                    <td><a <?php echo $this->Url->build('/pages/reports/SeptimoReporte'); ?><btn class="btn btn-sm btn-warning btn-icon"><i class="fa fa-pencil-square"></i></btn></a></td>
-                                </tr>
+                <div class="content table-responsive table-full-width">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th><i class="ti-package"></i> CASILLA</th>
+                                <th><i class="ti-time"></i> INSTALACIÓN</th>
+                                <th><i class="ti-time"></i> INICIO VOTACIÓN</th>
+                                <th><i class="ti-user"></i> FUNCIONARIOS ELECTORALES DEL INE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            for($x=0;$x<=4;$x++){
+                            ?>
+                            <tr>
+                                <td>CB206</td>
+                                <td>7:03</td>
+                                <td>7:33</td>
+                                <td>
+                                    <ul>
+                                        <?php
+                                        for($f=0;$f<=3;$f++)
+                                        {
+                                        ?>
+                                        <li>
+                                            NOMBRE FUNCIONARIO
+                                        </li>    
+                                        <?php
+                                        }
+                                        ?>
 
+                                </td>
+                            </tr>
+                        
+                            
+                            <?php
+                            }
+                            ?>
 
-                            </tbody>
-                        </table>
+                        </tbody>
+                    </table>
 
-                    </div>
                 </div>
             </div>
         </div>
+    </div>
+   
 </div>   <!-- container-fluid -->
-        <div class="text-center">
-            <button type="submit" class="btn btn-info btn-fill btn-wd">Exportar XLS</button>
-        </div>
+        
