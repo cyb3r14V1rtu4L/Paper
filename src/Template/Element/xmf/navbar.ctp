@@ -6,7 +6,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Proceso Electoral Local</a>
+                <a class="navbar-brand" href="#"><?= ($_SERVER['HTTP_HOST'] == 'portal:81' || $_SERVER['HTTP_HOST'] == 'pool') ? 'PortalGST' : 'Proceso Electoral Local' ?></a>
             </div>
             <div class="collapse navbar-collapse">
 
@@ -26,7 +26,7 @@
                         </a>
                     </li>
 
-                    
+
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-gavel"></i>

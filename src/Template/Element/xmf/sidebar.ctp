@@ -53,7 +53,7 @@ Tip 2: you can change the color of the active button using the data-active-color
             </a>
         </li>
 
-        
+
     </ul>
   </div>
 </div>
