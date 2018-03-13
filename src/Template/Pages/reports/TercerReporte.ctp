@@ -15,7 +15,9 @@
         
     </div>
     <div class="row">
-        <?= $this->element('Paper.xmf/reportes/incidencias'); ?>
+        <div class="col-md-12">
+            <?= $this->element('Paper.xmf/reportes/incidencias'); ?>
+        </div>
     </div>
     <div class="row">
         <div class="text-center">
