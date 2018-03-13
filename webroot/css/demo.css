@@ -68,3 +68,107 @@
 .table-upgrade td:nth-child(3){
     text-align: center;
 }
+
+.modal-window {
+	position: fixed;
+	background-color: rgba(255, 255, 255, 0.15);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+	opacity: 0;
+	pointer-events: none;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+  }
+  
+  .modal-window:target {
+	opacity: 1;
+	pointer-events: auto;
+  }
+  
+  .modal-window>div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 2rem;
+	background: #fff;
+	color: #444;
+  }
+  
+  .modal-window header {
+	font-weight: bold;
+  }
+  
+  .modal-close {
+	color: #aaa;
+	line-height: 50px;
+	font-size: 80%;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+	width: 70px;
+	text-decoration: none;
+  }
+  
+  .modal-close:hover {
+	color: #000;
+  }
+  
+  .modal-window h1 {
+	font-size: 150%;
+	margin: 0 0 15px;
+	}
+	
+	.input-resultados{
+		height:50px;
+		font-size:14pt;"
+	}
+
+	#tooltip
+{
+    text-align: center;
+    color: #fff;
+    background: #111;
+    position: absolute;
+    z-index: 100;
+    padding: 15px;
+}
+ 
+    #tooltip:after /* triangle decoration */
+    {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #111;
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        margin-left: -10px;
+    }
+ 
+        #tooltip.top:after
+        {
+            border-top-color: transparent;
+            border-bottom: 10px solid #111;
+            top: -20px;
+            bottom: auto;
+        }
+ 
+        #tooltip.left:after
+        {
+            left: 10px;
+            margin: 0;
+        }
+ 
+        #tooltip.right:after
+        {
+            right: 10px;
+            left: auto;
+            margin: 0;
+        }

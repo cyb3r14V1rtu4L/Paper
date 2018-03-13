@@ -37,6 +37,7 @@ $cakeDescription = '.:: XMF Cristina ::.';
     <?= $this->Html->css('animate.min.css') ?>
     <?= $this->Html->css('paper-dashboard.css') ?>
     <?= $this->Html->css('demo.css') ?>
+    <?= $this->Html->css('style.peity.css') ?>
 
     <!-- Fonts and icons -->
     <?= $this->Html->css('font-awesome-4.7.0/css/font-awesome.css') ?>
@@ -75,14 +76,14 @@ $cakeDescription = '.:: XMF Cristina ::.';
 
     <?= $this->Html->script('paper-dashboard'); ?>
     <?= $this->Html->script('demo'); ?>
-
+    <?= $this->Html->script('jquery.peity'); ?>
     <?= $this->fetch('script') ?>
 
     <script type="text/javascript">
         $(document).ready(function(){
 
             demo.initChartist();
-
+            $("span.pie").peity("pie");
             // $.notify({
             //     icon: 'ti-package',
             //     message: "<b>XMF Cristina</b> - Proceso Electoral Local."

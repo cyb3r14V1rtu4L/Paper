@@ -99,18 +99,23 @@ demo = {
         Chartist.Bar('#chartHours2', dataSales2, optionsSales2, responsiveSales);
 
         Chartist.Bar('#chartResFinales', {
-          labels: ['PAN', 'PRI', 'PRD', 'VER', 'PT', 'MOC', 'NA','MOR','PES'],
-          series: [620, 560, 420, 500, 680, 120, 110,420,215]
+          
+          labels: ['PAN', 'PRI', 'PRD', 'VER', 'PT', 'MOC', 'NA','MOR','PES',
+          'NO REGS','NULOS'],
+          series: [620, 560, 420, 500, 680, 120, 110,420,215,620, 560]
         }, {
           distributeSeries: true
         });
 
         Chartist.Bar('#chartResFinalesCOAS', {
-          labels: ['COA1', 'COA2', 'COA3', 'COA4'],
-          series: [680, 120,420,215]
+          
+          labels: ['PAN-PRD-MC','PAN-PRD','PAN-MC','PRI-PVE-PANAL','PRI-PVE','PRI-PANAL',
+          'PVE-PANAL','PT','PES','MORENA','NO REGS','NULOS'],
+          series: [2620, 2560, 1420, 3200, 1680, 1220, 1210,620,560,123,323,221]
         }, {
           distributeSeries: true
         });
+
 
 
 

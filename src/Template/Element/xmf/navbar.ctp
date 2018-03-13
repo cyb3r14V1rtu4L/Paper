@@ -1,4 +1,8 @@
-<nav class="navbar navbar-ct-info">
+<?php
+if(isset($_SESSION['Auth']['User']))
+{
+?>    
+    <nav class="navbar navbar-ct-info">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse">
@@ -63,7 +67,7 @@
                         </a>
                         <ul class="dropdown-menu dropdown-with-icons">
                             <li>
-                                <a href="#" class="text-danger">
+                                <a href="/logout" class="text-danger">
                                     <i class="pe-7s-close-circle"></i>
                                     Log out
                                 </a>
@@ -76,5 +80,6 @@
         </div>
     </nav>
 <br/>
-
-<br/>
+<?php
+}
+?>

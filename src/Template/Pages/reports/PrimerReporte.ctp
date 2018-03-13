@@ -1,4 +1,5 @@
 <div class="container-fluid">
+
     <div class="row">
         <div class="col-md-12 text-center">
             <?= $this->element('Paper.xmf/counter_head'); ?> 

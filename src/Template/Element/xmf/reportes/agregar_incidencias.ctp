@@ -92,7 +92,7 @@
             </div>
         </div>
         <div class="col-sm-12 ">
-            <button type="button" class="btn btn-default btn-fill btn-xs pull-right">Agregar Incidencia</button>
+            <button type="button" class="btn btn-info btn-fill btn-xs pull-right">Agregar Incidencia</button>
         </div>
         
 </div>
