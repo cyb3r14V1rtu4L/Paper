@@ -15,7 +15,7 @@
                         <div class="col-xs-6">
                             Hora de Cierre
                             <br>
-                            <span class="text-success"><small>18:50</small></span>
+                            <span class="text-success"><h3>18:50</h3></span>
                         </div>
                         
                     </div>
@@ -30,7 +30,7 @@
                         <div class="col-xs-6">
                             Había Gente en la Fila
                             <br>
-                            <span class="text-success"><small>Casilla sin Fila</small></span>
+                            <span class="text-success"><h3>Casilla sin Fila</h3></span>
                         </div>
                         
                     </div>
@@ -57,7 +57,7 @@
                         <div class="col-xs-6">
                             VOTANTES
                             <br>
-                            <span class="text-success"><h3>1,500</h3></span>
+                            <span class="text-warning"><h3>1,500</h3></span>
                         </div>
                        
                     </div>
@@ -72,7 +72,7 @@
                         <div class="col-xs-6">
                             PROMOVIDOS
                             <br>
-                            <span class="text-warning"><small>2,500</small></span>
+                            <span class="text-info"><h3>2,500</h3></span>
                         </div>
                         
                     </div>

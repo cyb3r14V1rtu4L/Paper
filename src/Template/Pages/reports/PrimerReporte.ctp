@@ -16,9 +16,7 @@
                 <div class="header">
                     <h4 class="title">PRIMER REPORTE - INSTALACIÓN DE CASILLAS</h4>
                     <p class="category">
-                        <div class="pull-right">
-                            <button type="submit" class="btn btn-info btn-fill btn-wd">Exportar XLS</button>
-                        </div>
+                    
                     </p>
                 </div>
                 <div class="content table-responsive table-full-width">
@@ -64,6 +62,19 @@
                     </table>
 
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 col-sm-6">
+            <div class="text-center">
+                <button type="submit" class="btn btn-info btn-fill btn-wd">Exportar PDF</button>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-6">
+            <div class="text-center">
+                <button type="submit" class="btn btn-info btn-fill btn-wd">Exportar XLS</button>
             </div>
         </div>
     </div>

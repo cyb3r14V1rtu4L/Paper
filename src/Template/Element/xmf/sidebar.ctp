@@ -4,7 +4,7 @@ Tip 1: you can change the color of the sidebar's background using: data-backgrou
 Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
 -->
 
-    <div class="sidebar-wrapper" >
+    <div class="sidebar-wrapper text-left" >
     <?php
         $role_id = (isset($_SESSION['Auth']['User'])) ? $_SESSION['Auth']['User']['role_id']: 0;
         $is_superuser = (isset($_SESSION['Auth']['User'])) ? $_SESSION['Auth']['User']['is_superuser']: 0;

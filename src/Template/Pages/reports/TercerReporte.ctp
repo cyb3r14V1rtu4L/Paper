@@ -20,8 +20,15 @@
         </div>
     </div>
     <div class="row">
-        <div class="text-center">
-            <button type="submit" class="btn btn-info btn-fill btn-wd">Exportar XLS</button>
+        <div class="col-lg-6 col-sm-6">
+            <div class="text-center">
+                <button type="submit" class="btn btn-info btn-fill btn-wd">Exportar PDF</button>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-6">
+            <div class="text-center">
+                <button type="submit" class="btn btn-info btn-fill btn-wd">Exportar XLS</button>
+            </div>
         </div>
     </div>
 

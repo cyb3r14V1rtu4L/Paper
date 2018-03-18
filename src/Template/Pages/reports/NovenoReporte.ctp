@@ -502,7 +502,7 @@
                                                 </div>
                                                 <div class="col-sm-6 text-center ">
                                                         <div class="form-group">
-                                                            <label>PROMOIDOS</label>
+                                                            <label>PROMOVIDOS</label>
                                                             <input class="form-control valid"  aria-invalid="false" type="text">
                                                         </div>
                                                     </div>
@@ -522,7 +522,7 @@
                                                 </div>
                                                 <div class="col-sm-6 text-center ">
                                                         <div class="form-group">
-                                                            <label>PROMOIDOS</label>
+                                                            <label>PROMOVIDOS</label>
                                                             <input class="form-control valid"  aria-invalid="false" type="text">
                                                         </div>
                                                     </div>
@@ -531,7 +531,7 @@
                                             </div>
                                     </div>
                                     <div class="tab-pane" id="cuarto_reporte">
-                                        <h5 class="info-text">CIERRE DE LA CASSILLA Y FLUJO DE VOTACIÓN FINAL. </h5>
+                                        <h5 class="info-text">CIERRE DE LA CASILLA Y FLUJO DE VOTACIÓN FINAL. </h5>
                                         <div class="row">
 
                                                 <div class="col-sm-6 ">
@@ -566,7 +566,7 @@
                                                 </div>
                                                 <div class="col-sm-6 text-center ">
                                                         <div class="form-group">
-                                                            <label>PROMOIDOS</label>
+                                                            <label>PROMOVIDOS</label>
                                                             <input class="form-control valid"  aria-invalid="false" type="text">
                                                         </div>
                                                     </div>

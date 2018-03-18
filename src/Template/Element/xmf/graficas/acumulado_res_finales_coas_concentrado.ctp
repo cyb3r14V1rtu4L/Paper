@@ -1,3 +1,5 @@
+
+
 <div class="row">
     <div class="col-md-12">
         <div class="card">
@@ -6,7 +8,7 @@
                 <p class="category">Monitoreo en tiempo real</p>
             </div>
             <div class="content">
-                <div id="chartResFinalesCOAS" class="ct-chart"></div>
+                <div id="chartResFinalesCOASCONCENTRADO" class="ct-chart"></div>
                 <div class="footer">
                     <!--<div class="chart-legend">
                         <i class="fa fa-circle text-warning"></i> VOTANTES
@@ -38,66 +40,12 @@
                                 </div>
                             </div>
                             <div class="col-xs-5">
-                                <span class="text-success"><h5><b>1,023</b></h5></span>
+                                <span class="text-danger"><h5><b>9,023</b></h5></span>
                                 30%
                             </div>
                             
                         </div>
                     </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PAN-PRD.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                <span class="text-success"><h5><b>1,023</b></h5></span>
-                                30%
-                            </div>
-                            
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PAN-MC.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                <span class="text-success"><h5><b>1,023</b></h5></span>
-                                30%
-                            </div>
-                        
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PRD-MC.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                <span class="text-success"><h5><b>1,023</b></h5></span>
-                                30%
-                            </div>
-                        
-                        </div>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-4">
-        <div class="card">
-            <div class="header">
-                <h4 class="title"></h4>
-            </div>
-            <div class="content">
-                <ul class="list-unstyled team-members">
                     <li>
                         <div class="row">
                             <div class="col-xs-3">
@@ -106,50 +54,7 @@
                                 </div>
                             </div>
                             <div class="col-xs-5">
-                                <span class="text-success"><h5><b>1,023</b></h5></span>
-                                30%
-                            </div>
-                            
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PRI-PVE.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                <span class="text-success"><h5><b>1,023</b></h5></span>
-                                30%
-                            </div>
-                            
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PRI-PANAL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                <span class="text-success"><h5><b>1,023</b></h5></span>
-                                30%
-                            </div>
-                            
-                        </div>
-                    </li>
-                    
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PVE-PANAL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                <span class="text-success"><h5><b>1,023</b></h5></span>
+                                <span class="text-danger"><h5><b>7,587</b></h5></span>
                                 30%
                             </div>
                             
@@ -208,6 +113,49 @@
                             
                         </div>
                     </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card">
+            <div class="header">
+                <h4 class="title"></h4>
+            </div>
+            <div class="content">
+                <ul class="list-unstyled team-members">
+                    <li>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <div class="avatar">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                </div>
+                            </div>
+                            <div class="col-xs-5">
+                                No Registrados<br/>
+                                <span class="text-success"><h5><b>1,023</b></h5></span>
+                                 30%
+                            </div>
+                            
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <div class="avatar">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                </div>
+                            </div>
+                            <div class="col-xs-5">
+                                Votos Nulos<br/>
+                                <span class="text-success"><h5><b>1,023</b></h5></span>
+                                 30%
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
                 </ul>
             </div>
         </div>
