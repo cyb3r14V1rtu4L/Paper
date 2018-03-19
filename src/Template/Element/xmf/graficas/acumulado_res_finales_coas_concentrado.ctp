@@ -4,7 +4,7 @@
     <div class="col-md-12">
         <div class="card">
             <div class="header">
-                <h4 class="title">CONCENTRADO TOTAL COALISIONES</h4>
+                <h4 class="title">CONCENTRADO FINAL COALISIONES</h4>
                 <p class="category">Monitoreo en tiempo real</p>
             </div>
             <div class="content">
@@ -24,6 +24,7 @@
         </div>
     </div>
 </div>
+
 <div class="row">
     <div class="col-lg-4">
         <div class="card">
@@ -39,9 +40,12 @@
                                     <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PAN-PRD-MC.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                                 </div>
                             </div>
-                            <div class="col-xs-5">
+                            <div class="col-xs-4">
                                 <span class="text-danger"><h5><b>9,023</b></h5></span>
                                 30%
+                            </div>
+                            <div class="col-xs-5">
+                                <span class="text-info"><small>PAN-PRD-MC</small></span>
                             </div>
                             
                         </div>
@@ -53,9 +57,12 @@
                                     <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PRI-PVE-PANAL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                                 </div>
                             </div>
-                            <div class="col-xs-5">
+                            <div class="col-xs-4">
                                 <span class="text-danger"><h5><b>7,587</b></h5></span>
                                 30%
+                            </div>
+                            <div class="col-xs-5">
+                                <span class="text-info"><small>PRI-PVE-PANAL</small></span>
                             </div>
                             
                         </div>
