@@ -36,30 +36,40 @@ $cakeDescription = '.:: XMF Cristina ::.';
     <?= $this->Html->css('bootstrap.min.css') ?>
     <?= $this->Html->css('animate.min.css') ?>
     <?= $this->Html->css('paper-dashboard.css') ?>
-    <?= $this->Html->css('demo.css') ?>
-    
+    <!-- <?= $this->Html->css('demo.css') ?> -->
+    <?= $this->Html->css('mods.css') ?>
 
     <!-- Fonts and icons -->
     <?= $this->Html->css('font-awesome-4.7.0/css/font-awesome.css') ?>
     <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
-    <?= $this->Html->css('themify/css/themify-icons.css') ?>
+    <!-- <?= $this->Html->css('themify/css/themify-icons.css') ?> -->
 
 
     <?= $this->fetch('css') ?>
+
+    <style media="screen">
+      .login{
+        /* width: 100%; */
+        /* height:100%; */
+        margin :0px auto;
+        /* position:relative;| */
+        /* width:1200px; */
+      }
+    </style>
 </head>
 <body>
 
     <?= $this->Flash->render() ?>
 
-    <div id="content" class="wrapper">
+    <div id="content">
 
-        <div class="main-panel">
+        <!-- <div class="main-panel"> -->
 
-          <div class="content"><?= $this->fetch('content') ?>  </div>
+          <div class="login"><?= $this->fetch('content') ?>  </div>
 
           <div id="footer-xmf" class="noprint"> <?= $this->element('Paper.xmf/footer'); ?> </div>
 
-        </div>
+        <!-- </div> -->
     </div>
 </body>
 
@@ -72,7 +82,7 @@ $cakeDescription = '.:: XMF Cristina ::.';
 
     <?= $this->Html->script('paper-dashboard'); ?>
     <?= $this->Html->script('demo'); ?>
-    
+
 
     <?= $this->fetch('script') ?>
 

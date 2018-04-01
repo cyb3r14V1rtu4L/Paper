@@ -9,7 +9,8 @@
                     <div class="row">
                         <div class="col-xs-3">
                             <div class="avatar">
-                                <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                <!-- <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PT.png" alt="Circle Image" class="img-circle img-no-padding img-responsive"> -->
+                                <?= $this->Html->image('Paper.partidos_png/PT.png',['alt'=>'Circle Image ','class'=>'img-circle img-no-padding img-responsive']);?>
                             </div>
                         </div>
                         <div class="col-xs-4">
@@ -17,14 +18,16 @@
                             <br>
                             <span class="text-success"><small>1</small></span>
                         </div>
-                        
+
                     </div>
                 </li>
                 <li>
                     <div class="row">
                         <div class="col-xs-3">
                             <div class="avatar">
-                                <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PAN.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                <!-- <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PAN.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">> -->
+
+                                <?= $this->Html->image('partidos_png/PAN.png',['alt'=>'Circle Image ','class'=>'img-circle img-no-padding img-responsive']);?>
                             </div>
                         </div>
                         <div class="col-xs-4">
@@ -32,14 +35,15 @@
                             <br>
                             <span class="text-success"><small>3</small></span>
                         </div>
-                        
+
                     </div>
                 </li>
                 <li>
                     <div class="row">
                         <div class="col-xs-3">
                             <div class="avatar">
-                                <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/VER.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                <!-- <img src="<?php echo $this->request->webroot?>paper/img/partidos/VER.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">> -->
+                                <?= $this->Html->image('partidos/VER.png',['alt'=>'Circle Image ','class'=>'img-circle img-no-padding img-responsive']);?>
                             </div>
                         </div>
                         <div class="col-xs-4">
@@ -47,7 +51,7 @@
                             <br>
                             <span class="text-success"><small>1</small></span>
                         </div>
-                        
+
                     </div>
                 </li>
             </ul>
@@ -55,7 +59,7 @@
     </div>
 </div>
 <div class="col-lg-6">
-        
+
         <h5 class="info-text"><small>REPORTAR INCIDENCIA</small> </h5>
         <div class="col-sm-10 col-sm-offset-1">
         <div class="form-group">
@@ -84,7 +88,7 @@
             </select>
             </div>
         </div>
-        
+
         <div class="col-sm-10 col-sm-offset-1">
             <div class="form-group">
                 <label>OTRA INCIDENCIA</label>
@@ -94,5 +98,5 @@
         <div class="col-sm-12 ">
             <button type="button" class="btn btn-info btn-fill btn-xs pull-right">Agregar Incidencia</button>
         </div>
-        
+
 </div>

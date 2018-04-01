@@ -1,7 +1,7 @@
 <?php
 if(isset($_SESSION['Auth']['User']))
 {
-?>    
+?>
     <nav class="navbar navbar-ct-info">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -67,10 +67,11 @@ if(isset($_SESSION['Auth']['User']))
                         </a>
                         <ul class="dropdown-menu dropdown-with-icons">
                             <li>
-                                <a href="/logout" class="text-danger">
+                                <!-- <a href="users/logout" class="text-danger">
                                     <i class="pe-7s-close-circle"></i>
                                     Log out
-                                </a>
+                                </a> -->
+                                <?= $this->Html->link('Salir',['controller'=>'Users','action'=>'logout'],['class' => 'text-danger'])?>
                             </li>
                         </ul>
                     </li>

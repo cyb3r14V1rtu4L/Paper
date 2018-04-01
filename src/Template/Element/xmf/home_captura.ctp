@@ -4,7 +4,7 @@
         <div class="card card-user">
             <div class="content">
                 <div class="author">
-                    <img class="avatar border-white" src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PAN.png" alt="...">
+                    <img class="avatar border-white" src="<?php echo $this->request->webroot?>paper/img/partidos_png/PAN.png" alt="...">
                     <hr/>
                 </div>
                 <div class="col-md-6 col-lg-6">
@@ -17,13 +17,13 @@
                     </div>
                 <br/>
                 <hr/>
-                <br/>          
+                <br/>
                 <div class="text-center">
                     <div class="row">
                         <h5>FUNCIONES PRINCIPALES DE CASILLA</h5>
                         <div class="row">
-                            <div style="text-align:center;padding:1em 0;"> 
-                                <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&size=medium&timezone=America%2FCancun" width="100%" height="115" frameborder="0" seamless></iframe> 
+                            <div style="text-align:center;padding:1em 0;">
+                                <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&size=medium&timezone=America%2FCancun" width="100%" height="115" frameborder="0" seamless></iframe>
                             </div>
                         </div>
                         <div class="col-md-6 ">
@@ -32,13 +32,13 @@
                             <h5><small>06:45 HRS.</small></h5>
                         </div>
                         <div class="col-md-6">
-                            <button type="button" class="btn btn-warning">INICIO VOTACIÓN</button>                 
+                            <button type="button" class="btn btn-warning">INICIO VOTACIÓN</button>
                             <br/>
                             <h5><small>07:45 HRS.</small></h5>
                         </div>
-                    
+
                     </div>
-                    
+
                 </div>
             </div>
             <hr>
@@ -54,7 +54,7 @@
                     <div class="col-md-4">
                         <h5><small>URBANA</small></h5>
                     </div>
-                
+
                 </div>
             </div>
         </div>

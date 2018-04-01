@@ -20,8 +20,8 @@ $cakeDescription = '.:: XMF Cristina ::.';
 <head>
   <?php //= $this->Html->charset() ?>
   <meta charset="utf-8" />
-	<link rel="apple-touch-icon" sizes="76x76" href="<?php echo $this->request->webroot?>Paper/img/apple-icon.png">
-	<link rel="icon" type="image/png" sizes="84x82" href="<?php echo $this->request->webroot?>Paper/img/favicon.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="<?php echo $this->request->webroot?>paper/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="84x82" href="<?php echo $this->request->webroot?>paper/img/favicon.png">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
         <?= $cakeDescription ?>:
@@ -38,6 +38,7 @@ $cakeDescription = '.:: XMF Cristina ::.';
     <?= $this->Html->css('paper-dashboard.css') ?>
     <?= $this->Html->css('demo.css') ?>
     <?= $this->Html->css('style.peity.css') ?>
+    <?= $this->Html->css('mods.css') ?>
 
     <!-- Fonts and icons -->
     <?= $this->Html->css('font-awesome-4.7.0/css/font-awesome.css') ?>
