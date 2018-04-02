@@ -80,6 +80,13 @@ $cakeDescription = '.:: XMF Cristina ::.';
     <?= $this->Html->script('jquery.peity'); ?>
     <?= $this->fetch('script') ?>
 
+
+    <?= $this->Html->script('highCharts/stock/highstock'); ?>
+    <?= $this->Html->script('highCharts/charts/highcharts-more'); ?>
+    <?= $this->Html->script('highCharts/stock/modules/exporting'); ?>
+    <?= $this->Html->script('highCharts/stock/themes/sand-signika')?>
+    <?= $this->Html->script('highCharts/plugin/export-csv')?>
+
     <script type="text/javascript">
         $(document).ready(function(){
 
