@@ -1,0 +1,1 @@
+ALTER TABLE xmf_casillas ADD COLUMN hora_presencia DATETIME DEFAULT NULL AFTER locacion;
