@@ -67,6 +67,23 @@
                             
                         </div>
                     </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <div class="avatar">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT-MOR-SOL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <span class="text-danger"><h5><b>5,287</b></h5></span>
+                                30%
+                            </div>
+                            <div class="col-xs-5">
+                                <span class="text-info"><small>PT-MORENA-PES</small></span>
+                            </div>
+                            
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -82,56 +99,17 @@
                         <div class="row">
                             <div class="col-xs-3">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                                 </div>
                             </div>
                             <div class="col-xs-5">
+                                Partido Independiente<br/>
                                 <span class="text-success"><h5><b>1,023</b></h5></span>
-                                30%
+                                 30%
                             </div>
                             
                         </div>
                     </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/SOL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                <span class="text-success"><h5><b>1,023</b></h5></span>
-                                30%
-                            </div>
-                            
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/MOR.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                <span class="text-success"><h5><b>1,023</b></h5></span>
-                                30%
-                            </div>
-                            
-                        </div>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-4">
-        <div class="card">
-            <div class="header">
-                <h4 class="title"></h4>
-            </div>
-            <div class="content">
-                <ul class="list-unstyled team-members">
                     <li>
                         <div class="row">
                             <div class="col-xs-3">
@@ -159,12 +137,12 @@
                                 <span class="text-success"><h5><b>1,023</b></h5></span>
                                  30%
                             </div>
-                            
                         </div>
                     </li>
-                    
                 </ul>
             </div>
         </div>
     </div>
+    
+    
 </div>

@@ -313,10 +313,97 @@
     <div class="col-lg-4">
         <div class="card">
             <div class="header">
+                <h4 class="title"><small class="text-info">COALISION PT-MORENTA-PES</small></h4>
+            </div>
+            <div class="content">
+                <ul class="list-unstyled team-members">
+                    <li>
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div class="avatar">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT-MOR-SOL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                </div>
+                            </div>
+                            <div class="col-xs-7">
+                                PT - MORENA - PES
+                                <br>
+                                <span class="text-info"><small><input class="input-resultados" type="text"  size="8"/></small></span>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div class="avatar">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT-MOR.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                </div>
+                            </div>
+                            <div class="col-xs-7">
+                                PT - MORENTA
+                                <br>
+                                <span class="text-info"><small><input class="input-resultados" type="text"  size="8"/></small></span>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div class="avatar">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT-SOL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                </div>
+                            </div>
+                            <div class="col-xs-7">
+                                PT - PES
+                                <br>
+                                <span class="text-info"><small><input class="input-resultados" type="text"  size="8"/></small></span>
+                            </div>
+                            
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div class="avatar">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/MOR-SOL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                </div>
+                            </div>
+                            <div class="col-xs-7">
+                                MORENA - PES
+                                <br>
+                                <span class="text-info"><small><input class="input-resultados" type="text"  size="8"/></small></span>
+                            </div>
+                            
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card">
+            <div class="header">
                 <h4 class="title"></h4>
             </div>
             <div class="content">
                 <ul class="list-unstyled team-members">
+                    <li>
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div class="avatar">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                </div>
+                            </div>
+                            <div class="col-xs-7">
+                                Partido Independiente
+                                <br>
+                                <span class="text-info"><small><input class="input-resultados" type="text"  size="8"/></small></span>
+                            </div>
+                            
+                        </div>
+                    </li>
                     <li>
                         <div class="row">
                             <div class="col-xs-4">

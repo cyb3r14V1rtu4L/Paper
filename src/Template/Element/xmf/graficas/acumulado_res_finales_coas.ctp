@@ -170,7 +170,7 @@
                         <div class="row">
                             <div class="col-xs-3">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT-MOR-SOL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                                 </div>
                             </div>
                             <div class="col-xs-5">
@@ -184,7 +184,7 @@
                         <div class="row">
                             <div class="col-xs-3">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/SOL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT-MOR.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                                 </div>
                             </div>
                             <div class="col-xs-5">
@@ -198,7 +198,22 @@
                         <div class="row">
                             <div class="col-xs-3">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/MOR.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT-SOL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                </div>
+                            </div>
+                            <div class="col-xs-5">
+                                <span class="text-success"><h5><b>1,023</b></h5></span>
+                                30%
+                            </div>
+                            
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <div class="avatar">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/MOR-SOL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                                 </div>
                             </div>
                             <div class="col-xs-5">

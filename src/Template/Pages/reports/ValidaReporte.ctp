@@ -876,6 +876,21 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-7">
+                                                        Partido Independiente
+                                                        <br>
+                                                        <span class="text-success"><small><input type="text" size="8"/></small></span>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-xs-4">
+                                                        <div class="avatar">
+                                                            <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-7">
                                                         No Registrados
                                                         <br>
                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>

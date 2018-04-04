@@ -101,8 +101,8 @@ demo = {
         Chartist.Bar('#chartResFinales', {
           
           labels: ['PAN', 'PRI', 'PRD', 'VER', 'PT', 'MOC', 'NA','MOR','PES',
-          'NO REGS','NULOS'],
-          series: [620, 560, 420, 500, 680, 120, 110,420,215,620, 560]
+          'PI','NO REGS','NULOS'],
+          series: [620, 560, 420, 500, 680, 120, 110,420,215,620, 560,133]
         }, {
           distributeSeries: true
         });
@@ -110,16 +110,16 @@ demo = {
         Chartist.Bar('#chartResFinalesCOAS', {
           
           labels: ['PAN-PRD-MC','PAN-PRD','PAN-MC','PRD-MC','PRI-PVE-PANAL','PRI-PVE','PRI-PANAL',
-          'PVE-PANAL','PT','PES','MORENA','NO REGS','NULOS'],
-          series: [2620, 2560, 1420, 3200,2400, 1680, 1220, 1210,620,560,123,323,221]
+          'PVE-PANAL','PT-MORENA-PES','PT-MORENA','PT-PES','MORENA-PES','PI','NO REGS','NULOS'],
+          series: [2620, 2560, 1420, 3200,2400,2344 ,1680, 1220, 1210,620,560,323,123,323,221]
         }, {
           distributeSeries: true
         });
 
         Chartist.Bar('#chartResFinalesCOASCONCENTRADO', {
           
-          labels: ['PAN-PRD-MC','PRI-PVE-PANAL','PT','PES','MORENA','NO REGS','NULOS'],
-          series: [9023, 7587, 5420, 5200,6400, 3680, 1220]
+          labels: ['PAN-PRD-MC','PRI-PVE-PANAL','PT-MORENA-PES','PI','NO REGS','NULOS'],
+          series: [9023, 7587, 5287,2322, 3680, 1220]
         }, {
           distributeSeries: true
         });
