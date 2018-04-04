@@ -4,7 +4,7 @@
     <div class="col-md-12">
         <div class="card">
             <div class="header">
-                <h4 class="title">CONCENTRADO FINAL COALISIONES</h4>
+                <h4 class="title">CONCENTRADO FINAL COALICIONES</h4>
                 <p class="category">Monitoreo en tiempo real</p>
             </div>
             <div class="content">

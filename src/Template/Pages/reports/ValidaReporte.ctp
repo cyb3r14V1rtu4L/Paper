@@ -750,7 +750,7 @@
                         <div class="col-lg-4">
                                 <div class="card">
                                     <div class="header">
-                                        <h4 class="title"><small>COALISION PAN-PRD-MC</small></h4>
+                                        <h4 class="title"><small>COALICION PAN-PRD-MC</small></h4>
                                     </div>
                                     <div class="content">
                                         <ul class="list-unstyled team-members">
@@ -807,7 +807,7 @@
                             <div class="col-lg-4">
                                 <div class="card">
                                     <div class="header">
-                                        <h4 class="title"><small>COALISION PRI-PVE-PANAL</small></h4>
+                                        <h4 class="title"><small>COALICION PRI-PVE-PANAL</small></h4>
                                     </div>
                                     <div class="content">
                                         <ul class="list-unstyled team-members">

@@ -169,7 +169,7 @@
 <div class="col-lg-4">
         <div class="card">
             <div class="header">
-                <h4 class="title"><small class="text-info">COALISION PAN-PRD-MC</small></h4>
+                <h4 class="title"><small class="text-info">COALICION PAN-PRD-MC</small></h4>
             </div>
             <div class="content">
                 <ul class="list-unstyled team-members">
@@ -241,7 +241,7 @@
     <div class="col-lg-4">
         <div class="card">
             <div class="header">
-                <h4 class="title"><small class="text-info">COALISION PRI-PVE-PANAL</small></h4>
+                <h4 class="title"><small class="text-info">COALICION PRI-PVE-PANAL</small></h4>
             </div>
             <div class="content">
                 <ul class="list-unstyled team-members">
@@ -313,7 +313,7 @@
     <div class="col-lg-4">
         <div class="card">
             <div class="header">
-                <h4 class="title"><small class="text-info">COALISION PT-MORENTA-PES</small></h4>
+                <h4 class="title"><small class="text-info">COALICION PT-MORENTA-PES</small></h4>
             </div>
             <div class="content">
                 <ul class="list-unstyled team-members">

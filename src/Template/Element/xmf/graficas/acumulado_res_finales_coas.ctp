@@ -2,7 +2,7 @@
     <div class="col-md-12">
         <div class="card">
             <div class="header">
-                <h4 class="title">CONCENTRADO TOTAL COALISIONES</h4>
+                <h4 class="title">CONCENTRADO TOTAL COALICIONES</h4>
                 <p class="category">Monitoreo en tiempo real</p>
             </div>
             <div class="content">
