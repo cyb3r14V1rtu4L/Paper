@@ -1,4 +1,7 @@
 
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<?= $this->Html->css('clockpicker.css') ?>
+<?= $this->Html->script('clockpicker'); ?>
 <!-- CSS stylea -->
 <?= $this->Html->css('paper-bootstrap-wizard.css') ?>
 
@@ -11,8 +14,6 @@
 <!-- UI Kit Plugins -->
 <?= $this->Html->script('ct-paper-radio', ['block' => true]); ?>
 <?= $this->Html->script('bootstrap-select', ['block' => true]); ?>
-
-
 
 <div class="container-fluid">
     <div class="row">
@@ -117,8 +118,8 @@
                         <hr/>
                         <div class="pull-right">
                             
-                            <input type='button' class='btn btn-next btn-fill btn-success btn-wd' name='next' value='Enviar' />
-                            <input type='button' class='btn btn-finish btn-fill btn-success btn-wd' name='finish' value='Enviar' />
+                            <input type='button' class='btn btn-next btn-fill btn-success btn-wd' name='next' value='Siguiente' />
+                            <input type='button' class='btn btn-finish btn-fill btn-success btn-wd' name='finish' value='Siguiente' />
 
                         </div>
 

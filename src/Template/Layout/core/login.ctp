@@ -38,6 +38,7 @@ $cakeDescription = '.:: XMF Cristina ::.';
     <?= $this->Html->css('paper-dashboard.css') ?>
     <!-- <?= $this->Html->css('demo.css') ?> -->
     <?= $this->Html->css('mods.css') ?>
+    
 
     <!-- Fonts and icons -->
     <?= $this->Html->css('font-awesome-4.7.0/css/font-awesome.css') ?>
@@ -78,10 +79,12 @@ $cakeDescription = '.:: XMF Cristina ::.';
     <?= $this->Html->script('bootstrap.min'); ?>
     <?= $this->Html->script('bootstrap-checkbox-radio'); ?>
     <?= $this->Html->script('bootstrap-notify');?>
-    <?= $this->Html->script('chartist.min'); ?>
 
     <?= $this->Html->script('paper-dashboard'); ?>
-    <?= $this->Html->script('demo'); ?>
+
+    <?php # $this->Html->script('chartist.min'); ?>
+    <?php # $this->Html->script('demo'); ?>
+    
 
 
     <?= $this->fetch('script') ?>
@@ -89,7 +92,7 @@ $cakeDescription = '.:: XMF Cristina ::.';
     <script type="text/javascript">
         $(document).ready(function(){
 
-            demo.initChartist();
+           // demo.initChartist();
 
         });
     </script>
