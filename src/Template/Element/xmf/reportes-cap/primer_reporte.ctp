@@ -16,7 +16,6 @@
         <div class="tim-title">
             <h5><small>CASILLA SE INSTALÓ EN EL LUGAR INDICADO POR EL IEQROO?</small></h5>
         </div>
-
             <label class="radio">
             <input type="radio" name="lugar_indicado" data-toggle="radio" id="lugar_indicado" value="1" >
             <i></i>SI
@@ -311,7 +310,7 @@
                             </div>
                         </div>
                     </li>
-                    
+
                 </ul>
             </div>
         </div>
@@ -375,14 +374,14 @@
             </div>
         </div>
     </div>
-    
+
     <div class="row">
     <button type="button" id="btn_reporte_1" class="btn btn-fill btn-success" onclick="addFirstReport();">Enviar Reporte</button>
     <p>
 
     </p>
     </div>
-                            
+
 </div>
 <?= $this->Form->end();?>
 
@@ -395,9 +394,9 @@
         type: "POST",
         dataType: "json",
         data: {
-            casilla_id:$('#casilla_id').val(),           
+            casilla_id:$('#casilla_id').val(),
             hora_instalacion:$('#hora_instalacion').val(),
-            hora_inicio:$('#hora_inicio').val(),           
+            hora_inicio:$('#hora_inicio').val(),
             lugar_indicado:$('#lugar_indicado').is(':checked'),
             gente_fila:$('#gente_fila').is(':checked'),
             funcionario_1:$('#funcionario_1').is(':checked'),
@@ -423,7 +422,7 @@
             $.notify ({
                  icon: 'ti-package',
                  message: "<b>Primer Reporte</b> Enviado."
-            
+
                },{
                    type: 'danger',
                    timer: 2000

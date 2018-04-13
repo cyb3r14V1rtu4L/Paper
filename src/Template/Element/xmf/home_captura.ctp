@@ -29,12 +29,12 @@
                         <div class="col-md-6 ">
                             <button type="button" class="btn btn-info">PRESENCIA</button>
                             <br/>
-                            <h5><small>06:45 HRS.</small></h5>
+                            <h5><small>07:00 HRS.</small></h5>
                         </div>
                         <div class="col-md-6">
                             <button type="button" class="btn btn-warning">INICIO VOTACIÓN</button>
                             <br/>
-                            <h5><small>07:45 HRS.</small></h5>
+                            <h5><small>08:00 HRS.</small></h5>
                         </div>
 
                     </div>

@@ -1,3 +1,4 @@
+<?= $this->Form->create('IncidenceReport',array('id'=>'IncidenceReport'));?>
 <div class="col-lg-6">
     <div class="card">
         <div class="header">
@@ -59,44 +60,73 @@
     </div>
 </div>
 <div class="col-lg-6">
-
         <h5 class="info-text"><small>REPORTAR INCIDENCIA</small> </h5>
         <div class="col-sm-10 col-sm-offset-1">
         <div class="form-group">
-            <select class="form-control">
+            <select id="xmf_partidos_id" class="form-control">
                 <option selected="">- Seleccionar Partido -</option>
-                <option>PAN</option>
-                <option>PRI</option>
-                <option>PRD</option>
-                <option>PVE</option>
-                <option>PT</option>
-                <option>MOV</option>
-                <option>NA</option>
-                <option>MOR</option>
-                <option>PES</option>
+                <option value="1">PAN</option>
+                <option value="2">PRI</option>
+                <option value="3">PRD</option>
+                <option value="4">PVE</option>
+                <option value="5">PT</option>
+                <option value="6">MOV</option>
+                <option value="7">NA</option>
+                <option value="8">MOR</option>
+                <option value="9">PES</option>
             </select>
             </div>
         </div>
         <div class="col-sm-10 col-sm-offset-1">
         <div class="form-group">
-            <select class="form-control">
-                <option  selected="">- Seleccionar Incidencia-</option>
-                <option>La casilla se instaló antes de las 7:00 a.m.</option>
-                <option>Faltó material Electoral</option>
-                <option>Se impidió el acceso de los REPRESENTANTES</option>
-                <option>Otro</option>
-            </select>
+          <?php
+          echo $this->Form->select('xmf_incidencias_id', $Incidencias,array('id'=>'xmf_incidencias_id','class' => 'form-control','empty'=>'--Seleccionar Incidencia--'));
+          ?>
             </div>
         </div>
 
         <div class="col-sm-10 col-sm-offset-1">
             <div class="form-group">
                 <label>OTRA INCIDENCIA</label>
-                <textarea class="form-control" placeholder="" rows="2"></textarea>
+                <textarea id="otra" class="form-control" placeholder="" rows="2"></textarea>
             </div>
         </div>
         <div class="col-sm-12 ">
-            <button type="button" class="btn btn-info btn-fill btn-xs pull-right">Agregar Incidencia</button>
+            <button type="button" onclick="addIncidenceReport();" class="btn btn-info btn-fill btn-xs pull-right">Agregar Incidencia</button>
         </div>
 
 </div>
+
+<?= $this->Form->end();?>
+
+<script>
+ function addIncidenceReport()
+{
+    $.ajax({
+        url: '/Xmf/addIncidenceReport',
+        type: "POST",
+        dataType: "json",
+        data: {
+            xmf_casillas_id:$('#casilla_id').val(),
+            xmf_partidos_id:$('#xmf_partidos_id').val(),
+            xmf_incidencias_id:$('#xmf_incidencias_id').val(),
+            otra:$('#otra').val(),
+        }
+        ,
+        success: function (json) {
+
+            $.notify ({
+                 icon: 'ti-package',
+                 message: "<b>Incidencia</b> Agregada."
+
+               },{
+                   type: 'danger',
+                   timer: 2000
+               });
+        },
+        error: function (xhr, textStatus, errorThrown) {
+            console.log(xhr);
+        }
+    });
+}
+</script>

@@ -1,5 +1,5 @@
 <?= $this->Form->create('ThirdReport',array('id'=>'ThirdReport'));?>
-<h5 class="info-text">FLUJO DE VOTACIÓN 8:00 - 16:00 HRS</h5>
+<h5 class="info-text">FLUJO DE VOTACIÓN 8:00 - 15:00 HRS</h5>
 <div class="row">
     <div class="col-sm-6 text-center">
             <div class="form-group">
@@ -31,10 +31,10 @@
         type: "POST",
         dataType: "json",
         data: {
-            casilla_id:$('#casilla_id').val(),           
+            casilla_id:$('#casilla_id').val(),
             votantes_tercero:$('#votantes_tercero').val(),
-            promovidos_tercero:$('#promovidos_tercero').val(),           
-            
+            promovidos_tercero:$('#promovidos_tercero').val(),
+
         }
         ,
         success: function (json) {
@@ -42,7 +42,7 @@
             $.notify ({
                  icon: 'ti-package',
                  message: "<b>Tercer Reporte</b> Enviado."
-            
+
                },{
                    type: 'danger',
                    timer: 2000
