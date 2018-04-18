@@ -19,7 +19,7 @@
     <div class="row">
         <div class="col-sm-3">
             <div class="card">
-                
+
                 <div class="content">
                     <h5>CB206</h5>
                     708 - URBANA - BÁSICA - IX
@@ -29,17 +29,17 @@
                     <h5><small>NOMBRE ABOGADO</small></h5>
                     <a href="tel:9999999999">(999)999-9999</a>
                     <hr/>
-                    
+
                 </div>
 
             </div>
         </div>
         <div class="col-sm-9">
-            <?= $this->element('Paper.xmf/reportes/agregar_incidencias'); ?> 
+            <?= $this->element('Paper.xmf/reportes/agregar_incidencias'); ?>
         </div>
     </div>
-    
-    
+
+
     <div class="row">
         <div class="col-sm-12">
             <!--      Wizard container        -->
@@ -99,25 +99,25 @@
                     </div>
                     <div class="tab-content">
                         <div class="tab-pane" id="primer_reporte">
-                        <?= $this->element('Paper.xmf/reportes-cap/primer_reporte'); ?> 
+                        <?= $this->element('Paper.xmf/reportes-cap/primer_reporte'); ?>
                         <hr/>
                     </div>
                     <div class="tab-pane" id="segundo_reporte">
-                        <?= $this->element('Paper.xmf/reportes-cap/segundo_reporte'); ?> 
+                        <?= $this->element('Paper.xmf/reportes-cap/segundo_reporte'); ?>
                     </div>
                     <div class="tab-pane" id="tercer_reporte">
-                    <?= $this->element('Paper.xmf/reportes-cap/tercer_reporte'); ?> 
+                    <?= $this->element('Paper.xmf/reportes-cap/tercer_reporte'); ?>
                     </div>
                     <div class="tab-pane" id="cuarto_reporte">
-                    <?= $this->element('Paper.xmf/reportes-cap/cuarto_reporte'); ?> 
+                    <?= $this->element('Paper.xmf/reportes-cap/cuarto_reporte'); ?>
                     </div>
                     <div class="tab-pane" id="resultados_finales">
-                    <?= $this->element('Paper.xmf/reportes-cap/resultados_finales'); ?> 
+                    <?= $this->element('Paper.xmf/reportes-cap/resultados_finales'); ?>
                     </div>
                     <div class="wizard-footer">
                         <hr/>
                         <div class="pull-right">
-                            
+
                             <input type='button' class='btn btn-next btn-fill btn-success btn-wd' name='next' value='Siguiente' />
                             <input type='button' class='btn btn-finish btn-fill btn-success btn-wd' name='finish' value='Siguiente' />
 
@@ -127,7 +127,7 @@
                             <input type='button' class='btn btn-previous btn-default btn-wd' name='previous' value='Anterior' />
                         </div>
                         <div class="clearfix"></div>
-                </div>  
+                </div>
             </div> <!-- wizard container -->
         </div>
     </div>
