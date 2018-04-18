@@ -16,6 +16,7 @@
 <?= $this->Html->script('bootstrap-select', ['block' => true]); ?>
 
 <div class="container-fluid">
+    <button type="button" class="btn btn-danger pull-right" onclick="showNotificationInci('top','right')"><small>Enviar Incidencia <i class="ti-pulse"></i></small></button>
     <div class="row">
         <div class="col-sm-12">
             <!--      Wizard container        -->
@@ -76,7 +77,6 @@
                     <div class="tab-content">
                         <div class="tab-pane" id="primer_reporte">
                         <?= $this->element('Paper.xmf/reportes-cap/primer_reporte'); ?>
-                        <hr/>
                     </div>
                     <div class="tab-pane" id="segundo_reporte">
                         <?= $this->element('Paper.xmf/reportes-cap/segundo_reporte'); ?>
@@ -108,3 +108,20 @@
         </div>
     </div>
 </div> <!-- row -->
+<script>
+$(document).ready(function() {
+    $(".voto").keydown(function (e) {
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+            (e.keyCode == 65 && e.ctrlKey === true) ||
+            (e.keyCode >= 35 && e.keyCode <= 39)) {
+                 return;
+        }
+
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
+        }
+    });
+
+    $(".voto").attr('maxlength','3');
+});
+</script>

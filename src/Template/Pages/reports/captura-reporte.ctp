@@ -28,13 +28,12 @@
                     <h5><small>NOMBRE ABOGADO</small></h5>
                     <a href="tel:9999999999">(999)999-9999</a>
                     <hr/>
-
                 </div>
 
             </div>
         </div>
         <div class="col-sm-9">
-            <?= $this->element('Paper.xmf/reportes/agregar_incidencias'); ?> 
+            <?= $this->element('Paper.xmf/reportes/agregar_incidencias'); ?>
         </div>
     </div>
 

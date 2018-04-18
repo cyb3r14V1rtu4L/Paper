@@ -33,7 +33,7 @@
                             </div>
                             <div class="col-xs-4">
                                 <span class="text-info"><small>
-                                  <input class="input-resultados voto" id="xmf_partido_1" data-id="1" type="text"  size="8"/></small></span>
+                                  <input class="input-resultados voto" id="xmf_partido_1" data-id="1" type="text" size="8"/></small></span>
                             </div>
 
                         </div>
@@ -500,7 +500,7 @@
 
 </div>
 <div class="row">
-<button type="button" id="btn_reporte_1" class="btn btn-fill btn-success" onclick="addLastReport();">Enviar Reporte</button>
+<button type="button" id="btn_reporte_f" class="btn btn-fill btn-success" onclick="addLastReport();">Enviar Reporte</button>
 <p>
 
 </p>

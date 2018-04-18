@@ -5,15 +5,16 @@
     <div class="col-sm-12">
         <h5 class="info-text">INTALACIÓN DE LA CASILLA</h5>
     </div>
-    <div class="col-sm-6 ">
+    <!-- <div class="col-sm-6 ">
         <div class="form-group">
             <label>HORA INICIO DE INSTALACIÓN</label>
             <input type="text" name="hora_instalacion" id="hora_instalacion" class="form-control clockpicker" value="" >
-            <input type="hidden" name="casilla_id" id="casilla_id" class="form-control" value="<?=$_SESSION['Casilla']['id'];?>">
         </div>
     </div>
-    <div class="col-sm-6">
+  -->
+    <div class="col-sm-12 col-lg-3">
         <div class="tim-title">
+            <input type="hidden" name="casilla_id" id="casilla_id" class="form-control" value="<?=$_SESSION['Casilla']['id'];?>">
             <h5><small>CASILLA SE INSTALÓ EN EL LUGAR INDICADO POR EL IEQROO?</small></h5>
         </div>
             <label class="radio">
@@ -25,27 +26,31 @@
             <i></i>NO
             </label>
     </div>
+    <div class="col-sm-2 col-lg-2"></div>
+    <div class="col-sm-12 col-lg-2">
+        <div class="tim-title">
+            <h5><small>SE TOMÓ GENTE DE LA FILA?</small></h5>
+        </div>
+          <label class="radio">
+          <input type="radio" name="gente_fila" data-toggle="radio" id="gente_fila" value="1" >
+          <i></i>SI
+          </label>
+          <label class="radio">
+          <input type="radio" name="gente_fila" data-toggle="radio" id="gente_fila" value="0">
+          <i></i>NO
+          </label>
+    </div>
 </div>
 <div class="row">
-    <div class="col-sm-6 "> <!-- inicio votacion -->
+   <!--
+    <div class="col-sm-6 ">
         <div class="form-group">
             <label>HORA INICIO DE VOTACIÓN</label>
             <input type="text" name="hora_inicio" id="hora_inicio" class="form-control clockpicker" value="" >
         </div>
     </div>
-    <div class="col-sm-6">
-        <div class="tim-title">
-            <h5><small>SE TOMÓ GENTE DE LA FILA?</small></h5>
-        </div>
-        <label class="radio">
-        <input type="radio" name="gente_fila" data-toggle="radio" id="gente_fila" value="1" >
-        <i></i>SI
-        </label>
-        <label class="radio">
-        <input type="radio" name="gente_fila" data-toggle="radio" id="gente_fila" value="0">
-        <i></i>NO
-        </label>
-    </div>
+    -->
+
 </div>
 <hr/>
 <div class="row">
@@ -412,9 +417,7 @@
 
     <div class="row">
     <button type="button" id="btn_reporte_1" class="btn btn-fill btn-success" onclick="addFirstReport();">Enviar Reporte</button>
-    <p>
-
-    </p>
+    
     </div>
 
 </div>
@@ -423,15 +426,12 @@
 <script>
  function addFirstReport()
 {
-    var data = $('#FirstReport').serializeArray();
     $.ajax({
         url: '/Xmf/addFirstReport',
         type: "POST",
         dataType: "json",
         data: {
             casilla_id:$('#casilla_id').val(),
-            hora_instalacion:$('#hora_instalacion').val(),
-            hora_inicio:$('#hora_inicio').val(),
             lugar_indicado:$('#lugar_indicado').is(':checked'),
             gente_fila:$('#gente_fila').is(':checked'),
             funcionario_1:$('#funcionario_1').is(':checked'),
