@@ -17,30 +17,6 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-3">
-            <div class="card">
-
-                <div class="content">
-                    <h5>CB206</h5>
-                    708 - URBANA - BÁSICA - IX
-                    <h5><small>REPRESENTANTE</small></h5>
-                    <a href="tel:9999999999">(999)999-9999</a>
-                    <hr/>
-                    <h5><small>NOMBRE ABOGADO</small></h5>
-                    <a href="tel:9999999999">(999)999-9999</a>
-                    <hr/>
-
-                </div>
-
-            </div>
-        </div>
-        <div class="col-sm-9">
-            <?= $this->element('Paper.xmf/reportes/agregar_incidencias'); ?>
-        </div>
-    </div>
-
-
-    <div class="row">
         <div class="col-sm-12">
             <!--      Wizard container        -->
             <div class="wizard-container">

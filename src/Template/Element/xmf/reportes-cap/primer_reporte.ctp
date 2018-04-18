@@ -259,11 +259,29 @@
                                 </div>
                             </div>
                             <div class="col-xs-5">
-                                    Secretario
+                                    Secretario I
                                 </div>
                                 <div class="col-xs-2 text-right">
                                     <label class="checkbox" for="checkbox1">
                                         <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input  id="funcionario_11"  name="funcionario_11" data-toggle="checkbox" type="checkbox">
+                                    </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <div class="avatar">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                </div>
+                            </div>
+                            <div class="col-xs-5">
+                                    Secretario II
+                                </div>
+                                <div class="col-xs-2 text-right">
+                                    <label class="checkbox" for="checkbox1">
+                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span>
+                                        <input  id="funcionario_17"  name="funcionario_17" data-toggle="checkbox" type="checkbox">
                                     </label>
                             </div>
                         </div>
@@ -306,6 +324,23 @@
                                 <div class="col-xs-2 text-right">
                                     <label class="checkbox" for="checkbox1">
                                         <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input  id="funcionario_13"  name="funcionario_13" data-toggle="checkbox" type="checkbox">
+                                    </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <div class="avatar">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                </div>
+                            </div>
+                            <div class="col-xs-5">
+                                    Escrutador III
+                                </div>
+                                <div class="col-xs-2 text-right">
+                                    <label class="checkbox" for="checkbox1">
+                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input  id="funcionario_18"  name="funcionario_18" data-toggle="checkbox" type="checkbox">
                                     </label>
                             </div>
                         </div>
@@ -414,7 +449,9 @@
             funcionario_13:$('#funcionario_13').is(':checked'),
             funcionario_14:$('#funcionario_14').is(':checked'),
             funcionario_15:$('#funcionario_15').is(':checked'),
-            funcionario_16:$('#funcionario_16').is(':checked')
+            funcionario_16:$('#funcionario_16').is(':checked'),
+            funcionario_17:$('#funcionario_17').is(':checked'),
+            funcionario_18:$('#funcionario_18').is(':checked')
         }
         ,
         success: function (json) {

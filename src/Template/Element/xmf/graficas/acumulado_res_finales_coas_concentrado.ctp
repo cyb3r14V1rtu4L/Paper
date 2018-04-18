@@ -47,7 +47,7 @@
                             <div class="col-xs-5">
                                 <span class="text-info"><small>PAN-PRD-MC</small></span>
                             </div>
-                            
+
                         </div>
                     </li>
                     <li>
@@ -64,7 +64,7 @@
                             <div class="col-xs-5">
                                 <span class="text-info"><small>PRI-PVE-PANAL</small></span>
                             </div>
-                            
+
                         </div>
                     </li>
                     <li>
@@ -81,7 +81,7 @@
                             <div class="col-xs-5">
                                 <span class="text-info"><small>PT-MORENA-PES</small></span>
                             </div>
-                            
+
                         </div>
                     </li>
                 </ul>
@@ -103,11 +103,26 @@
                                 </div>
                             </div>
                             <div class="col-xs-5">
-                                Partido Independiente<br/>
+                                Margarita Zavala<br/>
                                 <span class="text-success"><h5><b>1,023</b></h5></span>
                                  30%
                             </div>
-                            
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <div class="avatar">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                </div>
+                            </div>
+                            <div class="col-xs-5">
+                                Bronco<br/>
+                                <span class="text-success"><h5><b>1,023</b></h5></span>
+                                 30%
+                            </div>
+
                         </div>
                     </li>
                     <li>
@@ -122,7 +137,7 @@
                                 <span class="text-success"><h5><b>1,023</b></h5></span>
                                  30%
                             </div>
-                            
+
                         </div>
                     </li>
                     <li>
@@ -143,6 +158,6 @@
             </div>
         </div>
     </div>
-    
-    
+
+
 </div>

@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-sm-3">
                 <div class="card">
-                    
+
                     <div class="content">
                         <h5>CB206</h5>
                         708 - URBANA - BÁSICA - IX
@@ -28,13 +28,13 @@
                         <h5><small>NOMBRE ABOGADO</small></h5>
                         <a href="tel:9999999999">(999)999-9999</a>
                         <hr/>
-                        
+
                     </div>
 
                 </div>
             </div>
             <div class="col-sm-9">
-                <?= $this->element('Paper.xmf/reportes/agregar_incidencias'); ?> 
+                <?= $this->element('Paper.xmf/reportes/agregar_incidencias'); ?>
             </div>
         </div>
         <div class=row>
@@ -43,9 +43,9 @@
                 <button type="button" class="btn btn-warning">INICIO VOTACIÓN</button>
             </div>
         </div>
-        
+
         <div class="row">
-                
+
 
                 <div class="col-sm-12">
 
@@ -420,7 +420,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </li>
-                                                                    
+
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -484,7 +484,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                                    
+
                                             </div>
                                         <hr/>
 
@@ -606,7 +606,7 @@
                                                                         <br>
                                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                                     </div>
-                                                                   
+
                                                                 </div>
                                                             </li>
                                                             <li>
@@ -621,7 +621,7 @@
                                                                         <br>
                                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                                     </div>
-                                                                    
+
                                                                 </div>
                                                             </li>
                                                             <li>
@@ -636,7 +636,7 @@
                                                                         <br>
                                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                                     </div>
-                                                                    
+
                                                                 </div>
                                                             </li>
 
@@ -663,7 +663,7 @@
                                                                         <br>
                                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                                     </div>
-                                                                    
+
                                                                 </div>
                                                             </li>
                                                             <li>
@@ -678,7 +678,7 @@
                                                                         <br>
                                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                                     </div>
-                                                                    
+
                                                                 </div>
                                                             </li>
                                                             <li>
@@ -693,7 +693,7 @@
                                                                         <br>
                                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                                     </div>
-                                                                    
+
                                                                 </div>
                                                             </li>
 
@@ -720,7 +720,7 @@
                                                                         <br>
                                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                                     </div>
-                                                                    
+
                                                                 </div>
                                                             </li>
                                                             <li>
@@ -735,7 +735,7 @@
                                                                         <br>
                                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                                     </div>
-                                                                    
+
                                                                 </div>
                                                             </li>
                                                             <li>
@@ -750,16 +750,16 @@
                                                                         <br>
                                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                                     </div>
-                                                                    
+
                                                                 </div>
                                                             </li>
-                                                            
+
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
-                                            
-                                            
+
+
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-4">
@@ -777,11 +777,26 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-xs-4">
-                                                                    Partido Independiente
+                                                                    Margarita Zavala
                                                                     <br>
                                                                     <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                                 </div>
-                                                                
+
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="row">
+                                                                <div class="col-xs-4">
+                                                                    <div class="avatar">
+                                                                        <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-4">
+                                                                    Bronco
+                                                                    <br>
+                                                                    <span class="text-success"><small><input type="text" size="8"/></small></span>
+                                                                </div>
+
                                                             </div>
                                                         </li>
                                                         <li>
@@ -796,7 +811,7 @@
                                                                     <br>
                                                                     <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                                 </div>
-                                                                
+
                                                             </div>
                                                         </li>
                                                         <li>
@@ -811,24 +826,24 @@
                                                                     <br>
                                                                     <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                                 </div>
-                                                                
+
                                                             </div>
                                                         </li>
-                                                        
+
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-8">
-                                        <?= $this->element('Paper.xmf/reportes/agregar_incidencias'); ?> 
+                                        <?= $this->element('Paper.xmf/reportes/agregar_incidencias'); ?>
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                                 <div class="wizard-footer">
                                     <hr/>
                                     <div class="pull-right">
-                                        
+
                                         <input type='button' class='btn btn-next btn-fill btn-success btn-wd' name='next' value='Enviar' />
                                         <input type='button' class='btn btn-finish btn-fill btn-success btn-wd' name='finish' value='Enviar' />
 
