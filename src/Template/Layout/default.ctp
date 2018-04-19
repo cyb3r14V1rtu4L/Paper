@@ -48,7 +48,28 @@ $cakeDescription = '.:: XMF Cristina ::.';
 
     <?= $this->fetch('css') ?>
 
-    
+
+        <?= $this->Html->script('jquery-1.10.2');?>
+
+        <?= $this->Html->script('bootstrap.min'); ?>
+        <?= $this->Html->script('bootstrap-checkbox-radio'); ?>
+        <?= $this->Html->script('bootstrap-notify');?>
+
+        <?= $this->Html->script('paper-dashboard'); ?>
+
+        <?= $this->Html->script('jquery.peity'); ?>
+        <?= $this->fetch('script') ?>
+
+        <?php # $this->Html->script('chartist.min'); ?>
+        <?php # $this->Html->script('demo'); ?>
+
+
+        <?= $this->Html->script('highCharts/stock/highstock'); ?>
+        <?= $this->Html->script('highCharts/charts/highcharts-more'); ?>
+        <?= $this->Html->script('highCharts/stock/modules/exporting'); ?>
+        <?= $this->Html->script('highCharts/stock/themes/sand-signika')?>
+        <?= $this->Html->script('highCharts/plugin/export-csv')?>
+
 </head>
 <body>
 
@@ -70,41 +91,20 @@ $cakeDescription = '.:: XMF Cristina ::.';
     </div>
 </body>
 
-    <?= $this->Html->script('jquery-1.10.2');?>
-
-    <?= $this->Html->script('bootstrap.min'); ?>
-    <?= $this->Html->script('bootstrap-checkbox-radio'); ?>
-    <?= $this->Html->script('bootstrap-notify');?>
-
-    <?= $this->Html->script('paper-dashboard'); ?>
-    
-    <?= $this->Html->script('jquery.peity'); ?>
-    <?= $this->fetch('script') ?>
-
-    <?php # $this->Html->script('chartist.min'); ?>
-    <?php # $this->Html->script('demo'); ?>
-
-
-    <?= $this->Html->script('highCharts/stock/highstock'); ?>
-    <?= $this->Html->script('highCharts/charts/highcharts-more'); ?>
-    <?= $this->Html->script('highCharts/stock/modules/exporting'); ?>
-    <?= $this->Html->script('highCharts/stock/themes/sand-signika')?>
-    <?= $this->Html->script('highCharts/plugin/export-csv')?>
-
     <script type="text/javascript">
-        $(document).ready(function(){
-
-            //demo.initChartist();
-            //$("span.pie").peity("pie");
-            //$.notify ({
-            //     icon: 'ti-package',
-            //     message: "<b>XMF Cristina</b> - Proceso Electoral Local."
-            //
-            //   },{
-            //       type: 'warning',
-            //       timer: 2000
-            //   });
-
-        });
+        // $(document).ready(function(){
+        //
+        //     //demo.initChartist();
+        //     //$("span.pie").peity("pie");
+        //     //$.notify ({
+        //     //     icon: 'ti-package',
+        //     //     message: "<b>XMF Cristina</b> - Proceso Electoral Local."
+        //     //
+        //     //   },{
+        //     //       type: 'warning',
+        //     //       timer: 2000
+        //     //   });
+        //
+        // });
     </script>
 </html>

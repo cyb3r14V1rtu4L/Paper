@@ -15,14 +15,17 @@
 
     <li>
         <!-- <a href="index2.html"> -->
-        <a href="<?php echo $this->Url->build('/pages/reports/SegundoReporte'); ?>">
+        <a href="<?php echo // $this->Url->build('/pages/reports/SegundoReporte');
+
+        $this->Url->build('XmfReportsSegundoTercero/SegundoReporte');
+        ?>">
             <i class="ti-bar-chart"></i>
             <p>SEGUNDO REPORTE</p>
         </a>
     </li>
 
     <li>
-        <a href="<?php echo $this->Url->build('/pages/reports/TercerReporte'); ?>">
+        <a href="<?php echo $this->Url->build('XmfReportsSegundoTercero/TercerReporte');?>">
             <i class="ti-bar-chart"></i>
             <p>TECER REPORTE</p>
         </a>
