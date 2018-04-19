@@ -28,15 +28,16 @@
 <script>
  function addSecondReport()
 {
+  alert($('#casilla_id').val());
     $.ajax({
         url: '/Xmf/addSecondReport',
         type: "POST",
         dataType: "json",
         data: {
-            casilla_id:$('#casilla_id').val(),           
+            casilla_id:$('#casilla_id').val(),
             votantes_segundo:$('#votantes_segundo').val(),
-            promovidos_segundo:$('#promovidos_segundo').val(),           
-            
+            promovidos_segundo:$('#promovidos_segundo').val(),
+
         }
         ,
         success: function (json) {
@@ -44,7 +45,7 @@
             $.notify ({
                  icon: 'ti-package',
                  message: "<b>Segundo Reporte</b> Enviado."
-            
+
                },{
                    type: 'danger',
                    timer: 2000
