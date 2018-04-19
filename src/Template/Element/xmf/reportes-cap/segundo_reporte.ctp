@@ -28,7 +28,6 @@
 <script>
  function addSecondReport()
 {
-  alert($('#casilla_id').val());
     $.ajax({
         url: '/Xmf/addSecondReport',
         type: "POST",
