@@ -755,3 +755,32 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2018-04-17 22:23:22
+
+
+
+create or replace view `xmf_view_reporte_segundos_terceros`
+as
+	select
+			`rpt`.xmf_casillas_id
+			,`cas`.name
+			,sum(`rpt`.votantes_segundo) as 'votantes_segundo',sum(`rpt`.promovidos_segundo) as 'promovidos_segundo' 
+			,sum(`rpt`.votantes_tercero) as 'votantes_tercero',sum(`rpt`.promovidos_tercero) as 'promovidos_tercero'
+			
+	from 
+			xmf_casillas.xmf_reports_segundo_tercero as `rpt` 
+	inner join 
+			xmf_casillas.xmf_casillas as `cas` on `cas`.id = `rpt`.xmf_casillas_id 
+	where 
+			`rpt`.xmf_casillas_id is not null
+	group by 
+			`rpt`.xmf_casillas_id,`cas`.name
+			
+-- 
+-- select * from xmf_casillas.xmf_casillas
+-- select * from xmf_casillas.xmf_view_reporte_segundos_terceros
+-- 
+-- 
+-- update xmf_casillas.xmf_reports_segundo_tercero set xmf_casillas_id = 2 where xmf_casillas_id is null
+-- and votantes_segundo is not null 
+-- or
+-- votantes_tercero is not null
