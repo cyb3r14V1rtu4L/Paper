@@ -757,23 +757,57 @@ UNLOCK TABLES;
 -- Dump completed on 2018-04-17 22:23:22
 
 
+use xmf_casillas
+
 
 create or replace view `xmf_view_reporte_segundos_terceros`
 as
+with `report` as (
 	select
-			`rpt`.xmf_casillas_id
+			 `rpt`.xmf_casillas_id
 			,`cas`.name
-			,sum(`rpt`.votantes_segundo) as 'votantes_segundo',sum(`rpt`.promovidos_segundo) as 'promovidos_segundo' 
-			,sum(`rpt`.votantes_tercero) as 'votantes_tercero',sum(`rpt`.promovidos_tercero) as 'promovidos_tercero'
-			
+			,`rpt`.votantes_segundo
+			,`rpt`.promovidos_segundo
+			,`rpt`.votantes_tercero
+			,`rpt`.promovidos_tercero
+			,case 
+				when 
+					cast(`rpt`.created as time) between cast('00:00:00' as time) and cast('12:00:00' as time)
+				then
+					1
+				else 
+					0
+			end as 'is_twelve'
+			,case 
+				when 
+					cast(`rpt`.created as time) between cast('00:00:00' as time) and cast('23:59:59' as time)
+				then
+					1
+				else 
+					0
+			end as 'is_eighteen'
 	from 
 			xmf_casillas.xmf_reports_segundo_tercero as `rpt` 
 	inner join 
 			xmf_casillas.xmf_casillas as `cas` on `cas`.id = `rpt`.xmf_casillas_id 
 	where 
 			`rpt`.xmf_casillas_id is not null
-	group by 
-			`rpt`.xmf_casillas_id,`cas`.name
+		and 
+			`rpt`.votantes_segundo is not null 
+		or
+			`rpt`.votantes_tercero is not null
+)
+select
+	 `xmf_casillas_id`
+	,`name`
+	,`votantes_segundo`
+	,`promovidos_segundo`
+	,`votantes_tercero`
+	,`promovidos_tercero`
+	,`is_twelve`
+	,`is_eighteen`
+from 
+	`report`
 			
 -- 
 -- select * from xmf_casillas.xmf_casillas
