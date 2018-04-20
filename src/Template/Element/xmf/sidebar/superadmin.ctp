@@ -31,7 +31,7 @@
         </a>
     </li>
     <li>
-        <a href="<?php echo $this->Url->build('/pages/reports/CuartoReporte'); ?>">
+        <a href="<?php echo $this->Url->build('XmfReportsSegundoTercero/CuartoReporte');?>">
             <i class="ti-bar-chart"></i>
             <p>CUARTO REPORTE</p>
         </a>
