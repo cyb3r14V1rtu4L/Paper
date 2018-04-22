@@ -1,12 +1,11 @@
-<?= $this->element('Paper.xmf/resultados_finales_tab'); ?> 
-    
+<?= $this->element('Paper.xmf/resultados_finales_tab'); ?>
+
     <div class="container-fluid">
 
-        <?= $this->element('Paper.xmf/graficas/acumulado_res_finales_coas_concentrado'); ?> 
+        <?= $this->element('Paper.xmf/graficas/acumulado_res_finales_coas_concentrado'); ?>
         <hr/>
-        <?= $this->element('Paper.xmf/graficas/acumulado_res_finales_coas'); ?> 
+        <?= $this->element('Paper.xmf/graficas/acumulado_res_finales_coas'); ?>
         <hr/>
-        <?= $this->element('Paper.xmf/reportes/incidencias_monitor'); ?>
 
         <div class="row">
             <div class="col-lg-6 col-sm-6">
