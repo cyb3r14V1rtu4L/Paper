@@ -8,10 +8,10 @@
             <div class="nav-tabs-navigation">
                 <div class="nav-tabs-wrapper">
                     <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-                        <li class="active"><a href="#presencias" data-toggle="tab"  >PRESENCIAS (<?=$count_presentes;?>)</a></li>
-                        <li><a href="#ausencias" data-toggle="tab" >AUSENCIAS (<?=$count_ausentes;?>)</a></li>
-                        <li><a href="#abiertas" data-toggle="tab"  >ABIERTAS (<?=$count_abiertas;?>)</a></li>
-                        <li><a href="#cerradas" data-toggle="tab"  >CERRADAS (<?=$count_cerradas;?>)</a></li>
+                        <li class="active"><a href="#presencias" data-toggle="tab"  >REPORTE II</a></li>
+                        <li><a href="#ausencias" data-toggle="tab" >REPORTE III</a></li>
+                        <li><a href="#abiertas" data-toggle="tab"  >REPORTE IV</a></li>
+                        <li><a href="#cerradas" data-toggle="tab"  >RESULTADOS FINALES</a></li>
                         <li><a href="#incidencias" data-toggle="tab" style="color:red" >INCIDENCIAS (5)</a></li>
                     </ul>
                 </div>
@@ -19,10 +19,13 @@
             <div id="my-tab-content" class="tab-content text-center">
                 <div class="tab-pane active" id="presencias">
                     <p>
-                        <h4>CASILLAS PRESENTES</h4>
+                        <h4>DATOS CASILLAS REPORTE II</h4>
                         <hr/>
                         <?php
-                        foreach($casillas_presentes as $cp){
+                        $votantes = 0;
+                        $promovidos = 0;
+                        #pr($casillas_segundo_reporte);
+                        foreach($casillas_segundo_reporte as $cp){
                         ?>
                             <div class="col-lg-2 col-sm-12">
                                 <div class="card ">
@@ -41,12 +44,16 @@
                                                         <span class="ti-mobile"></span>
                                                     </a>
                                                     &nbsp;
+                                                    <a href="<?php echo $this->Url->build('/XmfCasillas/CapturaResultados/'.$cp['id'].'/2'); ?>">
+                                                        <span class="ti-package"></span>
+                                                    </a>
+                                                    &nbsp;
                                                     <?php
-                                                    #$votantes = $cp['votos']['votantes_segundo']+$cp['votos']['votantes_tercero'];
-                                                    #$promovidos =$cp['votos']['promovidos_segundo']+$cp['votos']['promovidos_tercero'];
+                                                    $votantes += $cp['votos']['votantes_segundo'];
+                                                    $promovidos +=$cp['votos']['promovidos_segundo'];
 
                                                     ?>
-                                                    <!--<a href="#" rel="tooltip" style="white-space: nowrap;" title="<?=$votantes?>/<?=$promovidos?>"><span class="pie"><?=$votantes?>/<?=$promovidos?></span></a> -->
+                                                    <a href="#" rel="tooltip" style="white-space: nowrap;" title="<?='Votos: '.$votantes?> Prom: <?=$promovidos?>"><span class="pie"><?=$votantes?>/<?=$promovidos?></span></a>
 
                                                 </div>
                                         </div>
@@ -60,10 +67,13 @@
                 </div>
                 <div class="tab-pane" id="ausencias">
                     <p>
-                        <h4>CASILLAS AUSENTES</h4>
+                        <h4>DATOS CASILLAS REPORTE III</h4>
                             <hr/>
                             <?php
-                            foreach($casillas_ausentes as $cp){
+                            $votantes = 0;
+                            $promovidos = 0;
+                            #pr($casillas_segundo_reporte);
+                            foreach($casillas_tercer_reporte as $cp){
                             ?>
                                 <div class="col-lg-2 col-sm-12">
                                     <div class="card ">
@@ -82,12 +92,16 @@
                                                             <span class="ti-mobile"></span>
                                                         </a>
                                                         &nbsp;
+                                                        <a href="<?php echo $this->Url->build('/XmfCasillas/CapturaResultados/'.$cp['id'].'/3'); ?>">
+                                                            <span class="ti-package"></span>
+                                                        </a>
+                                                        &nbsp;
                                                         <?php
-                                                        #$votantes = $cp['votos']['votantes_segundo']+$cp['votos']['votantes_tercero'];
-                                                        #$promovidos =$cp['votos']['promovidos_segundo']+$cp['votos']['promovidos_tercero'];
+                                                        $votantes += $cp['votos']['votantes_tercero'];
+                                                        $promovidos +=$cp['votos']['promovidos_tercero'];
 
                                                         ?>
-                                                        <!--<a href="#" rel="tooltip" style="white-space: nowrap;" title="<?=$votantes?>/<?=$promovidos?>"><span class="pie"><?=$votantes?>/<?=$promovidos?></span></a> -->
+                                                        <a href="#" rel="tooltip" style="white-space: nowrap;" title="<?='Votos: '.$votantes?> Prom: <?=$promovidos?>"><span class="pie"><?=$votantes?>/<?=$promovidos?></span></a>
 
                                                     </div>
                                             </div>
@@ -101,10 +115,13 @@
                 </div>
                 <div class="tab-pane" id="abiertas">
                     <p>
-                        <h4>CASILLAS ABIERTAS</h4>
+                        <h4>DATOS CASILLAS REPORTE IV</h4>
                             <hr/>
                             <?php
-                            foreach($casillas_abiertas as $cp){
+                            $votantes = 0;
+                            $promovidos = 0;
+                            #pr($casillas_cuarto_reporte);
+                            foreach($casillas_cuarto_reporte as $cp){
                             ?>
                                 <div class="col-lg-2 col-sm-12">
                                     <div class="card ">
@@ -112,7 +129,7 @@
                                             <div class="row">
                                                 <div class="col-xs-5">
                                                     <div class="numbers">
-                                                        <div class="text-center"><?=$cp['name']?></div>
+                                                        <div class="text-center"><?=$cp['CasillaDatos']['name']?></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -123,12 +140,16 @@
                                                             <span class="ti-mobile"></span>
                                                         </a>
                                                         &nbsp;
+                                                        <a href="<?php echo $this->Url->build('/XmfCasillas/CapturaResultados/'.$cp['xmf_casillas_id'].'/4'); ?>">
+                                                            <span class="ti-package"></span>
+                                                        </a>
+                                                        &nbsp;
                                                         <?php
-                                                        #$votantes = $cp['votos']['votantes_segundo']+$cp['votos']['votantes_tercero'];
-                                                        #$promovidos =$cp['votos']['promovidos_segundo']+$cp['votos']['promovidos_tercero'];
+                                                        $votantes = $cp['votantes'];
+                                                        $promovidos = $cp['promovidos'];
 
                                                         ?>
-                                                        <!--<a href="#" rel="tooltip" style="white-space: nowrap;" title="<?=$votantes?>/<?=$promovidos?>"><span class="pie"><?=$votantes?>/<?=$promovidos?></span></a> -->
+                                                        <a href="#" rel="tooltip" style="white-space: nowrap;" title="<?='Votos: '.$votantes?> Prom: <?=$promovidos?>"><span class="pie"><?=$votantes?>/<?=$promovidos?></span></a>
 
                                                     </div>
                                             </div>

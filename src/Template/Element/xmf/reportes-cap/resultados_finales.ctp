@@ -184,7 +184,7 @@
 <div class="col-lg-4">
         <div class="card">
             <div class="header">
-                <h4 class="title"><small class="text-info">COALICION PAN-PRD-MC</small></h4>
+                <h4 class="title"><small class="text-info">COALICIÓN PAN-PRD-MC</small></h4>
             </div>
             <div class="content">
                 <ul class="list-unstyled team-members">
@@ -260,7 +260,7 @@
     <div class="col-lg-4">
         <div class="card">
             <div class="header">
-                <h4 class="title"><small class="text-info">COALICION PRI-PVE-PANAL</small></h4>
+                <h4 class="title"><small class="text-info">COALICIÓN PRI-PVE-PANAL</small></h4>
             </div>
             <div class="content">
                 <ul class="list-unstyled team-members">
@@ -336,10 +336,10 @@
     <div class="col-lg-4">
         <div class="card">
             <div class="header">
-                <h4 class="title"><small class="text-info">COALICION PT-MORENTA-PES</small></h4>
+                <h4 class="title" id="coalicion_title"><small class="text-info">COALICIÓN MORENTA-PT-PES</small></h4>
             </div>
             <div class="content">
-                <ul class="list-unstyled team-members">
+                <ul class="list-unstyled team-members" id="pt-mor-pes">
                     <li>
                         <div class="row">
                             <div class="col-xs-4">
@@ -400,6 +400,25 @@
                                 <br>
                                 <span class="text-info"><small>
                                   <input class="input-resultados voto" id="xmf_partido_21" data-id="28" type="text"  size="8"/></small></span>
+                            </div>
+
+                        </div>
+                    </li>
+
+                </ul>
+                <ul class="list-unstyled team-members" id="pt-mor" style="display:none;">
+                    <li>
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div class="avatar">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT-MOR-SOL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                </div>
+                            </div>
+                            <div class="col-xs-7">
+                                MORENA - PT
+                                <br>
+                                <span class="text-info"><small>
+                                  <input class="input-resultados voto" id="xmf_partido_26" data-id="35"  type="text"  size="8"/></small></span>
                             </div>
 
                         </div>
@@ -522,6 +541,33 @@ function setTypoVote(obj)
 
     $(obj).addClass('active');
     $('#xmf_tipo_votaciones_id').val($(obj).attr('data-id'));
+
+    $('.voto').each(function(i, obj) {
+        $(obj).prop('disabled', false);
+    });
+
+    if($('#xmf_tipo_votaciones_id').val() == 4){
+      $('#pt-mor-pes').hide();
+      $('#pt-mor').show();
+      $('#coalicion_title').html('<small class="text-info">COALICIÓN MORENTA-PT</small>');
+      $('#xmf_partido_18').val('0');
+      $('#xmf_partido_18').attr('disabled',true);
+
+      $('#xmf_partido_19').val('0');
+      $('#xmf_partido_19').attr('disabled',true);
+
+      $('#xmf_partido_20').val('0');
+      $('#xmf_partido_20').attr('disabled',true);
+
+      $('#xmf_partido_21').val('0');
+      $('#xmf_partido_21').attr('disabled',true);
+
+    }else{
+      $('#pt-mor-pes').show();
+      $('#pt-mor').hide();
+      $('#coalicion_title').html('<small class="text-info">COALICIÓN MORENTA-PT-PES</small>');
+      $('#xmf_partido_26').val('0');
+    }
 }
 
 
@@ -628,7 +674,10 @@ function addLastReport()
            xmf_partido_id_24:$('#xmf_partido_24').attr('data-id'),
 
            xmf_partido_25:$('#xmf_partido_25').val(),
-           xmf_partido_id_25:$('#xmf_partido_25').attr('data-id')
+           xmf_partido_id_25:$('#xmf_partido_25').attr('data-id'),
+
+           xmf_partido_26:$('#xmf_partido_26').val(),
+           xmf_partido_id_26:$('#xmf_partido_26').attr('data-id')
        }
        ,
        success: function (json) {
@@ -658,4 +707,8 @@ function addLastReport()
       });
  }
 }
+
+$('.voto').each(function(i, obj) {
+    $(obj).prop('disabled', true);
+});
 </script>

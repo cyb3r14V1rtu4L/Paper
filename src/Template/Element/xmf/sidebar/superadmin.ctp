@@ -1,6 +1,9 @@
 <ul class="nav">
     <li class="active">
-        <a href="<?php echo $this->Url->build('/pages/reports/monitor'); ?>">
+      <a href="<?php echo
+
+      $this->Url->build('XmfCasillas/MonitorCasillas');
+      ?>">
             <i class="ti-package"></i>
             <p>MONITOR CASILLAS</p>
         </a>

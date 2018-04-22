@@ -122,6 +122,6 @@ $(document).ready(function() {
         }
     });
 
-    $(".voto").attr('maxlength','3');
+    $(".voto").attr('maxlength','4');
 });
 </script>

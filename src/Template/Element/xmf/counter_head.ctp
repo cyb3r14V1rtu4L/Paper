@@ -2,10 +2,12 @@
     <div class="row">
         <div class="col-lg-3 col-sm-12">
             <div class="card">
-                <a href="<?php echo $this->Url->build('/pages/reports/monitor'); ?>">
+                <a href="<?php echo
+                $this->Url->build('XmfCasillas/MonitorCasillas');
+                ?>">
                     <div class="content">
                         <div class="row">
-                            <div class="col-xs-5">
+                            <div class="col-xs-4">
                                 <div class="icon-big icon-info text-center">
                                     <i class="ti-package"></i>
                                 </div>
@@ -13,12 +15,12 @@
                             <div class="col-xs-7">
                                 <div class="numbers">
                                     <p>PRESENCIAS</p>
-                                    130
+                                    <?=$count_presentes;?>
                                 </div>
                             </div>
                         </div>
                         <div class="footer">
-                            
+
                         </div>
                     </div>
                 </a>
@@ -26,7 +28,9 @@
         </div>
         <div class="col-lg-3 col-sm-12">
             <div class="card">
-                <a href="<?php echo $this->Url->build('/pages/reports/monitorInstaladas'); ?>">
+                <a href="<?php echo
+                $this->Url->build('XmfCasillas/MonitorCasillas');
+                ?>">
                     <div class="content">
                         <div class="row">
                             <div class="col-xs-5">
@@ -36,13 +40,13 @@
                             </div>
                             <div class="col-xs-7">
                                 <div class="numbers">
-                                    <p>INSTALADAS</p>
-                                    1,350
+                                    <p>INSTALANDO</p>
+                                    <?=$count_instalando?>
                                 </div>
                             </div>
                         </div>
                         <div class="footer">
-                            
+
                         </div>
                     </div>
                 </a>
@@ -50,28 +54,56 @@
         </div>
         <div class="col-lg-3 col-sm-12">
             <div class="card">
-                <a href="<?php echo $this->Url->build('/pages/reports/monitorCerradas'); ?>">
+              <a href="<?php echo
+              $this->Url->build('XmfCasillas/MonitorCasillasAbiertas');
+              ?>">
                     <div class="content">
                         <div class="row">
                             <div class="col-xs-5">
-                                <div class="icon-big icon-warning text-center">
+                                <div class="icon-big icon-success text-center">
                                     <i class="ti-package"></i>
                                 </div>
                             </div>
                             <div class="col-xs-7">
                                 <div class="numbers">
-                                    <p>CERRADAS</p>
-                                    20
+                                    <p>ABIERTAS</p>
+                                    <?=$count_abiertas?>
                                 </div>
                             </div>
                         </div>
                         <div class="footer">
+
                         </div>
                     </div>
                 </a>
             </div>
         </div>
         <div class="col-lg-3 col-sm-12">
+            <div class="card">
+              <a href="<?php echo
+              $this->Url->build('XmfCasillas/MonitorCasillas');
+              ?>">
+                  <div class="content">
+                      <div class="row">
+                          <div class="col-xs-5">
+                              <div class="icon-big icon-warning text-center">
+                                  <i class="ti-package"></i>
+                              </div>
+                          </div>
+                          <div class="col-xs-7">
+                              <div class="numbers">
+                                  <p>CERRADAS</p>
+                                  <?=$count_cerradas;?>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="footer">
+                      </div>
+                  </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-12 pull-right">
             <div class="card">
                 <a href="<?php echo $this->Url->build('/pages/reports/monitorIncidencias'); ?>">
                     <div class="content">
@@ -84,7 +116,7 @@
                             <div class="col-xs-7">
                                 <div class="numbers">
                                     <p>INCIDENCIAS</p>
-                                    5
+                                    <?=$casillas_incidencias;?>
                                 </div>
                             </div>
                         </div>
