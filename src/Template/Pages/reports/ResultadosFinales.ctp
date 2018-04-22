@@ -6,6 +6,8 @@
         <hr/>
         <?= $this->element('Paper.xmf/graficas/acumulado_res_finales_coas'); ?>
         <hr/>
+        <?= $this->element('Paper.xmf/graficas/acumulado_res_finales'); ?>
+        <hr/>
 
         <div class="row">
             <div class="col-lg-6 col-sm-6">

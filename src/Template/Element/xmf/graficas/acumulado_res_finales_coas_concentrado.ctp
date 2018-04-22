@@ -84,6 +84,24 @@
 
                         </div>
                     </li>
+
+                    <li>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <div class="avatar">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT-MOR.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <span class="text-danger"><h5><b>5,287</b></h5></span>
+                                30%
+                            </div>
+                            <div class="col-xs-5">
+                                <span class="text-info"><small>MORENA-PT</small></span>
+                            </div>
+
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -125,6 +143,19 @@
 
                         </div>
                     </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card">
+            <div class="header">
+                <h4 class="title"></h4>
+            </div>
+            <div class="content">
+                <ul class="list-unstyled team-members">
+
                     <li>
                         <div class="row">
                             <div class="col-xs-3">

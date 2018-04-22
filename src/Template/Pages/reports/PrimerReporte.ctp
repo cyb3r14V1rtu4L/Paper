@@ -1,13 +1,9 @@
 <div class="container-fluid">
 
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <?= $this->element('Paper.xmf/counter_head'); ?> 
-        </div>
-    </div>
+  
     <div class="row">
         <div class="col-md-8 col-sm-offset-2 text-center">
-            <?= $this->element('Paper.xmf/graficas/abierta_cerrada_pastel'); ?> 
+            <?= $this->element('Paper.xmf/graficas/abierta_cerrada_pastel'); ?>
         </div>
     </div>
     <div class="row">
@@ -16,7 +12,7 @@
                 <div class="header">
                     <h4 class="title">PRIMER REPORTE - INSTALACIÓN DE CASILLAS</h4>
                     <p class="category">
-                    
+
                     </p>
                 </div>
                 <div class="content table-responsive table-full-width">
@@ -45,15 +41,15 @@
                                         ?>
                                         <li>
                                             NOMBRE FUNCIONARIO
-                                        </li>    
+                                        </li>
                                         <?php
                                         }
                                         ?>
 
                                 </td>
                             </tr>
-                        
-                            
+
+
                             <?php
                             }
                             ?>
@@ -78,6 +74,5 @@
             </div>
         </div>
     </div>
-   
+
 </div>   <!-- container-fluid -->
-        
