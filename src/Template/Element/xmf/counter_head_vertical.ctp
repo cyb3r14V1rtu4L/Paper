@@ -41,7 +41,7 @@
                             </div>
                         </div>
                         <div class="footer">
-                            
+
                         </div>
                     </div>
                 </a>
@@ -65,7 +65,7 @@
                             </div>
                         </div>
                         <div class="footer">
-                            
+
                         </div>
                     </div>
                 </a>
@@ -94,6 +94,6 @@
                 </a>
             </div>
         </div>
-        
+
     </div>
 </div>

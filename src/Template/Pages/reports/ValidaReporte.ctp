@@ -18,7 +18,7 @@
     <div class="row">
         <div class="col-sm-3">
             <div class="card">
-                
+
                 <div class="content">
                     <h5>CB206</h5>
                     708 - URBANA - BÁSICA - IX
@@ -28,21 +28,21 @@
                     <h5><small>NOMBRE ABOGADO</small></h5>
                     <a href="tel:9999999999">(999)999-9999</a>
                     <hr/>
-                    
+
                 </div>
 
             </div>
         </div>
         <div class="col-sm-9">
-            <?= $this->element('Paper.xmf/reportes/agregar_incidencias'); ?> 
+            <?= $this->element('Paper.xmf/reportes/agregar_incidencias'); ?>
         </div>
     </div>
     <div class=row>
         <div class="col-md-12 text-center">
-            
+
         </div>
     </div>
-    
+
     <div class="row">
         <div class="col-sm-12">
             <!--      Wizard container        -->
@@ -104,7 +104,7 @@
                         <div class="tab-pane" id="primer_reporte">
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <h5 class="info-text">INTALACIÓN DE LA CASILLA</h5>
+                                    <h5 class="info-text">INSTALACIÓN DE LA CASILLA</h5>
                                 </div>
                                 <div class="col-sm-6 ">
                                     <div class="form-group">
@@ -412,7 +412,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                
+
                                             </ul>
                                         </div>
                                     </div>
@@ -476,7 +476,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                                        
+
                             </div>
                         <hr/>
                     </div>
@@ -593,7 +593,7 @@
                                                         <br>
                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </li>
                                             <li>
@@ -608,7 +608,7 @@
                                                         <br>
                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </li>
                                             <li>
@@ -623,7 +623,7 @@
                                                         <br>
                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </li>
 
@@ -650,7 +650,7 @@
                                                         <br>
                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </li>
                                             <li>
@@ -665,7 +665,7 @@
                                                         <br>
                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </li>
                                             <li>
@@ -680,7 +680,7 @@
                                                         <br>
                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </li>
 
@@ -707,7 +707,7 @@
                                                         <br>
                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </li>
                                             <li>
@@ -722,7 +722,7 @@
                                                         <br>
                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </li>
                                             <li>
@@ -737,10 +737,10 @@
                                                         <br>
                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </li>
-                                            
+
                                         </ul>
                                     </div>
                                 </div>
@@ -766,7 +766,7 @@
                                                         <br>
                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </li>
                                             <li>
@@ -781,7 +781,7 @@
                                                         <br>
                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </li>
                                             <li>
@@ -796,10 +796,10 @@
                                                         <br>
                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </li>
-                                            
+
                                         </ul>
                                     </div>
                                 </div>
@@ -823,7 +823,7 @@
                                                         <br>
                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </li>
                                             <li>
@@ -838,7 +838,7 @@
                                                         <br>
                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </li>
                                             <li>
@@ -853,7 +853,7 @@
                                                         <br>
                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </li>
 
@@ -880,7 +880,7 @@
                                                         <br>
                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </li>
                                             <li>
@@ -895,7 +895,7 @@
                                                         <br>
                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </li>
                                             <li>
@@ -910,28 +910,28 @@
                                                         <br>
                                                         <span class="text-success"><small><input type="text" size="8"/></small></span>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </li>
-                                            
+
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                         <div class="row">
-                            
+
                             <div class="col-lg-8">
-                            <?= $this->element('Paper.xmf/reportes/agregar_incidencias'); ?> 
+                            <?= $this->element('Paper.xmf/reportes/agregar_incidencias'); ?>
                             </div>
-                            
+
                         </div>
                     </div>
                     <div class="wizard-footer">
                         <hr/>
                         <div class="pull-right">
-                            
+
                             <input type='button' class='btn btn-next btn-fill btn-success btn-wd' name='next' value='Enviar' />
                             <input type='button' class='btn btn-finish btn-fill btn-success btn-wd' name='finish' value='Enviar' />
 
@@ -941,7 +941,7 @@
                             <input type='button' class='btn btn-previous btn-default btn-wd' name='previous' value='Anterior' />
                         </div>
                         <div class="clearfix"></div>
-                </div>  
+                </div>
             </div> <!-- wizard container -->
         </div>
     </div>

@@ -16,7 +16,7 @@
             <div id="my-tab-content" class="tab-content text-center">
                 <div class="tab-pane active" id="home">
                     <p>
-                        <h4>CASILLAS PRESSENTES</h4>   
+                        <h4>CASILLAS PRESENTES</h4>   
                         <hr/>
                         <?php
                         for($x=0;$x<=50;$x++){

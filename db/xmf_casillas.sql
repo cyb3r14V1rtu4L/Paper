@@ -760,7 +760,7 @@ UNLOCK TABLES;
 use xmf_casillas
 
 
-create or replace view `xmf_view_reporte_segundos_terceros`
+create view `xmf_view_reporte_segundos_terceros`
 as
 with `report` as (
 	select
@@ -770,30 +770,30 @@ with `report` as (
 			,`rpt`.promovidos_segundo
 			,`rpt`.votantes_tercero
 			,`rpt`.promovidos_tercero
-			,case 
-				when 
+			,case
+				when
 					cast(`rpt`.created as time) between cast('00:00:00' as time) and cast('12:00:00' as time)
 				then
 					1
-				else 
+				else
 					0
 			end as 'is_twelve'
-			,case 
-				when 
+			,case
+				when
 					cast(`rpt`.created as time) between cast('00:00:00' as time) and cast('23:59:59' as time)
 				then
 					1
-				else 
+				else
 					0
 			end as 'is_eighteen'
-	from 
-			xmf_casillas.xmf_reports_segundo_tercero as `rpt` 
-	inner join 
-			xmf_casillas.xmf_casillas as `cas` on `cas`.id = `rpt`.xmf_casillas_id 
-	where 
+	from
+			xmf_casillas.xmf_reports_segundo_tercero as `rpt`
+	inner join
+			xmf_casillas.xmf_casillas as `cas` on `cas`.id = `rpt`.xmf_casillas_id
+	where
 			`rpt`.xmf_casillas_id is not null
-		and 
-			`rpt`.votantes_segundo is not null 
+		and
+			`rpt`.votantes_segundo is not null
 		or
 			`rpt`.votantes_tercero is not null
 )
@@ -806,15 +806,15 @@ select
 	,`promovidos_tercero`
 	,`is_twelve`
 	,`is_eighteen`
-from 
+from
 	`report`
-			
--- 
+
+--
 -- select * from xmf_casillas.xmf_casillas
 -- select * from xmf_casillas.xmf_view_reporte_segundos_terceros
--- 
--- 
+--
+--
 -- update xmf_casillas.xmf_reports_segundo_tercero set xmf_casillas_id = 2 where xmf_casillas_id is null
--- and votantes_segundo is not null 
+-- and votantes_segundo is not null
 -- or
 -- votantes_tercero is not null

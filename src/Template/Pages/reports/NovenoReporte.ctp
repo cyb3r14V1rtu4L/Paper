@@ -111,7 +111,7 @@
                                     <div class="tab-pane" id="primer_reporte">
                                         <div class="row">
                                             <div class="col-sm-12">
-                                                <h5 class="info-text">INTALACIÓN DE LA CASILLA</h5>
+                                                <h5 class="info-text">INSTALACIÓN DE LA CASILLA</h5>
                                             </div>
                                             <div class="col-sm-6 ">
                                                 <div class="form-group">

@@ -27,7 +27,7 @@
     <li>
         <a href="<?php echo $this->Url->build('XmfReportsSegundoTercero/TercerReporte');?>">
             <i class="ti-bar-chart"></i>
-            <p>TECER REPORTE</p>
+            <p>TERCER REPORTE</p>
         </a>
     </li>
     <li>

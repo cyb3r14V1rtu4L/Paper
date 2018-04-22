@@ -3,7 +3,7 @@
 
 <div class="row">
     <div class="col-sm-12">
-        <h5 class="info-text">INTALACIÓN DE LA CASILLA</h5>
+        <h5 class="info-text">INSTALACIÓN DE LA CASILLA</h5>
     </div>
     <!-- <div class="col-sm-6 ">
         <div class="form-group">
@@ -417,7 +417,7 @@
 
     <div class="row">
     <button type="button" id="btn_reporte_1" class="btn btn-fill btn-success" onclick="addFirstReport();">Enviar Reporte</button>
-    
+
     </div>
 
 </div>
