@@ -10,7 +10,7 @@
     </li>
 
     <li>
-        <a href="<?php echo $this->Url->build('/pages/reports/PrimerReporte'); ?>">
+        <a href="<?php echo $this->Url->build('/XmfReportsSegundoTercero/PrimerReporte'); ?>">
             <i class="ti-bar-chart"></i>
             <p>PRIMER REPORTE</p>
         </a>
@@ -20,7 +20,7 @@
         <!-- <a href="index2.html"> -->
         <a href="<?php echo // $this->Url->build('/pages/reports/SegundoReporte');
 
-        $this->Url->build('XmfReportsSegundoTercero/SegundoReporte');
+        $this->Url->build('/XmfReportsSegundoTercero/SegundoReporte');
         ?>">
             <i class="ti-bar-chart"></i>
             <p>SEGUNDO REPORTE</p>
@@ -28,13 +28,13 @@
     </li>
 
     <li>
-        <a href="<?php echo $this->Url->build('XmfReportsSegundoTercero/TercerReporte');?>">
+        <a href="<?php echo $this->Url->build('/XmfReportsSegundoTercero/TercerReporte');?>">
             <i class="ti-bar-chart"></i>
             <p>TERCER REPORTE</p>
         </a>
     </li>
     <li>
-        <a href="<?php echo $this->Url->build('XmfReportsSegundoTercero/CuartoReporte');?>">
+        <a href="<?php echo $this->Url->build('/XmfReportsSegundoTercero/CuartoReporte');?>">
             <i class="ti-bar-chart"></i>
             <p>CUARTO REPORTE</p>
         </a>
