@@ -4,14 +4,18 @@
     <div class="col-sm-6 text-center">
             <div class="form-group">
                 <label>VOTANTES</label>
-                <input id="votantes_tercero" name="votantes_tercer" class="form-control valid"  aria-invalid="false" type="text">
-                <input type="hidden" name="casilla_id" id="casilla_id" class="form-control" value="<?=$_SESSION['Casilla']['id'];?>">
+                <input id="votantes_tercero" name="votantes_tercer"
+                  value="<?=$casillas_tercero_reporte['votantes_tercero']?>"
+                class="form-control valid"  aria-invalid="false" type="text">
+                <input type="hidden" name="casilla_id" id="casilla_id" class="form-control" value="<?= (isset($id)) ? $id : $_SESSION['Casilla']['id'];?>">
             </div>
         </div>
         <div class="col-sm-6 text-center ">
             <div class="form-group">
                 <label>PROMOVIDOS</label>
-                <input id="promovidos_tercero" name="promovidos_tercer" class="form-control valid"  aria-invalid="false" type="text">
+                <input id="promovidos_tercero" name="promovidos_tercero"
+                  value="<?=$casillas_tercero_reporte['promovidos_tercero'];?>"
+                 class="form-control valid"  aria-invalid="false" type="text">
             </div>
         </div>
     </div>

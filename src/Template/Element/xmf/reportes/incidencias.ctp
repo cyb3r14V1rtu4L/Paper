@@ -1,33 +1,36 @@
 <div class="card">
     <div class="header">
         <h4 class="title">REPORTE GENRAL DE INCIDENCIAS</h4>
-        <p class="category">Relación general de Incidencias en las casillas</p>
+        <p class="category">Relación general de Incidencias de casillas</p>
     </div>
     <div class="content table-responsive table-full-width">
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th><i class="ti-package"></i> CASILLA ID</th>
-                    <th><i class="ti-time"></i> HORA INCIDENCIA</th>
-                    <th><i class="ti-time"></i> TIPO INCIDENCIA</th>
-                    <th><i class="ti-package"></i> ESTATUS</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>CB206</td>
-                    <td>7:03</td>
-                    <td>Faltó Material Electoral</td>
-                    <td>ENTREGADO</td>
+                    <th class="text-center"><i class="ti-package"></i>  CASILLA</th>
+                    <th class="text-center"><i class="ti-pulse"></i>  TOTAL INCIDENCIAS</th>
                 </tr>
 
+            </thead>
+            <tbody>
+
+              <?php
+              $total_incidencias = 0;
+              foreach($CasillasIncidencias as $c_i)
+              {
+              ?>
                 <tr>
-                    <td>CB206</td>
-                    <td>7:03</td>
-                    <td>Faltó Material Electoral</td>
-                    <td>NO ENTREGADO</td>
-                    
+                    <td><?=$c_i['CasillaDatos']['name'];?></td>
+                    <td><?=$c_i['xmf_total_incidencias'];?></td>
                 </tr>
+              <?php
+                $total_incidencias += $c_i['xmf_total_incidencias'] ;
+              }
+              ?>
+              <tr>
+                <td class="text-center" >TOTAL</div>
+                <td class="text-center btn btn-danger"><?=$total_incidencias;?> Incidencia(s)  <i class="ti-pulse"></i></div>
+              </tr>
             </tbody>
         </table>
     </div>

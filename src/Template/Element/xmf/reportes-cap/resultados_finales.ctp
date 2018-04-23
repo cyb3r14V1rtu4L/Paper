@@ -28,7 +28,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PAN.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PAN.png" alt="PAN" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-4">
@@ -42,7 +42,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PRI.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PRI.png" alt="PRI" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-4">
@@ -56,7 +56,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PRD.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PRD.png" alt="PRD" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-4">
@@ -82,7 +82,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PVE.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PVE.png" alt="PVE" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-4">
@@ -96,7 +96,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT.png" alt="PT" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-4">
@@ -110,7 +110,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/MOV.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/MOV.png" alt="MC" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-4">
@@ -136,7 +136,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/NA.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/NA.png" alt="PANAL" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-4">
@@ -150,7 +150,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/MOR.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/MOR.png" alt="MORENA" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-4">
@@ -164,7 +164,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/SOL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/SOL.png" alt="PES" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-4">
@@ -192,7 +192,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PAN-PRD-MC.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PAN-PRD-MC.png" alt="PAN-PRD-MC" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-7">
@@ -208,7 +208,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PAN-PRD.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PAN-PRD.png" alt="PAN-PRD" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-7">
@@ -224,7 +224,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PAN-MC.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PAN-MC.png" alt="PAN-MC" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-7">
@@ -240,7 +240,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PRD-MC.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PRD-MC.png" alt="PRD-MC" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-7">
@@ -268,7 +268,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PRI-PVE-PANAL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PRI-PVE-PANAL.png" alt="PRI-PVE-PANAL" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-7">
@@ -284,7 +284,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PRI-PVE.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PRI-PVE.png" alt="PRI-PVE" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-7">
@@ -300,7 +300,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PRI-PANAL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PRI-PANAL.png" alt="PRI-PANAL" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-7">
@@ -316,7 +316,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PVE-PANAL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PVE-PANAL.png" alt="PVE-PANAL" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-7">
@@ -344,7 +344,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT-MOR-SOL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT-MOR-SOL.png" alt="PT-MOR-PES" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-7">
@@ -360,7 +360,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT-MOR.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT-MOR.png" alt="MORENTA-PT" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-7">
@@ -376,7 +376,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT-SOL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT-SOL.png" alt="PT-PES" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-7">
@@ -392,7 +392,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/MOR-SOL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/MOR-SOL.png" alt="MORENA-PES" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-7">
@@ -439,7 +439,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Margarita Z." class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-7">
@@ -455,7 +455,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Bronco" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-7">

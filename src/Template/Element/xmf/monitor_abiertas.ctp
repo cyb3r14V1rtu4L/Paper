@@ -12,7 +12,7 @@
                         <li><a href="#ausencias" data-toggle="tab" >REPORTE III</a></li>
                         <li><a href="#abiertas" data-toggle="tab"  >REPORTE IV</a></li>
                         <li><a href="#cerradas" data-toggle="tab"  >RESULTADOS FINALES</a></li>
-                        <li><a href="#incidencias" data-toggle="tab" style="color:red" >INCIDENCIAS (5)</a></li>
+                        <li><a href="#incidencias" data-toggle="tab" style="color:red" >INCIDENCIAS (<?=$casillas_incidencias?>)</a></li>
                     </ul>
                 </div>
             </div>

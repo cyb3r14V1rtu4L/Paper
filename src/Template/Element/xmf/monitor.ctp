@@ -12,7 +12,7 @@
                         <li><a href="#ausencias" data-toggle="tab" >AUSENCIAS (<?=$count_ausentes;?>)</a></li>
                         <li><a href="#abiertas" data-toggle="tab"  >ABIERTAS (<?=$count_abiertas;?>)</a></li>
                         <li><a href="#cerradas" data-toggle="tab"  >CERRADAS (<?=$count_cerradas;?>)</a></li>
-                        <li><a href="#incidencias" data-toggle="tab" style="color:red" >INCIDENCIAS (5)</a></li>
+                        <li><a href="#incidencias" data-toggle="tab" style="color:red" >INCIDENCIAS (<?=$casillas_incidencias;?>)</a></li>
                     </ul>
                 </div>
             </div>

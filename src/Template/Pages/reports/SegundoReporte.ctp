@@ -1,6 +1,6 @@
 <div class="container-fluid">
-    <div class="alert alert-danger">Resultados Preliminares</div>
-    <div class="alert alert-warning">Resultados Validados</div>
+    <!-- <div class="alert alert-danger">Resultados Preliminares</div>
+    <div class="alert alert-warning">Resultados Validados</div> -->
     <div class="row">
         <div class="col-md-12">
         <?= $this->element('Paper.xmf/graficas/acumulado_barras'); ?>

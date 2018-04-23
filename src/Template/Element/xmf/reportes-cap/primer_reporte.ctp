@@ -1,11 +1,14 @@
 
 <?= $this->Form->create('FirstReport',array('id'=>'FirstReport'));?>
-
+<?php
+#pr($casillas_primer_reporte);
+?>
 <div class="row">
     <div class="col-sm-12">
         <h5 class="info-text">INSTALACIÓN DE LA CASILLA</h5>
     </div>
-    <!-- <div class="col-sm-6 ">
+    <!--
+    <div class="col-sm-6 ">
         <div class="form-group">
             <label>HORA INICIO DE INSTALACIÓN</label>
             <input type="text" name="hora_instalacion" id="hora_instalacion" class="form-control clockpicker" value="" >
@@ -17,12 +20,16 @@
             <input type="hidden" name="casilla_id" id="casilla_id" class="form-control" value="<?=$_SESSION['Casilla']['id'];?>">
             <h5><small>CASILLA SE INSTALÓ EN EL LUGAR INDICADO POR EL IEQROO?</small></h5>
         </div>
+            <?php
+              $checked_si = ($casillas_primer_reporte['lugar_indicado']==1) ? 'checked' : '';
+              $checked_no = ($casillas_primer_reporte['lugar_indicado']==0) ? 'checked' : '';
+            ?>
             <label class="radio">
-            <input type="radio" name="lugar_indicado" data-toggle="radio" id="lugar_indicado" value="1" >
+            <input type="radio" name="lugar_indicado" data-toggle="radio" id="lugar_indicado" value="1" <?=$checked_si;?> >
             <i></i>SI
             </label>
             <label class="radio">
-            <input type="radio" name="lugar_indicado" data-toggle="radio" id="lugar_indicado" value="0">
+            <input type="radio" name="lugar_indicado" data-toggle="radio" id="lugar_indicado" value="0" <?=$checked_no;?>>
             <i></i>NO
             </label>
     </div>
@@ -31,12 +38,16 @@
         <div class="tim-title">
             <h5><small>SE TOMÓ GENTE DE LA FILA?</small></h5>
         </div>
+        <?php
+          $checked_si = ($casillas_primer_reporte['lugar_indicado']==1) ? 'checked' : '';
+          $checked_no = ($casillas_primer_reporte['lugar_indicado']==0) ? 'checked' : '';
+        ?>
           <label class="radio">
-          <input type="radio" name="gente_fila" data-toggle="radio" id="gente_fila" value="1" >
+          <input type="radio" name="gente_fila" data-toggle="radio" id="gente_fila" value="1" <?=$checked_si;?> >
           <i></i>SI
           </label>
           <label class="radio">
-          <input type="radio" name="gente_fila" data-toggle="radio" id="gente_fila" value="0">
+          <input type="radio" name="gente_fila" data-toggle="radio" id="gente_fila" value="0" <?=$checked_no;?>>
           <i></i>NO
           </label>
     </div>
@@ -71,7 +82,7 @@
                                 </div>
                                 <div class="col-xs-2 text-right">
                                     <label class="checkbox" for="checkbox1">
-                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input id="funcionario_1"  name="funcionario_1" data-toggle="checkbox" type="checkbox">
+                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input id="funcionario_1"  name="funcionario_1" data-toggle="checkbox" type="checkbox" >
                                     </label>
                                 </div>
                             </div>

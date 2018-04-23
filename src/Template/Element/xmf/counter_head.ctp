@@ -34,7 +34,7 @@
                     <div class="content">
                         <div class="row">
                             <div class="col-xs-5">
-                                <div class="icon-big icon-success text-center">
+                                <div class="icon-big icon-warning text-center">
                                     <i class="ti-package"></i>
                                 </div>
                             </div>
@@ -60,7 +60,7 @@
                     <div class="content">
                         <div class="row">
                             <div class="col-xs-5">
-                                <div class="icon-big icon-success text-center">
+                                <div class="icon-big icon-red text-center">
                                     <i class="ti-package"></i>
                                 </div>
                             </div>
@@ -80,32 +80,30 @@
         </div>
         <div class="col-lg-3 col-sm-12">
             <div class="card">
-              <a href="<?php echo
-              $this->Url->build('XmfCasillas/MonitorCasillas');
-              ?>">
-                  <div class="content">
-                      <div class="row">
-                          <div class="col-xs-5">
-                              <div class="icon-big icon-warning text-center">
-                                  <i class="ti-package"></i>
-                              </div>
-                          </div>
-                          <div class="col-xs-7">
-                              <div class="numbers">
-                                  <p>CERRADAS</p>
-                                  <?=$count_cerradas;?>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="footer">
-                      </div>
-                  </div>
+                <a href="<?php echo $this->Url->build('/xmfCasillas/monitorCerradas'); ?>">
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-xs-5">
+                                <div class="icon-big icon-success text-center">
+                                    <i class="ti-package"></i>
+                                </div>
+                            </div>
+                            <div class="col-xs-7">
+                                <div class="numbers">
+                                    <p>CERRADAS</p>
+                                    <?=$count_cerradas;?>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer">
+                        </div>
+                    </div>
                 </a>
             </div>
         </div>
         <div class="col-lg-3 col-sm-12 pull-right">
             <div class="card">
-                <a href="<?php echo $this->Url->build('/pages/reports/monitorIncidencias'); ?>">
+                <a href="<?php echo $this->Url->build('/xmfCasillas/monitorIncidencias'); ?>">
                     <div class="content">
                         <div class="row">
                             <div class="col-xs-5">
