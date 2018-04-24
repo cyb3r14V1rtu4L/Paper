@@ -5,7 +5,7 @@
             <div class="form-group">
                 <label>VOTANTES</label>
                 <input id="votantes_tercero" name="votantes_tercer"
-                  value="<?=$casillas_tercero_reporte['votantes_tercero']?>"
+                  value="<?=(isset($casillas_tercer_reporte['votantes_tercero'])) ? $casillas_segundo_reporte['votantes_tercero']: ''?>"
                 class="form-control valid"  aria-invalid="false" type="text">
                 <input type="hidden" name="casilla_id" id="casilla_id" class="form-control" value="<?= (isset($id)) ? $id : $_SESSION['Casilla']['id'];?>">
             </div>
@@ -14,7 +14,7 @@
             <div class="form-group">
                 <label>PROMOVIDOS</label>
                 <input id="promovidos_tercero" name="promovidos_tercero"
-                  value="<?=$casillas_tercero_reporte['promovidos_tercero'];?>"
+                  value="<?=(isset($casillas_tercer_reporte['promovidos_tercero'])) ? $casillas_segundo_reporte['promovidos_tercero']: ''?>"
                  class="form-control valid"  aria-invalid="false" type="text">
             </div>
         </div>

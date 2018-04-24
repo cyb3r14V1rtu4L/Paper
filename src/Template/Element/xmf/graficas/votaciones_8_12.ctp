@@ -1,7 +1,7 @@
 <div class="card">
         <div class="header">
             <h4 class="title">GR&Aacute;FICA VOTANTES Y PROMOVIDOS</h4>
-            <p class="category">VOTACIONES 8:00HRS A 12:OOHRS</p>
+            <p class="category">VOTACIONES 8:00HRS A 13:OOHRS</p>
         </div>
         <div class="content">
             <div id="chart8-12" class="ct-chart ct-perfect-fourth"></div>
@@ -43,14 +43,14 @@
             series: {
               dataLabels: {
                 enabled: true,
-                format: '{point.name}: {point.y}'
+                format: '{point.name}: {point.y:.1f}'
               }
             }
           },
 
           tooltip: {
             headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-            pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y}</b> of total<br/>'
+            pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}</b><br/>'
           },
 
           "series": [
@@ -59,12 +59,12 @@
               "colorByPoint": true,
               "data": [
                 {
-                  "name": "Votantes",
-                  "y": <?= (($votantes*100/$promovidos) + 100) ?>
+                  "name": "VOTANTES",
+                  "y": <?=$votantes_s;?>
                 },
                 {
-                  "name": "Promovidos",
-                  "y": <?= (($promovidos*100/$votantes) + 100) ?>
+                  "name": "PROMOVIDOS",
+                  "y": <?=$promovidos_s;?>
                 }
               ]
             }

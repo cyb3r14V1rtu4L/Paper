@@ -21,8 +21,13 @@
             <h5><small>CASILLA SE INSTALÓ EN EL LUGAR INDICADO POR EL IEQROO?</small></h5>
         </div>
             <?php
+            $checked_si='';
+            $checked_no='';
+            if(isset($casillas_primer_reporte))
+            {
               $checked_si = ($casillas_primer_reporte['lugar_indicado']==1) ? 'checked' : '';
               $checked_no = ($casillas_primer_reporte['lugar_indicado']==0) ? 'checked' : '';
+            }
             ?>
             <label class="radio">
             <input type="radio" name="lugar_indicado" data-toggle="radio" id="lugar_indicado" value="1" <?=$checked_si;?> >
@@ -39,8 +44,13 @@
             <h5><small>SE TOMÓ GENTE DE LA FILA?</small></h5>
         </div>
         <?php
-          $checked_si = ($casillas_primer_reporte['lugar_indicado']==1) ? 'checked' : '';
-          $checked_no = ($casillas_primer_reporte['lugar_indicado']==0) ? 'checked' : '';
+          $checked_si='';
+          $checked_no='';
+          if(isset($casillas_primer_reporte))
+          {
+            $checked_si = ($casillas_primer_reporte['lugar_indicado']==1) ? 'checked' : '';
+            $checked_no = ($casillas_primer_reporte['lugar_indicado']==0) ? 'checked' : '';
+          }
         ?>
           <label class="radio">
           <input type="radio" name="gente_fila" data-toggle="radio" id="gente_fila" value="1" <?=$checked_si;?> >

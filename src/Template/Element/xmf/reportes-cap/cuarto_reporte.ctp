@@ -5,7 +5,7 @@
         <div class="col-sm-6 ">
             <div class="form-group">
                 <label>HORA DEL CIERRE</label>
-                <input type="text" name="hr_cierre" id="hr_cierre" class="form-control clockpicker" value="<?=$casillas_cuarto_reporte[0]['hr_cierre']?>" >
+                <input type="text" name="hr_cierre" id="hr_cierre" class="form-control clockpicker" value="<?= (isset($casillas_cuarto_reporte[0]['hr_cierre']))? $casillas_cuarto_reporte[0]['hr_cierre']:'';?>" >
                 <input type="hidden" name="casilla_id" id="casilla_id" class="form-control" value="<?= (isset($id)) ? $id : $_SESSION['Casilla']['id'];?>">
 
             </div>
@@ -15,8 +15,13 @@
                 <h5><small>HABÍA GENTE EN LA COLA?</small></h5>
             </div>
               <?php
+              $checked_si = '';
+              $checked_no = '';
+              if(isset($casillas_cuarto_reporte))
+              {
                 $checked_si = ($casillas_cuarto_reporte[0]['habia_gente_fila']==1) ? 'checked' : '';
                 $checked_no = ($casillas_cuarto_reporte[0]['habia_gente_fila']==0) ? 'checked' : '';
+              }
               ?>
                 <label class="radio">
                 <span class="icons"><span class="first-icon fa fa-circle-o fa-base"></span><span class="second-icon fa fa-dot-circle-o fa-base"></span></span><input name="habia_gente_fila" data-toggle="radio" id="habia_gente_fila" value="1" type="radio"  <?=$checked_si;?>
@@ -34,7 +39,7 @@
         <div class="form-group">
             <label>VOTANTES</label>
             <input id="votantes" name="votantes"
-              value="<?=$casillas_cuarto_reporte[0]['votantes']?>"
+              value="<?=(isset($casillas_cuarto_reporte[0]['votantes'])) ? $casillas_cuarto_reporte[0]['votantes']: ''?>"
             class="form-control valid"  aria-invalid="false" type="text">
         </div>
     </div>
@@ -42,7 +47,7 @@
             <div class="form-group">
                 <label>PROMOVIDOS</label>
                 <input id="promovidos" name="promovidos"
-                value="<?=$casillas_cuarto_reporte[0]['promovidos'];?>"
+                value="<?=(isset($casillas_cuarto_reporte[0]['promovidos'])) ? $casillas_cuarto_reporte[0]['promovidos']: ''?>"
                 class="form-control valid"  aria-invalid="false" type="text">
             </div>
         </div>
