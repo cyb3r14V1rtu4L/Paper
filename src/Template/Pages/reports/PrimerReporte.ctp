@@ -1,6 +1,6 @@
 <div class="container-fluid">
 
-  
+
     <div class="row">
         <div class="col-md-8 col-sm-offset-2 text-center">
             <?= $this->element('Paper.xmf/graficas/abierta_cerrada_pastel'); ?>
@@ -10,7 +10,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="header">
-                    <h4 class="title">PRIMER REPORTE - INSTALACIÓN DE CASILLAS</h4>
+                    <h4 class="title">PRIMER REPORTE - INSTALACI&Oacute;N DE CASILLAS</h4>
                     <p class="category">
 
                     </p>
@@ -20,12 +20,35 @@
                         <thead>
                             <tr>
                                 <th><i class="ti-package"></i> CASILLA</th>
-                                <th><i class="ti-time"></i> INSTALACIÓN</th>
-                                <th><i class="ti-time"></i> INICIO VOTACIÓN</th>
+                                <th><i class="ti-time"></i> INSTALACI&Oacute;N</th>
+                                <th><i class="ti-time"></i> INICIO VOTACI&Oacute;N</th>
                                 <th><i class="ti-user"></i> FUNCIONARIOS ELECTORALES DEL INE</th>
                             </tr>
                         </thead>
                         <tbody>
+
+                        <?php foreach ($tabular as $tabata): ?>
+                          <tr>
+                            <td><?= h($tabata->name) ?></td>
+                            <td><?= h($tabata->instalacion ? $tabata->instalacion->format('h:i A') : '') ?></td>
+                            <td><?= h($tabata->inicio ? $tabata->inicio->format('h:i A'):'') ?></td>
+                            <td>
+                                <ul>
+                                    <?php
+                                    for($f=0;$f<=3;$f++)
+                                    {
+                                    ?>
+                                    <li>
+                                        NOMBRE FUNCIONARIO
+                                    </li>
+                                    <?php
+                                    }
+                                    ?>
+
+                            </td>
+                          </tr>
+                        <?php endforeach; ?>
+<!--
                             <?php
                             for($x=0;$x<=4;$x++){
                             ?>
@@ -52,7 +75,7 @@
 
                             <?php
                             }
-                            ?>
+                            ?> -->
 
                         </tbody>
                     </table>

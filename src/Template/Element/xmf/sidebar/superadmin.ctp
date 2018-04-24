@@ -23,9 +23,8 @@ switch ($method)
             <p>MONITOR CASILLAS</p>
         </a>
     </li>
-
     <li class="<?=$active_2;?>">
-        <a href="<?php echo $this->Url->build('/pages/reports/PrimerReporte'); ?>">
+        <a href="<?php echo $this->Url->build('/XmfReportsSegundoTercero/PrimerReporte'); ?>">
             <i class="ti-bar-chart"></i>
             <p>PRIMER REPORTE</p>
         </a>
@@ -35,7 +34,7 @@ switch ($method)
         <!-- <a href="index2.html"> -->
         <a href="<?php echo // $this->Url->build('/pages/reports/SegundoReporte');
 
-        $this->Url->build('XmfReportsSegundoTercero/SegundoReporte');
+        $this->Url->build('/XmfReportsSegundoTercero/SegundoReporte');
         ?>">
             <i class="ti-bar-chart"></i>
             <p>SEGUNDO REPORTE</p>
@@ -43,13 +42,12 @@ switch ($method)
     </li>
 
     <li class="<?=$active_4;?>">
-        <a href="<?php echo $this->Url->build('XmfReportsSegundoTercero/TercerReporte');?>">
+        <a href="<?php echo $this->Url->build('/XmfReportsSegundoTercero/TercerReporte');?>">
             <i class="ti-bar-chart"></i>
             <p>TERCER REPORTE</p>
         </a>
-    </li>
     <li class="<?=$active_5;?>">
-        <a href="<?php echo $this->Url->build('XmfReportsSegundoTercero/CuartoReporte');?>">
+        <a href="<?php echo $this->Url->build('/XmfReportsSegundoTercero/CuartoReporte');?>">
             <i class="ti-bar-chart"></i>
             <p>CUARTO REPORTE</p>
         </a>

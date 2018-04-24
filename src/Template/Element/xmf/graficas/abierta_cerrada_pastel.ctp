@@ -14,3 +14,56 @@
         </div>
     </div>
 </div>
+
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+    // 'chart8-12
+
+        // Create the chart
+        Highcharts.chart('chartPreferences', {
+          chart: {
+            type: 'pie'
+          },
+          title: {
+            text: 'Instalacion de Casillas'
+          },
+          credits:{enabled:false},
+          colors:['#F3BB45','#68B3C8','#3398d6','#b4c973','#6c99bb'],
+          subtitle: {
+            text: 'Monitoreo de casillas'
+          },
+          plotOptions: {
+            series: {
+              dataLabels: {
+                enabled: true,
+                format: '{point.name}: {point.y}'
+              }
+            }
+          },
+
+          tooltip: {
+            headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+            pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y}</b> de un total de <?= $total?><br/>'
+          },
+
+          "series": [
+            {
+              "name": "Casillas",
+              "colorByPoint": true,
+              "data": [
+                {
+                  "name": "Instaladas",
+                  "y": <?= $instalacion?>
+                },
+                {
+                  "name": "Cerradas",
+                  "y": <?= $cierre?>
+                }
+              ]
+            }
+          ]
+        });
+    });
+    </script>
