@@ -10,7 +10,7 @@ if(isset($_SESSION['Auth']['User']))
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><?= ($_SERVER['HTTP_HOST'] == 'portal:81' || $_SERVER['HTTP_HOST'] == 'pool') ? 'PortalGST' : 'Proceso Electoral Local' ?></a>
+                <a class="navbar-brand" href="#">Sistema Informático Electoral</a>
             </div>
             <div class="collapse navbar-collapse">
 
