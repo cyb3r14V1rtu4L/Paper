@@ -5,6 +5,7 @@
         <div class="col-md-8 col-sm-offset-2 text-center">
             <?= $this->element('Paper.xmf/graficas/abierta_cerrada_pastel'); ?>
         </div>
+
     </div>
     <div class="row">
         <div class="col-md-12">

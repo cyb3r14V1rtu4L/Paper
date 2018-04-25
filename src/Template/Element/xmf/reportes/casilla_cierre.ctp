@@ -1,7 +1,7 @@
 <div class="col-lg-6">
     <div class="card">
         <div class="header">
-            <h4 class="title">FLUJO DE VOTACIÓN</h4>
+            <h4 class="title">CIERRE DE CASILLA</h4>
         </div>
         <div class="content">
             <ul class="list-unstyled team-members">
@@ -9,13 +9,13 @@
                     <div class="row">
                         <div class="col-xs-3">
                             <div class="avatar">
-                                <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                <img src="<?php echo $this->request->webroot?>Paper/img/casilla.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                             </div>
                         </div>
                         <div class="col-xs-6">
-                            VOTANTES
+                            Hora de Cierre
                             <br>
-                            <span class="text-warning"><h3><?=$votantes_s;?></h3></span>
+                            <span class="text-success"><h3>18:50</h3></span>
                         </div>
 
                     </div>
@@ -24,13 +24,13 @@
                     <div class="row">
                         <div class="col-xs-3">
                             <div class="avatar">
-                                <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                <img src="<?php echo $this->request->webroot?>Paper/img/casilla.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                             </div>
                         </div>
                         <div class="col-xs-6">
-                            PROMOVIDOS
+                            Había Gente en la Fila
                             <br>
-                            <span class="text-info"><h3><?=$promovidos_s;?></h3></span>
+                            <span class="text-success"><h3>Casilla sin Fila</h3></span>
                         </div>
 
                     </div>

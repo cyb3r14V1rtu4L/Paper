@@ -166,6 +166,7 @@
                         <h4>CASILLAS CERRADAS</h4>
                             <hr/>
                             <?php
+
                             foreach($casillas_cerradas as $cp){
                             ?>
                                 <div class="col-lg-2 col-sm-12">
@@ -183,6 +184,10 @@
                                                     <div class="text-center">
                                                         <a href="tel:9999999999">
                                                             <span class="ti-mobile"></span>
+                                                        </a>
+                                                        &nbsp;
+                                                        <a href="<?php echo $this->Url->build('/XmfCasillas/CapturaResultados/'.$cp['id'].'/5'); ?>">
+                                                            <span class="ti-package"></span>
                                                         </a>
                                                         &nbsp;
                                                         <?php
