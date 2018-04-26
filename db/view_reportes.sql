@@ -207,8 +207,8 @@ group by
 		
 -- 3rd graphics
 select 
-		 nombre
-		,formula
+-- 		 nombre
+		formula
 -- 		,tipo
 		,sum(votes) as 'votes'
 from 
@@ -224,59 +224,11 @@ where
 	and 
 		is_funcionario = 1
 group by 
-		nombre,formula,tipo
+		formula
 		
-		
-		
-	
-		
-		
-		
-		
-select * from xmf_casillas.xmf_reaper	
-
-		
-select * from xmf_casillas.xmf_partidos 
-where 
-		formula is not null 
-	and 
-		formula not in ('') 
-	and 
-		nombre = 'PAN-PRD-MC'
-	and 
-		is_coalicion = 1
-
--- Reference Querys		
-		
+-- ---------------
 		
 
-select * from xmf_casillas.xmf_votes
-
-insert into xmf_casillas.xmf_votes 
-	values	
-			(null,3,1,27,312,now(),now()),
-			(null,3,1,30,311,now(),now()),
-			(null,3,1,31,415,now(),now()),
-			(null,3,1,5,3315,now(),now()),
-			(null,3,1,67,331,now(),now()),
-			(null,3,1,9,115,now(),now()),
-			(null,3,1,14,35,now(),now()),
-			(null,3,1,2,15,now(),now()),
-			(null,3,1,12,31,now(),now());
-
--- values(null,3,1,10,315,now(),now())
-
-
-select * from xmf_casillas.xmf_tipo_votaciones
-
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
