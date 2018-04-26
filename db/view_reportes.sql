@@ -77,43 +77,198 @@ from
   -- ============================================================================================================= --
   -- =================================   Reports Casillas     =============================== --
   -- ============================================================================================================= --
-	
--- 	
--- 	select 
--- 			id
--- -- 			,name
--- -- 			,hora_inicio
--- 			,hora_instalacion
--- 			,hora_cierre
--- 			,status
--- 	from 
--- 			xmf_casillas.xmf_casillas
--- 	group by 
--- 			status
--- 			
--- 	
--- 	
--- 			
--- 
--- 			
--- 	select 
--- 			 count(id) as "install"
--- 			,status
--- 	from 
--- 			xmf_casillas.xmf_casillas
--- 	group by 
--- 			status
 
+
+	
+use xmf_casillas
+
+drop view `xmf_reaper` 
+
+create or replace view `xmf_reapers` 
+as
+	select 
+ 			 `cas`.id as 'casillas_index'
+			,`cas`.name
+-- 			,`cas`.description
+			,`cas`.municipio
+			,`cas`.seccion
+-- 			,`cas`.clave_distrito
+			,`cas`.clave_agrupamiento
+			,`cas`.tipo_casilla
+-- 			,`cas`.tipo_contigua
+-- 			,`cas`.tipo_especial
+			,`cas`.urbana
+			,`cas`.distrito
+			,`cas`.locacion
+			,`cas`.hora_instalacion
+			,`cas`.hora_inicio
+			,`cas`.hora_cierre
+-- 			,`cas`.created
+-- 			,`cas`.modified
+-- 			,`partition`.id
+			,`partition`.nombre
+			,`partition`.formula
+			,`partition`.is_coalicion
+			,`partition`.is_funcionario
+			,`partition`.has_parent
+			,`partition`.parent_id
+-- 			,`partition`.description
+-- 			,`partition`.created
+-- 			,`partition`.modified
+-- 			,`tvt`.id
+			,`tvt`.tipo
+-- 			,`tvt`.description
+-- 			,`tvt`.created
+-- 			,`tvt`.modified
+			,`vts`.id						-- this id is the most 
+			,`vts`.xmf_casillas_id
+			,`vts`.xmf_tipo_votaciones_id
+			,`vts`.xmf_partidos_id
+			,`vts`.votes
+-- 			,`vts`.created
+-- 			,`vts`.modified
+	from 
+			`xmf_casillas`.`xmf_casillas` as `cas`
+	inner join 
+			`xmf_casillas`.`xmf_partidos` as `partition`
+	inner join
+			`xmf_casillas`.`xmf_tipo_votaciones` as `tvt`
+	left join 
+			`xmf_casillas`.`xmf_votes` as `vts` on `cas`.id = `vts`.xmf_casillas_id 
+		and 
+			`vts`.xmf_tipo_votaciones_id = `tvt`.id 
+		and 
+			`vts`.xmf_partidos_id = `partition`.id
+	
 			
--- 	update
--- 		xmf_casillas.xmf_casillas	
--- 	set status = 'I'
--- 	where 
--- 			hora_instalacion is not null
--- 		or
--- 			hora_cierre is not null			
+  -- ============================================================================================================= --
+  -- 										Primer grafica en last_result
+  -- ============================================================================================================= --
 
+-- Reference Querys
+			
+select 
+-- 		row_number() over(order by nombre ) as 'id' 
+-- 		casillas_index
+-- 		,name
+-- 		,municipio
+-- 		,seccion
+-- 		,clave_agrupamiento
+-- 		,tipo_casilla
+-- 		,urbana
+-- 		,distrito
+-- 		,locacion
+-- 		,hora_instalacion
+-- 		,hora_inicio
+-- 		,hora_cierre
+		nombre
+-- 		,formula
+-- 		,is_coalicion
+-- 		,is_funcionario
+-- 		,has_parent
+-- 		,parent_id
+		,tipo
+-- 		,id
+-- 		,xmf_casillas_id
+-- 		,xmf_tipo_votaciones_id
+-- 		,xmf_partidos_id
+		,coalesce(sum(votes),0) as 'votes'
+from 
+		xmf_casillas.xmf_reapers
+where 
+		formula is not null 
+	and 
+		formula not in ('') 
+group by
+		nombre,tipo
 	
+-- 2nd graphics
+
+select 
+		 nombre
+		,formula
+-- 		,tipo
+		,sum(votes) as 'votes'
+from 
+		xmf_casillas.xmf_reapers
+where 
+		formula is not null 
+	and 
+		formula not in ('') 
+	and
+		is_coalicion = 1
+-- 	and 
+-- 		has_parent = 1
+	and tipo = 'presidente'
+group by
+		nombre,formula -- ,tipo
+	
+		
+		
+-- 3rd graphics
+select 
+		 nombre
+		,formula
+-- 		,tipo
+		,sum(votes) as 'votes'
+from 
+		xmf_casillas.xmf_reapers
+where 
+		formula is not null 
+	and 
+		formula not in ('') 
+	and
+		is_coalicion = 0
+	and 
+		has_parent = 0
+	and 
+		is_funcionario = 1
+group by 
+		nombre,formula,tipo
+		
+		
+		
+	
+		
+		
+		
+		
+select * from xmf_casillas.xmf_reaper	
+
+		
+select * from xmf_casillas.xmf_partidos 
+where 
+		formula is not null 
+	and 
+		formula not in ('') 
+	and 
+		nombre = 'PAN-PRD-MC'
+	and 
+		is_coalicion = 1
+
+-- Reference Querys		
+		
+		
+
+select * from xmf_casillas.xmf_votes
+
+insert into xmf_casillas.xmf_votes 
+	values	
+			(null,3,1,27,312,now(),now()),
+			(null,3,1,30,311,now(),now()),
+			(null,3,1,31,415,now(),now()),
+			(null,3,1,5,3315,now(),now()),
+			(null,3,1,67,331,now(),now()),
+			(null,3,1,9,115,now(),now()),
+			(null,3,1,14,35,now(),now()),
+			(null,3,1,2,15,now(),now()),
+			(null,3,1,12,31,now(),now());
+
+-- values(null,3,1,10,315,now(),now())
+
+
+select * from xmf_casillas.xmf_tipo_votaciones
+
 	
 	
 	

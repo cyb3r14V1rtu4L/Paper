@@ -2,7 +2,15 @@
     <div class="row">
         <div class="col-lg-3 col-sm-12">
             <div class="card">
-                <a href="<?php echo $this->Url->build('/pages/reports/ResultadosFinales'); ?>">
+              <a href="<?php
+                      echo $this->Url->build([
+                                                "controller" => "XmfViewReporteSegundosTerceros",
+                                                "action" => "lastReport",
+                                                "presidente",
+                                             ]
+                          );
+                       ?>"
+              >
                     <div class="content">
                         <div class="row">
                             <div class="col-xs-5">
@@ -17,7 +25,7 @@
                             </div>
                         </div>
                         <div class="footer">
-                            
+
                         </div>
                     </div>
                 </a>
@@ -25,7 +33,15 @@
         </div>
         <div class="col-lg-3 col-sm-12">
             <div class="card">
-                <a href="<?php echo $this->Url->build('/pages/reports/ResultadosFinales'); ?>">
+              <a href="<?php
+                      echo $this->Url->build([
+                                                "controller" => "XmfViewReporteSegundosTerceros",
+                                                "action" => "lastReport",
+                                                "senador",
+                                             ]
+                          );
+                       ?>"
+              >
                     <div class="content">
                         <div class="row">
                             <div class="col-xs-5">
@@ -40,7 +56,7 @@
                             </div>
                         </div>
                         <div class="footer">
-                            
+
                         </div>
                     </div>
                 </a>
@@ -48,7 +64,15 @@
         </div>
         <div class="col-lg-3 col-sm-12">
             <div class="card">
-                <a href="<?php echo $this->Url->build('/pages/reports/ResultadosFinales'); ?>">
+              <a href="<?php
+                      echo $this->Url->build([
+                                                "controller" => "XmfViewReporteSegundosTerceros",
+                                                "action" => "lastReport",
+                                                "diputado",
+                                             ]
+                          );
+                       ?>"
+              >
                     <div class="content">
                         <div class="row">
                             <div class="col-xs-5">
@@ -70,7 +94,15 @@
         </div>
         <div class="col-lg-3 col-sm-12">
             <div class="card">
-                <a href="<?php echo $this->Url->build('/pages/reports/ResultadosFinales'); ?>">
+              <a href="<?php
+                      echo $this->Url->build([
+                                                "controller" => "XmfViewReporteSegundosTerceros",
+                                                "action" => "lastReport",
+                                                "ayuntamiento",
+                                             ]
+                          );
+                       ?>"
+              >
                     <div class="content">
                         <div class="row">
                             <div class="col-xs-4">
