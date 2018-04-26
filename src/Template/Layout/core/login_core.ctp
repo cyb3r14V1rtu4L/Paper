@@ -130,48 +130,48 @@ font-weight: 500;
 
 					  <div class="row login">
 
-					  	<h5>INCIO SESIÓN - PROCESO ELECTORAL LOCAL</h5>
+					  	<h5>INICIAR SESIÓN - S.I.E</h5>
               <hr>
               <img src="<?php echo $this->request->webroot?>paper/img/partidos/frentexqroo.jpg" alt="" class="responsive-img">
 					    <form class="col s12">
-					      <div class="row">
-					         <div class="input-field col m12 s12">
-					          <i class="material-icons iconis prefix">account_box</i>
-					          <!-- <input id="icon_prefix" type="text" class="validate"> -->
-                    <?= $this->Form->control('username',
-                                [
-                                  'label' => FALSE,
-                                  'required' => true,
-                                  'class'=> 'validate',
-                                  'id'=> 'icon_prefix',
-                                  'templates' => [
-                                                    'inputContainer' => '{{content}}'
-                                                 ]
-                                ]
-                        )
-                     ?>
-					          <label for="icon_prefix">USUARIO</label>
-					        </div>
-					      </div>
-					      <div class="row">
-					        <div class="input-field col m12 s12">
-					          <i class="material-icons iconis prefix">enhanced_encryption</i>
-					          <!-- <input id="password" type="password" class="validate"> -->
-                    <?= $this->Form->control('password',
-                                [
-                                  'label' => FALSE,
-                                  'required' => true,
-                                  'class'=> 'validate',
-                                  'id'=> 'icon_prefix',
-                                  'templates' => [
-                                                    'inputContainer' => '{{content}}'
-                                                 ]
-                                ]
-                        )
-                     ?>
-					          <label for="password">CONTRASEÑA</label>
-					        </div>
-					      </div>
+  					      <div class="row">
+  					         <div class="input-field col m12 s12">
+    					          <i class="material-icons iconis prefix">account_box</i>
+    					          <!-- <input id="icon_prefix" type="text" class="validate"> -->
+                        <?= $this->Form->control('username',
+                                    [
+                                      'label' => FALSE,
+                                      'required' => true,
+                                      'class'=> 'validate',
+                                      'id'=> 'icon_prefix',
+                                      'templates' => [
+                                                        'inputContainer' => '{{content}}'
+                                                     ]
+                                    ]
+                            )
+                         ?>
+  					          <label for="icon_prefix">USUARIO</label>
+  					        </div>
+  					      </div>
+                  <div class="row">
+	                   <div class="input-field col m12 s12">
+				                <i class="material-icons iconis prefix">enhanced_encryption</i>
+  					          <!-- <input id="password" type="password" class="validate"> -->
+                        <?= $this->Form->control('password',
+                                    [
+                                      'label' => FALSE,
+                                      'required' => true,
+                                      'class'=> 'validate',
+                                      'id'=> 'icon_prefix',
+                                      'templates' => [
+                                                        'inputContainer' => '{{content}}'
+                                                     ]
+                                    ]
+                            )
+                         ?>
+      					          <label for="password">CONTRASEÑA</label>
+    					        </div>
+	               </div>
 					      <div class="row">
 					      	<!-- <button class="btn waves-effect waves-light" type="submit" name="action">INGRESAR</button> -->
 
