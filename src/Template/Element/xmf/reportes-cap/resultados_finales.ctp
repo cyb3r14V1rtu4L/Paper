@@ -10,7 +10,7 @@
             <button type="button" id="typo_voto_4" data-id="4" onclick="setTypoVote(this)" class="btn btn-danger">AYUNTAMIENTO</button>
         </div>
         <input type="hidden" name="xmf_tipo_votaciones_id" id="xmf_tipo_votaciones_id"/>
-        <input type="hidden" name="casilla_id" id="casilla_id" value="<?=$_SESSION['Casilla']['id'];?>">
+        <input type="hidden" name="casilla_id" id="casilla_id" value="<?= (isset($id)) ? $id : $_SESSION['Casilla']['id'];?>">
 
 
     </div>

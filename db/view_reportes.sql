@@ -1,7 +1,7 @@
 -- show databases;
--- 
+--
 -- create database cakephp;
--- 
+--
 
 -- grant usage on xmf_casillas.* to xmf_casillas@localhost identified by '@xmf_casillas#';
 -- grant select, insert, update, delete, drop, alter, create , create temporary tables on xmf_casillas.* to xmf_casillas@localhost;
@@ -73,20 +73,20 @@ select
 from
 	`report`
 
-	
+
   -- ============================================================================================================= --
   -- =================================   Reports Casillas     =============================== --
   -- ============================================================================================================= --
 
 
-	
+
 use xmf_casillas
 
-drop view `xmf_reaper` 
+drop view `xmf_reaper`
 
-create or replace view `xmf_reapers` 
+create or replace view `xmf_reapers`
 as
-	select 
+	select
  			 `cas`.id as 'casillas_index'
 			,`cas`.name
 -- 			,`cas`.description
@@ -120,35 +120,35 @@ as
 -- 			,`tvt`.description
 -- 			,`tvt`.created
 -- 			,`tvt`.modified
-			,`vts`.id						-- this id is the most 
+			,`vts`.id						-- this id is the most
 			,`vts`.xmf_casillas_id
 			,`vts`.xmf_tipo_votaciones_id
 			,`vts`.xmf_partidos_id
 			,`vts`.votes
 -- 			,`vts`.created
 -- 			,`vts`.modified
-	from 
+	from
 			`xmf_casillas`.`xmf_casillas` as `cas`
-	inner join 
+	inner join
 			`xmf_casillas`.`xmf_partidos` as `partition`
 	inner join
 			`xmf_casillas`.`xmf_tipo_votaciones` as `tvt`
-	left join 
-			`xmf_casillas`.`xmf_votes` as `vts` on `cas`.id = `vts`.xmf_casillas_id 
-		and 
-			`vts`.xmf_tipo_votaciones_id = `tvt`.id 
-		and 
+	left join
+			`xmf_casillas`.`xmf_votes` as `vts` on `cas`.id = `vts`.xmf_casillas_id
+		and
+			`vts`.xmf_tipo_votaciones_id = `tvt`.id
+		and
 			`vts`.xmf_partidos_id = `partition`.id
-	
-			
+
+
   -- ============================================================================================================= --
   -- 										Primer grafica en last_result
   -- ============================================================================================================= --
 
 -- Reference Querys
-			
-select 
--- 		row_number() over(order by nombre ) as 'id' 
+
+select
+-- 		row_number() over(order by nombre ) as 'id'
 -- 		casillas_index
 -- 		,name
 -- 		,municipio
@@ -173,66 +173,57 @@ select
 -- 		,xmf_tipo_votaciones_id
 -- 		,xmf_partidos_id
 		,coalesce(sum(votes),0) as 'votes'
-from 
+from
 		xmf_casillas.xmf_reapers
-where 
-		formula is not null 
-	and 
-		formula not in ('') 
+where
+		formula is not null
+	and
+		formula not in ('')
 group by
 		nombre,tipo
-	
+
 -- 2nd graphics
 
-select 
+select
 		 nombre
 		,formula
 -- 		,tipo
 		,sum(votes) as 'votes'
-from 
+from
 		xmf_casillas.xmf_reapers
-where 
-		formula is not null 
-	and 
-		formula not in ('') 
+where
+		formula is not null
+	and
+		formula not in ('')
 	and
 		is_coalicion = 1
--- 	and 
+-- 	and
 -- 		has_parent = 1
 	and tipo = 'presidente'
 group by
 		nombre,formula -- ,tipo
-	
-		
-		
+
+
+
 -- 3rd graphics
-select 
+select
 -- 		 nombre
 		formula
 -- 		,tipo
 		,sum(votes) as 'votes'
-from 
+from
 		xmf_casillas.xmf_reapers
-where 
-		formula is not null 
-	and 
-		formula not in ('') 
+where
+		formula is not null
+	and
+		formula not in ('')
 	and
 		is_coalicion = 0
-	and 
+	and
 		has_parent = 0
-	and 
+	and
 		is_funcionario = 1
-group by 
+group by
 		formula
-		
--- ---------------
-		
 
-	
-	
-	
-	
-	
-	
-	
+-- ---------------
