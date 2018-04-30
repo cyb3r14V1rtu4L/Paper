@@ -23,212 +23,40 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-lg-4">
+  <?php foreach ($tabular_two as $tlvalue): ?>
+
+    <div class="col-lg-3">
         <div class="card">
             <div class="header">
                 <h4 class="title"></h4>
             </div>
             <div class="content">
                 <ul class="list-unstyled team-members">
-                  <?php foreach ($tabular_two as $tlvalue): ?>
 
                     <li>
                         <div class="row">
                             <div class="col-xs-3">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/<?= strtoupper(str_replace('_','-',$tlvalue['name']))?>.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                    <?php $img = str_replace(" ","-",$tlvalue['name']);?>
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/<?=$img;?>.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                                 </div>
                             </div>
-                            <div class="col-xs-5">
+                            <div class="col-xs-4">
                                 <span class="text-success"><h5><b><?= $tlvalue['data']?></b></h5></span>
-                                30%
+                            </div>
+                            <div class="col-xs-5">
+                                <span class="text-info"><small><?= $tlvalue['name']?></small></span>
                             </div>
 
                         </div>
                     </li>
-                    <!-- <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PAN-PRD.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                <span class="text-success"><h5><b>1,023</b></h5></span>
-                                30%
-                            </div>
 
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PAN-MC.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                <span class="text-success"><h5><b>1,023</b></h5></span>
-                                30%
-                            </div>
-
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PRD-MC.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                <span class="text-success"><h5><b>1,023</b></h5></span>
-                                30%
-                            </div>
-
-                        </div>
-                    </li> -->
-                  <?php endforeach; ?>
                 </ul>
             </div>
         </div>
     </div>
-    <!-- <div class="col-lg-4">
-        <div class="card">
-            <div class="header">
-                <h4 class="title"></h4>
-            </div>
-            <div class="content">
-                <ul class="list-unstyled team-members">
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PRI-PVE-PANAL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                <span class="text-success"><h5><b>1,023</b></h5></span>
-                                30%
-                            </div>
+  <?php endforeach; ?>
 
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PRI-PVE.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                <span class="text-success"><h5><b>1,023</b></h5></span>
-                                30%
-                            </div>
-
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PRI-PANAL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                <span class="text-success"><h5><b>1,023</b></h5></span>
-                                30%
-                            </div>
-
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PVE-PANAL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                <span class="text-success"><h5><b>1,023</b></h5></span>
-                                30%
-                            </div>
-
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div> -->
-    <!-- <div class="col-lg-4">
-        <div class="card">
-            <div class="header">
-                <h4 class="title"></h4>
-            </div>
-            <div class="content">
-                <ul class="list-unstyled team-members">
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT-MOR-SOL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                <span class="text-success"><h5><b>1,023</b></h5></span>
-                                30%
-                            </div>
-
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT-MOR.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                <span class="text-success"><h5><b>1,023</b></h5></span>
-                                30%
-                            </div>
-
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT-SOL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                <span class="text-success"><h5><b>1,023</b></h5></span>
-                                30%
-                            </div>
-
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/MOR-SOL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                <span class="text-success"><h5><b>1,023</b></h5></span>
-                                30%
-                            </div>
-
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div> -->
 </div>
 
 

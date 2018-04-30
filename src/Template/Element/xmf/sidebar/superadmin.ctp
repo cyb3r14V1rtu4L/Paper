@@ -9,7 +9,7 @@ switch ($method)
   case 'SegundoReporte':$active_1 = '';$active_2 = '';$active_3 = 'active';$active_4 = '';$active_5 = '';$active_6 = '';break;
   case 'TercerReporte': $active_1 = ''; $active_2 = ''; $active_3 = ''; $active_4 = 'active'; $active_5 = '';$active_6 = ''; break;
   case 'CuartoReporte':$active_1 = '';$active_2 = '';$active_3 = ''; $active_4 = ''; $active_5 = 'active';$active_6 = '';break;
-  case 'ResultadosFinales': $active_1 = '';$active_2 = ''; $active_3 = ''; $active_4 = '';$active_5 = ''; $active_6 = 'active';break;
+  case 'lastReport': $active_1 = '';$active_2 = ''; $active_3 = ''; $active_4 = '';$active_5 = ''; $active_6 = 'active';break;
   default: $active_1 = 'active'; $active_2 = ''; $active_3 = ''; $active_4 = ''; $active_5 = ''; $active_6 = ''; break;
 }
 ?>

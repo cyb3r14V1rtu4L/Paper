@@ -28,6 +28,7 @@
 
 
 <div class="row">
+  <?php foreach ($tabular as $tbl): ?>
     <div class="col-lg-4">
         <div class="card">
             <div class="header">
@@ -35,8 +36,6 @@
             </div>
             <div class="content">
                 <ul class="list-unstyled team-members">
-
-                  <?php foreach ($tabular as $tbl): ?>
                     <li>
                         <div class="row">
                             <div class="col-xs-3">
@@ -46,7 +45,7 @@
                             </div>
                             <div class="col-xs-4">
                                 <span class="text-danger"><h5><b><?= $tbl['votes']?></b></h5></span>
-                                30%
+
                             </div>
                             <div class="col-xs-5">
                                 <span class="text-info"><small><?= $tbl['nombre']?></small></span>
@@ -54,11 +53,12 @@
 
                         </div>
                     </li>
-                    <?php endforeach; ?>
                 </ul>
             </div>
         </div>
     </div>
+  <?php endforeach; ?>
+
     <!-- <div class="col-lg-4">
         <div class="card">
             <div class="header">

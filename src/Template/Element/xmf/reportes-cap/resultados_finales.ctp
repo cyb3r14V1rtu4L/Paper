@@ -336,7 +336,7 @@
     <div class="col-lg-4">
         <div class="card">
             <div class="header">
-                <h4 class="title" id="coalicion_title"><small class="text-info">COALICIÓN MORENTA-PT-PES</small></h4>
+                <h4 class="title" id="coalicion_title"><small class="text-info">COALICIÓN MORENA-PT-PES</small></h4>
             </div>
             <div class="content">
                 <ul class="list-unstyled team-members" id="pt-mor-pes">
@@ -344,11 +344,11 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT-MOR-SOL.png" alt="PT-MOR-PES" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/MORENA-PT-PES.png" alt="PT-MOR-PES" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-7">
-                                PT - MORENA - PES
+                                MORENA - PT - PES
                                 <br>
                                 <span class="text-info"><small>
                                   <input class="input-resultados voto" id="xmf_partido_18" data-id="27"  type="text"  size="8"/></small></span>
@@ -360,11 +360,11 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT-MOR.png" alt="MORENTA-PT" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/MORENA-PT.png" alt="MORENA-PT" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-7">
-                                PT - MORENTA
+                                MORENA - PT
                                 <br>
                                 <span class="text-info"><small>
                                   <input class="input-resultados voto" id="xmf_partido_19" data-id="29"  type="text"  size="8"/></small></span>
@@ -376,7 +376,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT-SOL.png" alt="PT-PES" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT-PES.png" alt="PT-PES" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-7">
@@ -411,7 +411,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT-MOR-SOL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/MORENA-PT-PES.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-7">
@@ -428,7 +428,7 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-4">
+    <div class="col-lg-4" id="partidos_independientes">
         <div class="card">
             <div class="header">
                 <h4 class="title"></h4>
@@ -548,8 +548,9 @@ function setTypoVote(obj)
 
     if($('#xmf_tipo_votaciones_id').val() == 4){
       $('#pt-mor-pes').hide();
+      $('#partidos_independientes').hide();
       $('#pt-mor').show();
-      $('#coalicion_title').html('<small class="text-info">COALICIÓN MORENTA-PT</small>');
+      $('#coalicion_title').html('<small class="text-info">COALICIÓN MORENA-PT</small>');
       $('#xmf_partido_18').val('0');
       $('#xmf_partido_18').attr('disabled',true);
 
@@ -564,8 +565,9 @@ function setTypoVote(obj)
 
     }else{
       $('#pt-mor-pes').show();
+      $('#partidos_independientes').show();
       $('#pt-mor').hide();
-      $('#coalicion_title').html('<small class="text-info">COALICIÓN MORENTA-PT-PES</small>');
+      $('#coalicion_title').html('<small class="text-info">COALICIÓN MORENA-PT-PES</small>');
       $('#xmf_partido_26').val('0');
     }
 }
