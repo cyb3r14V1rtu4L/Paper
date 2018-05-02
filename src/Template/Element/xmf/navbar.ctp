@@ -45,7 +45,7 @@ if(isset($_SESSION['Auth']['User']))
                             <li><a href="#">Another Action</a></li>
                         </ul>
                     </li>
-                    -->
+
 
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -59,7 +59,7 @@ if(isset($_SESSION['Auth']['User']))
                             <li><a href="#" style="color:orange;">CE332 INICIO VOTACI&Oacute;N</a></li>
                         </ul>
                     </li>
-
+-->
                     <li class="dropdown dropdown-with-icons">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-user"></i>
