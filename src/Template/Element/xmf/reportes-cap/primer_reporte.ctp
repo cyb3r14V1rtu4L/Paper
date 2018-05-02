@@ -17,7 +17,7 @@
   -->
     <div class="col-sm-12 col-lg-3">
         <div class="tim-title">
-            <input type="hidden" name="casilla_id" id="casilla_id" class="form-control" value="<?=$_SESSION['Casilla']['id'];?>">
+            <input type="hidden" name="casilla_id" id="casilla_id" class="form-control" value="<?= (isset($id)) ? $id : $_SESSION['Casilla']['id'];?>">
             <h5><small>CASILLA SE INSTALÓ EN EL LUGAR INDICADO POR EL IEQROO?</small></h5>
         </div>
             <?php

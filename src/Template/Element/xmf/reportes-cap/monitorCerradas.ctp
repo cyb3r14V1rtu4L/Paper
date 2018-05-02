@@ -1,6 +1,6 @@
 <!-- Set the notification -->
 <?= $this->Html->script('xmf/notifications/notify.js', ['block' => true]); ?>
-<?= $this->element('Paper.xmf/counter_head'); ?> 
+<?= $this->element('Paper.xmf/counter_head'); ?>
 <div class="container-fluid">
     <div class="row" id="resMonitorCasillas">
     <div class="nav-tabs-navigation">
@@ -14,7 +14,7 @@
 <div id="my-tab-content" class="tab-content text-center">
     <div class="tab-pane active" id="cerradas">
         <p>
-            <h4>CASILLAS CERRADAS</h4>   
+            <h4>CASILLAS CERRADAS</h4>
             <hr/>
             <?php
             for($x=0;$x<=20;$x++){
@@ -55,10 +55,10 @@
 </div>
 
 
-        
 
 
-        
+
+
     </div>
 
 <div class="row">

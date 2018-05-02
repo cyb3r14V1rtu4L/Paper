@@ -28,8 +28,8 @@
                                 <div class="card ">
                                     <div class="content">
                                         <div class="row">
-                                            <div class="col-xs-5">
-                                                <div class="numbers">
+                                            <div class="col-xs-12">
+                                                <div class="">
                                                     <div class="text-center"><?=$cp['name']?></div>
                                                 </div>
                                             </div>
@@ -69,8 +69,8 @@
                                     <div class="card ">
                                         <div class="content">
                                             <div class="row">
-                                                <div class="col-xs-5">
-                                                    <div class="numbers">
+                                                <div class="col-xs-12">
+                                                    <div class="">
                                                         <div class="text-center"><?=$cp['name']?></div>
                                                     </div>
                                                 </div>
@@ -110,8 +110,8 @@
                                     <div class="card ">
                                         <div class="content">
                                             <div class="row">
-                                                <div class="col-xs-5">
-                                                    <div class="numbers">
+                                                <div class="col-xs-12">
+                                                    <div class="">
                                                         <div class="text-center"><?=$cp['name']?></div>
                                                     </div>
                                                 </div>
@@ -123,6 +123,10 @@
                                                             <span class="ti-mobile"></span>
                                                         </a>
                                                         &nbsp;
+                                                        &nbsp;
+                                                        <a href="<?php echo $this->Url->build('/XmfCasillas/CapturaResultados/'.$cp['id'].'/1'); ?>">
+                                                            <span class="ti-package"></span>
+                                                        </a>
                                                         <?php
                                                         #$votantes = $cp['votos']['votantes_segundo']+$cp['votos']['votantes_tercero'];
                                                         #$promovidos =$cp['votos']['promovidos_segundo']+$cp['votos']['promovidos_tercero'];
@@ -151,8 +155,8 @@
                                     <div class="card ">
                                         <div class="content">
                                             <div class="row">
-                                                <div class="col-xs-5">
-                                                    <div class="numbers">
+                                                <div class="col-xs-12">
+                                                    <div class="">
                                                         <div class="text-center"><?=$cp['name']?></div>
                                                     </div>
                                                 </div>
@@ -163,6 +167,11 @@
                                                         <a href="tel:9999999999">
                                                             <span class="ti-mobile"></span>
                                                         </a>
+                                                        &nbsp;
+                                                        <a href="<?php echo $this->Url->build('/XmfCasillas/CapturaResultados/'.$cp['id'].'/2'); ?>">
+                                                            <span class="ti-package"></span>
+                                                        </a>
+
                                                         &nbsp;
                                                         <?php
                                                         #$votantes = $cp['votos']['votantes_segundo']+$cp['votos']['votantes_tercero'];

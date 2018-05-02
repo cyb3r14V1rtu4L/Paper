@@ -31,8 +31,8 @@
                                 <div class="card ">
                                     <div class="content">
                                         <div class="row">
-                                            <div class="col-xs-5">
-                                                <div class="numbers">
+                                            <div class="col-xs-12">
+                                                <div class="">
                                                     <div class="text-center"><?=$cp['name']?></div>
                                                 </div>
                                             </div>
@@ -79,8 +79,8 @@
                                     <div class="card ">
                                         <div class="content">
                                             <div class="row">
-                                                <div class="col-xs-5">
-                                                    <div class="numbers">
+                                                <div class="col-xs-12">
+                                                    <div class="">
                                                         <div class="text-center"><?=$cp['name']?></div>
                                                     </div>
                                                 </div>
@@ -127,8 +127,8 @@
                                     <div class="card ">
                                         <div class="content">
                                             <div class="row">
-                                                <div class="col-xs-5">
-                                                    <div class="numbers">
+                                                <div class="col-xs-12">
+                                                    <div class="">
                                                         <div class="text-center"><?=$cp['CasillaDatos']['name']?></div>
                                                     </div>
                                                 </div>
@@ -173,8 +173,8 @@
                                     <div class="card ">
                                         <div class="content">
                                             <div class="row">
-                                                <div class="col-xs-5">
-                                                    <div class="numbers">
+                                                <div class="col-xs-12">
+                                                    <div class="">
                                                         <div class="text-center"><?=$cp['name']?></div>
                                                     </div>
                                                 </div>
@@ -187,6 +187,10 @@
                                                         </a>
                                                         &nbsp;
                                                         <a href="<?php echo $this->Url->build('/XmfCasillas/CapturaResultados/'.$cp['id'].'/5'); ?>">
+                                                            <span class="ti-package"></span>
+                                                        </a>
+                                                        &nbsp;
+                                                        <a href="<?php echo $this->Url->build('/XmfCasillas/CapturaResultados/'.$cp['id'].'/2'); ?>">
                                                             <span class="ti-package"></span>
                                                         </a>
                                                         &nbsp;
