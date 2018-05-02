@@ -411,7 +411,7 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/MORENA-PT-PES.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/MORENA-PT.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-7">
@@ -435,18 +435,19 @@
             </div>
             <div class="content">
                 <ul class="list-unstyled team-members">
+
                     <li>
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Margarita Z." class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>paper/img//partidos_png/Bronco.png" alt="Bronco" class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-7">
-                                Margarita Zavala
+                                Bronco
                                 <br>
                                 <span class="text-info"><small>
-                                  <input class="input-resultados voto" id="xmf_partido_22" data-id="31" type="text"  size="8"/></small></span>
+                                  <input class="input-resultados voto" id="xmf_partido_23" data-id="32"  type="text"  size="8"/></small></span>
                             </div>
 
                         </div>
@@ -455,14 +456,14 @@
                         <div class="row">
                             <div class="col-xs-4">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Bronco" class="img-circle img-no-padding img-responsive">
+                                    <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/Margarita Zavala.png" alt="Margarita Z." class="img-circle img-no-padding img-responsive">
                                 </div>
                             </div>
                             <div class="col-xs-7">
-                                Bronco
+                                Margarita Zavala
                                 <br>
                                 <span class="text-info"><small>
-                                  <input class="input-resultados voto" id="xmf_partido_23" data-id="32"  type="text"  size="8"/></small></span>
+                                  <input class="input-resultados voto" id="xmf_partido_22" data-id="31" type="text"  size="8"/></small></span>
                             </div>
 
                         </div>
