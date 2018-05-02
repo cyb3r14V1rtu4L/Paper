@@ -40,7 +40,7 @@
                         <div class="row">
                             <div class="col-xs-3">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/<?= $tbl['nombre']?>.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                    <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/<?= $tbl['nombre']?>.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                                 </div>
                             </div>
                             <div class="col-xs-4">
@@ -175,7 +175,7 @@
           tooltip: {
               headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
               pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                  '<td style="padding:0"><b>{point.y:} votos</b></td></tr>',
+                  '<td style="padding:0"><b>{point.y} votos</b></td></tr>',
               footerFormat: '</table>',
               shared: true,
               useHTML: true

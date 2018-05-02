@@ -41,7 +41,7 @@
                                           $img = str_replace(" ","-",$tbvalue['name']);
 
                                           ?>
-                                            <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/<?= $img ?>.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/<?= $img ?>.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                                         </div>
                                     </div>
                                     <div class="col-xs-4">
