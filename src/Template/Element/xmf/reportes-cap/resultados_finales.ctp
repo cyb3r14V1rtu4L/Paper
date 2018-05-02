@@ -563,6 +563,12 @@ function setTypoVote(obj)
       $('#xmf_partido_21').val('0');
       $('#xmf_partido_21').attr('disabled',true);
 
+      $('#xmf_partido_22').val('0');
+      $('#xmf_partido_22').attr('disabled',true);
+
+      $('#xmf_partido_23').val('0');
+      $('#xmf_partido_23').attr('disabled',true);
+
     }else{
       $('#pt-mor-pes').show();
       $('#partidos_independientes').show();
@@ -693,6 +699,12 @@ function addLastReport()
                   timer: 2000
               });
               //$('#btn_reporte_f').attr('disabled','disabled');
+
+              $('.voto').each(function(i, obj) {
+                  $(obj).val('');
+                  $(obj).attr('disabled',true);
+              });
+
        },
        error: function (xhr, textStatus, errorThrown) {
            console.log(xhr);
