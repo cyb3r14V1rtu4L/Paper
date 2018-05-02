@@ -10,7 +10,7 @@
                                 <div class="row">
                                     <div class="col-xs-3">
                                         <div class="avatar">
-                                            <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PT.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PT.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                                         </div>
                                     </div>
                                     <div class="col-xs-5">
@@ -25,7 +25,7 @@
                                 <div class="row">
                                     <div class="col-xs-3">
                                         <div class="avatar">
-                                            <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/SOL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/SOL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                                         </div>
                                     </div>
                                     <div class="col-xs-5">
@@ -40,7 +40,7 @@
                                 <div class="row">
                                     <div class="col-xs-3">
                                         <div class="avatar">
-                                            <img src="<?php echo $this->request->webroot?>Paper/img/partidos_png/PVE.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PVE.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                                         </div>
                                     </div>
                                     <div class="col-xs-5">

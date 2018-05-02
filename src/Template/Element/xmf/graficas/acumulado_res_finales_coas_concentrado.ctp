@@ -70,7 +70,7 @@
                         <div class="row">
                             <div class="col-xs-3">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                    <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                                 </div>
                             </div>
                             <div class="col-xs-5">
@@ -85,7 +85,7 @@
                         <div class="row">
                             <div class="col-xs-3">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                    <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                                 </div>
                             </div>
                             <div class="col-xs-5">
@@ -113,7 +113,7 @@
                         <div class="row">
                             <div class="col-xs-3">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                    <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                                 </div>
                             </div>
                             <div class="col-xs-5">
@@ -128,7 +128,7 @@
                         <div class="row">
                             <div class="col-xs-3">
                                 <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                    <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                                 </div>
                             </div>
                             <div class="col-xs-5">
@@ -155,7 +155,7 @@
               type: 'column'
           },
           title: {
-              text: '<h4 class="title">FLUJO DE VOTACIONES</h4>'
+              text: '<h4 class="title">ACUMULADO DE VOTACIONES</h4>'
           },
           credits:{enabled:false},
           colors:['#F3BB45','#68B3C8','#3398d6','#b4c973','#6c99bb'],

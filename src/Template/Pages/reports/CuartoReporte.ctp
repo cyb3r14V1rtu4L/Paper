@@ -1,26 +1,26 @@
-<?= $this->element('Paper.xmf/counter_head'); ?> 
+<?= $this->element('Paper.xmf/counter_head'); ?>
 <div class="container-fluid">
 
     <div class="row">
         <div class="col-md-12">
-        <?= $this->element('Paper.xmf/graficas/acumulado_barras'); ?> 
+        <?= $this->element('Paper.xmf/graficas/acumulado_barras'); ?>
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-6">
-            <?= $this->element('Paper.xmf/graficas/votaciones_8_12'); ?> 
+            <?= $this->element('Paper.xmf/graficas/votaciones_8_12'); ?>
         </div>
         <div class="col-md-6">
             <?= $this->element('Paper.xmf/graficas/votaciones_8_16'); ?> 
         </div>
     </div>
-    
+
     <div class="row">
-        <?= $this->element('Paper.xmf/reportes/flujo_votaciones_final'); ?> 
+        <?= $this->element('Paper.xmf/reportes/flujo_votaciones_final'); ?>
     </div>
 
-   
+
 
 <div class="row">
         <div class="col-lg-6 col-sm-6">

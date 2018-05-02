@@ -1,3 +1,7 @@
+
+<div class="col-lg-6">
+<?= $this->element('Paper.xmf/graficas/votaciones_8_18'); ?>
+</div>
 <div class="col-lg-6">
     <div class="card">
         <div class="header">
@@ -9,7 +13,7 @@
                     <div class="row">
                         <div class="col-xs-3">
                             <div class="avatar">
-                                <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
+                                <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                             </div>
                         </div>
                         <div class="col-xs-6">
@@ -24,7 +28,7 @@
                     <div class="row">
                         <div class="col-xs-3">
                             <div class="avatar">
-                                <img src="<?php echo $this->request->webroot?>Paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                             </div>
                         </div>
                         <div class="col-xs-6">

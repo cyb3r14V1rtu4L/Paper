@@ -1,15 +1,10 @@
-<?php
-$votantes_data = (isset($votantes_s15)) ? $votantes_s15:$votantes_s;
-$promovidos_data = (isset($promovidos_s15)) ? $promovidos_s15:$promovidos_s;
-
-?>
 <div class="card">
         <div class="header">
             <h4 class="title">GR&Aacute;FICA VOTANTES Y PROMOVIDOS</h4>
-            <p class="category">VOTACIONES 8:00HRS A 15:OOHRS</p>
+            <p class="category">VOTACIONES 8:00HRS A 18:OOHRS</p>
         </div>
         <div class="content">
-            <div id="chart8-16" class="ct-chart ct-perfect-fourth"></div>
+            <div id="chart8-18" class="ct-chart ct-perfect-fourth"></div>
 
             <div class="footer">
                 <!-- <div class="chart-legend">
@@ -32,7 +27,7 @@ $promovidos_data = (isset($promovidos_s15)) ? $promovidos_s15:$promovidos_s;
     // 'chart8-12
 
         // Create the chart
-        Highcharts.chart('chart8-16', {
+        Highcharts.chart('chart8-18', {
           chart: {
             type: 'pie'
           },
@@ -65,11 +60,11 @@ $promovidos_data = (isset($promovidos_s15)) ? $promovidos_s15:$promovidos_s;
               "data": [
                 {
                   "name": "VOTANTES",
-                  "y": <?=$votantes_data;?>
+                  "y": <?=$votantes_s;?>
                 },
                 {
                   "name": "PROMOVIDOS",
-                  "y": <?=$promovidos_data;?>
+                  "y": <?=$promovidos_s;?>
                 }
               ]
             }

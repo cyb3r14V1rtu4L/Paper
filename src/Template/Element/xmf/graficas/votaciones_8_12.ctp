@@ -1,3 +1,8 @@
+<?php
+$votantes_data = (isset($votantes_s12)) ? $votantes_s12:$votantes_s;
+$promovidos_data = (isset($promovidos_s12)) ? $promovidos_s12:$promovidos_s;
+
+?>
 <div class="card">
         <div class="header">
             <h4 class="title">GR&Aacute;FICA VOTANTES Y PROMOVIDOS</h4>
@@ -60,11 +65,11 @@
               "data": [
                 {
                   "name": "VOTANTES",
-                  "y": <?=$votantes_s;?>
+                  "y": <?=$votantes_data;?>
                 },
                 {
                   "name": "PROMOVIDOS",
-                  "y": <?=$promovidos_s;?>
+                  "y": <?=$promovidos_data;?>
                 }
               ]
             }
