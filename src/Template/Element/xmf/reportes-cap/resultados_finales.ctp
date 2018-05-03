@@ -418,7 +418,7 @@
                                 MORENA - PT
                                 <br>
                                 <span class="text-info"><small>
-                                  <input class="input-resultados voto" id="xmf_partido_26" data-id="35"  type="text"  size="8"/></small></span>
+                                  <input class="input-resultados voto" id="xmf_partido_26" data-id="36"  type="text"  size="8"/></small></span>
                             </div>
 
                         </div>
