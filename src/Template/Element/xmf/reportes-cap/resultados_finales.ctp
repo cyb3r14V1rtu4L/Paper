@@ -555,6 +555,9 @@ function setTypoVote(obj)
       $('#xmf_partido_18').val('0');
       $('#xmf_partido_18').attr('disabled',true);
 
+      $("#xmf_partido_8").attr("data-id","37");
+      $("#xmf_partido_5").attr("data-id","38");
+
       $('#xmf_partido_19').val('0');
       $('#xmf_partido_19').attr('disabled',true);
 
@@ -576,6 +579,8 @@ function setTypoVote(obj)
       $('#pt-mor').hide();
       $('#coalicion_title').html('<small class="text-info">COALICIÓN MORENA-PT-PES</small>');
       $('#xmf_partido_26').val('0');
+      $("#xmf_partido_8").attr("data-id","8");
+      $("#xmf_partido_5").attr("data-id","5");
     }
 }
 
