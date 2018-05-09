@@ -52,14 +52,18 @@
             $checked_no = ($casillas_primer_reporte['lugar_indicado']==0) ? 'checked' : '';
           }
         ?>
-          <label class="radio">
-          <input type="radio" name="gente_fila" data-toggle="radio" id="gente_fila" value="1" <?=$checked_si;?> >
+          <label class="radio" >
+          <input type="radio" onchange="genteFila();" name="gente_fila" data-toggle="radio" id="gente_fila" value="1" <?=$checked_si;?>>
           <i></i>SI
           </label>
           <label class="radio">
           <input type="radio" name="gente_fila" data-toggle="radio" id="gente_fila" value="0" <?=$checked_no;?>>
           <i></i>NO
           </label>
+    </div>
+    <div class="col-sm-12 col-lg-5" id="personas_fila" style="display:none;">
+      <h5><small>NOMBRE PERSONAS EN LA FILA</small></h5>
+      <textarea id="nombres_fila" rows="8" cols="40"></textarea>
     </div>
 </div>
 <div class="row">
@@ -445,7 +449,7 @@
 <?= $this->Form->end();?>
 
 <script>
- function addFirstReport()
+function addFirstReport()
 {
     $.ajax({
         url: '/Xmf/addFirstReport',
@@ -455,6 +459,7 @@
             casilla_id:$('#casilla_id').val(),
             lugar_indicado:$('#lugar_indicado').is(':checked'),
             gente_fila:$('#gente_fila').is(':checked'),
+            nombres_fila:$('#nombres_fila').val(),
             funcionario_1:$('#funcionario_1').is(':checked'),
             funcionario_2:$('#funcionario_2').is(':checked'),
             funcionario_3:$('#funcionario_3').is(':checked'),
@@ -491,6 +496,20 @@
             console.log(xhr);
         }
     });
+}
+
+function genteFila(){
+  var checked = $('#gente_fila').is(':checked');
+  $('#nombres_fila').val('');
+  if(checked == true)
+  {
+    $('#personas_fila').show();
+  }
+
+  if(checked == false)
+  {
+    $('#personas_fila').hide();
+  }
 }
 
 $('.clockpicker').clockpicker({
