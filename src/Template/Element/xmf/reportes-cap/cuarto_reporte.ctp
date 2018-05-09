@@ -5,7 +5,7 @@
         <div class="col-sm-6 ">
             <div class="form-group">
                 <label>HORA DEL CIERRE</label>
-                <input type="text" name="hr_cierre" id="hr_cierre" class="form-control clockpicker" value="<?= (isset($casillas_cuarto_reporte[0]['hr_cierre']))? $casillas_cuarto_reporte[0]['hr_cierre']:'';?>" >
+                <input type="text" name="hr_cierre" id="hr_cierre" class="form-control" value="<?= (isset($casillas_cuarto_reporte[0]['hr_cierre']))? $casillas_cuarto_reporte[0]['hr_cierre']:'';?>" >
                 <input type="hidden" name="casilla_id" id="casilla_id" class="form-control" value="<?= (isset($id)) ? $id : $_SESSION['Casilla']['id'];?>">
 
             </div>
