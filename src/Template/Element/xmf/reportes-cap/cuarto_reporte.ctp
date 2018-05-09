@@ -17,7 +17,7 @@
               <?php
               $checked_si = '';
               $checked_no = '';
-              if(isset($casillas_cuarto_reporte))
+              if(isset($casillas_cuarto_reporte[0]))
               {
                 $checked_si = ($casillas_cuarto_reporte[0]['habia_gente_fila']==1) ? 'checked' : '';
                 $checked_no = ($casillas_cuarto_reporte[0]['habia_gente_fila']==0) ? 'checked' : '';
