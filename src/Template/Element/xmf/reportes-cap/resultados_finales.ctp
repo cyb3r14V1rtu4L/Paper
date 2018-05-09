@@ -574,14 +574,25 @@ function setTypoVote(obj)
       $('#xmf_partido_23').attr('disabled',true);
 
     }else{
-      $('#pt-mor-pes').show();
-      $('#partidos_independientes').show();
-      $('#pt-mor').hide();
-      $('#coalicion_title').html('<small class="text-info">COALICIÓN MORENA-PT-PES</small>');
-      $('#xmf_partido_26').val('0');
-      $("#xmf_partido_8").attr("data-id","8");
-      $("#xmf_partido_5").attr("data-id","5");
+        $('#pt-mor-pes').show();
+        $('#partidos_independientes').show();
+        $('#pt-mor').hide();
+        $('#coalicion_title').html('<small class="text-info">COALICIÓN MORENA-PT-PES</small>');
+        $('#xmf_partido_26').val('0');
+        $("#xmf_partido_8").attr("data-id","8");
+        $("#xmf_partido_5").attr("data-id","5");
     }
+
+    if($('#xmf_tipo_votaciones_id').val() == 2 || $('#xmf_tipo_votaciones_id').val() == 3)
+    {
+      $('#partidos_independientes').hide();
+      $('#xmf_partido_22').val('0');
+      $('#xmf_partido_22').attr('disabled',true);
+      $('#xmf_partido_23').val('0');
+      $('#xmf_partido_23').attr('disabled',true);
+    }
+
+
 }
 
 
