@@ -8,4 +8,33 @@
           </div>
       </div>
 </footer>
+<?php
+$url = explode("/",$this->request->url);
+$method = $url[1];
+switch ($method)
+{
+  case 'monitor-casillas':
+  case 'MonitorCasillas':
+  ?>
+      <script>
+      $(document).ready(function () {
+        function getMonitorCasillas()
+        {
+            $.ajax({
+                url:'/XmfCasillas/monitorCasillas',
+                type: 'POST',
+                dataType: "html",
+                evalScripts:true,
 
+                success:function (data, textStatus) {
+                    $("#divMonitorCasillas").html(data);
+                }
+            });
+        }
+        setInterval(getMonitorCasillas, 30000);
+      });
+      </script>
+  <?php
+  break;
+}
+  ?>

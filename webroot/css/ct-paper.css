@@ -3,19 +3,20 @@
  =========================================================
  * Paper Kit - v1.2.2
  =========================================================
- 
+
  * Product Page: http://www.creative-tim.com/product/paper-kit
  * Copyright 2016 Creative Tim (http://www.creative-tim.com)
  * Licensed under MIT (https://github.com/timcreative/paper-kit/blob/master/LICENSE.md)
- 
+
  =========================================================
- 
+
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
- 
+
 
 /*      light colors - used for select dropdown         */
 /*           Font Smoothing      */
+
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, a, .td-name, td {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -3138,11 +3139,11 @@ textarea.form-control {
  * http://www.apache.org/licenses/LICENSE-2.0
  *
  */
-/*  
+/*
  *
  *   SCSS by Creative Tim
  *   http://www.creative-tim.com
- *   
+ *
  */
 .datepicker {
   top: 0;
@@ -3337,4 +3338,3 @@ textarea.form-control {
   padding: 0 0 3px;
   display: block;
 }
-

@@ -12,6 +12,7 @@ switch ($method)
   case 'lastReport': $active_1 = '';$active_2 = ''; $active_3 = ''; $active_4 = '';$active_5 = ''; $active_6 = 'active';break;
   default: $active_1 = 'active'; $active_2 = ''; $active_3 = ''; $active_4 = ''; $active_5 = ''; $active_6 = ''; break;
 }
+
 ?>
 <ul class="nav">
     <li class="<?=$active_1;?>">
@@ -24,39 +25,11 @@ switch ($method)
         </a>
     </li>
     <li class="<?=$active_2;?>">
-        <a href="<?php echo $this->Url->build('/XmfReportsSegundoTercero/PrimerReporte'); ?>">
+        <a href="<?php echo $this->Url->build('/XmfCasillas/monitorCasillasAbiertas'); ?>">
             <i class="ti-bar-chart"></i>
-            <p>PRIMER REPORTE</p>
+            <p>REPORTES</p>
         </a>
     </li>
 
-    <li class="<?=$active_3;?>">
-        <!-- <a href="index2.html"> -->
-        <a href="<?php echo // $this->Url->build('/pages/reports/SegundoReporte');
 
-        $this->Url->build('/XmfReportsSegundoTercero/SegundoReporte');
-        ?>">
-            <i class="ti-bar-chart"></i>
-            <p>SEGUNDO REPORTE</p>
-        </a>
-    </li>
-
-    <li class="<?=$active_4;?>">
-        <a href="<?php echo $this->Url->build('/XmfReportsSegundoTercero/TercerReporte');?>">
-            <i class="ti-bar-chart"></i>
-            <p>TERCER REPORTE</p>
-        </a>
-    <li class="<?=$active_5;?>">
-        <a href="<?php echo $this->Url->build('/XmfReportsSegundoTercero/CuartoReporte');?>">
-            <i class="ti-bar-chart"></i>
-            <p>CUARTO REPORTE</p>
-        </a>
-    </li>
-
-    <li class="<?=$active_6;?>">
-        <a href="<?php echo $this->Url->build('/XmfViewReporteSegundosTerceros/lastReport'); ?>">
-            <i class="ti-user"></i>
-            <p>RESULTADOS FINALES</p>
-        </a>
-    </li>
 </ul>

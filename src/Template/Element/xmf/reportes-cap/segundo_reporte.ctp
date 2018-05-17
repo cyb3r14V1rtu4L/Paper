@@ -30,7 +30,7 @@
 <?= $this->Form->end();?>
 
 <script>
- function addSecondReport()
+function addSecondReport()
 {
     $.ajax({
         url: '/Xmf/addSecondReport',

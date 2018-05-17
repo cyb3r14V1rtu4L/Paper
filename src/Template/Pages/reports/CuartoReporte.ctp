@@ -1,4 +1,4 @@
-<?= $this->element('Paper.xmf/counter_head'); ?>
+<?= $this->element('Paper.xmf/counter_head_vertical'); ?>
 <div class="container-fluid">
 
     <div class="row">
@@ -12,7 +12,7 @@
             <?= $this->element('Paper.xmf/graficas/votaciones_8_12'); ?>
         </div>
         <div class="col-md-6">
-            <?= $this->element('Paper.xmf/graficas/votaciones_8_16'); ?> 
+            <?= $this->element('Paper.xmf/graficas/votaciones_8_16'); ?>
         </div>
     </div>
 

@@ -1,14 +1,14 @@
 <div class="card">
     <div class="header">
-        <h4 class="title">GRÁFICA PRIMER REPORTE - INSTALACIÓN DE CASILLAS</h4>
+        <h4 class="title">INSTALACIÓN DE CASILLAS</h4>
     </div>
     <div class="content">
         <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
 
         <div class="footer">
             <div class="chart-legend">
-                <i class="fa fa-circle text-warning"></i> Instaladas
-                <i class="fa fa-circle text-info"></i> Cerradas
+                <i class="fa fa-circle text-warning"></i> ABIERTAS (Votación)
+                <i class="fa fa-circle text-info"></i> AUSENTES
 
             </div>
         </div>
@@ -27,13 +27,11 @@
             type: 'pie'
           },
           title: {
-            text: 'Instalacion de Casillas'
+            text: 'Monitoreo de Casillas'
           },
           credits:{enabled:false},
           colors:['#F3BB45','#68B3C8','#3398d6','#b4c973','#6c99bb'],
-          subtitle: {
-            text: 'Monitoreo de casillas'
-          },
+
           plotOptions: {
             series: {
               dataLabels: {
@@ -54,12 +52,12 @@
               "colorByPoint": true,
               "data": [
                 {
-                  "name": "Instaladas",
-                  "y": <?= $instalacion?>
+                  "name": "Votación",
+                  "y": <?= $instalacion[0]?>
                 },
                 {
-                  "name": "Cerradas",
-                  "y": <?= $cierre?>
+                  "name": "Ausentes",
+                  "y": <?= $cierre[0]?>
                 }
               ]
             }
