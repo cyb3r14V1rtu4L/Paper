@@ -2,7 +2,7 @@
 
 <div class="row">
     <h5 class="info-text"> CAPTURAR RESULTADO DE LAS ELECCIONES. </h5>
-    <div class="col-md-12 text-center">
+    <div class="col-md-12 text-center" style="display:none;">
             <div class="btn-group">
             <button type="button" id="typo_voto_1" data-id="1" onclick="setTypoVote(this)" class="btn btn-danger">PRESIDENTE</button>
             <button type="button" id="typo_voto_2" data-id="2" onclick="setTypoVote(this)" class="btn btn-danger">SENADOR</button>
@@ -741,5 +741,9 @@ function addLastReport()
 
 $('.voto').each(function(i, obj) {
     $(obj).prop('disabled', true);
+});
+
+$( document ).ready(function() {
+    setTypoVote($('#typo_voto_4'));
 });
 </script>

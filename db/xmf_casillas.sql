@@ -932,7 +932,7 @@ UNLOCK TABLES;
 /*!50001 SET character_set_results     = utf8mb4 */;
 /*!50001 SET collation_connection      = utf8mb4_general_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`ambagasdowa`@`localhost` SQL SECURITY DEFINER */
+
 /*!50001 VIEW `xmf_view_reporte_segundos_terceros` AS with report as (select `rpt`.`xmf_casillas_id` AS `xmf_casillas_id`,`cas`.`name` AS `name`,`rpt`.`votantes_segundo` AS `votantes_segundo`,`rpt`.`promovidos_segundo` AS `promovidos_segundo`,`rpt`.`votantes_tercero` AS `votantes_tercero`,`rpt`.`promovidos_tercero` AS `promovidos_tercero`,case when cast(`rpt`.`created` as time) between cast('00:00:00' as time) and cast('12:00:00' as time) then 1 else 0 end AS `is_twelve`,case when cast(`rpt`.`created` as time) between cast('00:00:00' as time) and cast('15:00:00' as time) then 1 else 0 end AS `is_thirdteen` from (`xmf_reports_segundo_tercero` `rpt` join `xmf_casillas` `cas` on(`cas`.`id` = `rpt`.`xmf_casillas_id`)) where `rpt`.`xmf_casillas_id` is not null and `rpt`.`votantes_segundo` is not null or `rpt`.`votantes_tercero` is not null)select `report`.`xmf_casillas_id` AS `xmf_casillas_id`,`report`.`name` AS `name`,`report`.`votantes_segundo` AS `votantes_segundo`,`report`.`promovidos_segundo` AS `promovidos_segundo`,`report`.`votantes_tercero` AS `votantes_tercero`,`report`.`promovidos_tercero` AS `promovidos_tercero`,`report`.`is_twelve` AS `is_twelve`,`report`.`is_thirdteen` AS `is_thirdteen` from `report` */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
