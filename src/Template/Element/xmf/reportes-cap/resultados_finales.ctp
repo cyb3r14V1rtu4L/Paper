@@ -2,18 +2,28 @@
 
 <div class="row">
     <h5 class="info-text"> CAPTURAR RESULTADO DE LAS ELECCIONES. </h5>
-    <div class="col-md-12 text-center" style="display:none;">
-            <div class="btn-group">
-            <button type="button" id="typo_voto_1" data-id="1" onclick="setTypoVote(this)" class="btn btn-danger">PRESIDENTE</button>
-            <button type="button" id="typo_voto_2" data-id="2" onclick="setTypoVote(this)" class="btn btn-danger">SENADOR</button>
-            <button type="button" id="typo_voto_3" data-id="3" onclick="setTypoVote(this)" class="btn btn-danger">DIPUTADO</button>
-            <button type="button" id="typo_voto_4" data-id="4" onclick="setTypoVote(this)" class="btn btn-danger">AYUNTAMIENTO</button>
+<?php
+  $role_id = $_SESSION['Auth']['User']['role_id'];
+  if($role_id !== '80687266-6761-43a2-bd98-f42349a9bb63')
+  {
+?>
+      <div class="col-md-12 text-center">
+        <div class="btn-group">
+          <button type="button" id="typo_voto_1" data-id="1" onclick="setTypoVote(this)" class="btn btn-danger">PRESIDENTE</button>
+          <button type="button" id="typo_voto_2" data-id="2" onclick="setTypoVote(this)" class="btn btn-danger">SENADOR</button>
+          <button type="button" id="typo_voto_3" data-id="3" onclick="setTypoVote(this)" class="btn btn-danger">DIPUTADO</button>
+          <button type="button" id="typo_voto_4" data-id="4" onclick="setTypoVote(this)" class="btn btn-danger">AYUNTAMIENTO</button>
         </div>
         <input type="hidden" name="xmf_tipo_votaciones_id" id="xmf_tipo_votaciones_id"/>
         <input type="hidden" name="casilla_id" id="casilla_id" value="<?= (isset($id)) ? $id : $_SESSION['Casilla']['id'];?>">
-
-
-    </div>
+      </div>
+<?php
+}else{
+  ?>
+  <small><h5 class="info-text btn-warning active">AYUNTAMIENTO</h5></small>
+<?php
+}
+?>
 </div>
 
 <div class="row">
