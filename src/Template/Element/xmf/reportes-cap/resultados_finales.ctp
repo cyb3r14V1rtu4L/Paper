@@ -3,11 +3,9 @@
 <div class="row">
     <h5 class="info-text"> CAPTURAR RESULTADO DE LAS ELECCIONES. </h5>
 <?php
-  $role_id = $_SESSION['Auth']['User']['role_id'];
-  if($role_id !== '80687266-6761-43a2-bd98-f42349a9bb63')
-  {
+    $display = ($_SESSION['Auth']['User']['role_id'] == '80687266-6761-43a2-bd98-f42349a9bb63') ? 'none' : 'block';
 ?>
-      <div class="col-md-12 text-center">
+      <div class="col-md-12 text-center" style="display:<?=$display;?>">
         <div class="btn-group">
           <button type="button" id="typo_voto_1" data-id="1" onclick="setTypoVote(this)" class="btn btn-danger">PRESIDENTE</button>
           <button type="button" id="typo_voto_2" data-id="2" onclick="setTypoVote(this)" class="btn btn-danger">SENADOR</button>
@@ -18,8 +16,9 @@
         <input type="hidden" name="casilla_id" id="casilla_id" value="<?= (isset($id)) ? $id : $_SESSION['Casilla']['id'];?>">
       </div>
 <?php
-}else{
-  ?>
+if($display === 'none')
+{
+?>
   <small><h5 class="info-text btn-warning active">AYUNTAMIENTO</h5></small>
 <?php
 }
