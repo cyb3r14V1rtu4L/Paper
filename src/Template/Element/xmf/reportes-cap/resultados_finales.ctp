@@ -4,6 +4,7 @@
     <h5 class="info-text"> CAPTURAR RESULTADO DE LAS ELECCIONES. </h5>
 <?php
     $display = ($_SESSION['Auth']['User']['role_id'] == '80687266-6761-43a2-bd98-f42349a9bb63') ? 'none' : 'block';
+    $reset = ($_SESSION['Auth']['User']['role_id'] == '80687266-6761-43a2-bd98-f42349a9bb63') ? '0' : '1';
 ?>
       <div class="col-md-12 text-center" style="display:<?=$display;?>">
         <div class="btn-group">
@@ -13,6 +14,7 @@
           <button type="button" id="typo_voto_4" data-id="4" onclick="setTypoVote(this)" class="btn btn-danger">AYUNTAMIENTO</button>
         </div>
         <input type="hidden" name="xmf_tipo_votaciones_id" id="xmf_tipo_votaciones_id"/>
+        <input type="hidden" name="xmf_reset" id="xmf_reset" valule="<?= $reset;?>"  />
         <input type="hidden" name="casilla_id" id="casilla_id" value="<?= (isset($id)) ? $id : $_SESSION['Casilla']['id'];?>">
       </div>
 <?php
@@ -725,12 +727,19 @@ function addLastReport()
                   timer: 2000
               });
               //$('#btn_reporte_f').attr('disabled','disabled');
-
-              $('.voto').each(function(i, obj) {
-                  $(obj).val('');
-                  $(obj).attr('disabled',true);
-              });
-
+              if($('#xmf_reset').val() == '1')
+              {
+                $('.voto').each(function(i, obj) {
+                    $(obj).val('');
+                    $(obj).attr('disabled',true);
+                });
+              }else{
+                $('.voto').each(function(i, obj) {
+                    $(obj).attr('disabled',true);
+                });
+              }
+              $('.btn-finish').css('display','none');
+              $('#btn_reporte_f').attr('disabled','disabled');
        },
        error: function (xhr, textStatus, errorThrown) {
            console.log(xhr);
