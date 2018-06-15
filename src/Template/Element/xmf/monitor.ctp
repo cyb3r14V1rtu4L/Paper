@@ -37,7 +37,7 @@
                                         <div class="footer">
                                             <hr />
                                                 <div class="text-center">
-                                                    <a href="tel:9999999999">
+                                                    <a href="tel:<?=$cp['rc_telefono'];?>">
                                                         <span class="ti-mobile"></span>
                                                     </a>
                                                     &nbsp;
@@ -88,7 +88,7 @@
                                             <div class="footer">
                                                 <hr />
                                                     <div class="text-center">
-                                                        <a href="tel:9999999999">
+                                                        <a href="tel:<?=$cp['rc_telefono'];?>">
                                                             <span class="ti-mobile"></span>
                                                         </a>
                                                         &nbsp;
@@ -139,7 +139,7 @@
                                             <div class="footer">
                                                 <hr />
                                                     <div class="text-center">
-                                                        <a href="tel:9999999999">
+                                                        <a href="tel:<?=$cp['rc_telefono'];?>">
                                                             <span class="ti-mobile"></span>
                                                         </a>
                                                         &nbsp;
@@ -184,7 +184,7 @@
                                             <div class="footer">
                                                 <hr />
                                                     <div class="text-center">
-                                                        <a href="tel:9999999999">
+                                                        <a href="tel:<?=$cp['rc_telefono'];?>">
                                                             <span class="ti-mobile"></span>
                                                         </a>
                                                         &nbsp;

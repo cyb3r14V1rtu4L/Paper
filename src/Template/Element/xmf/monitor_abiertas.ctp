@@ -23,7 +23,7 @@
                         <?php
                         $votantes = 0;
                         $promovidos = 0;
-                        #pr($casillas_segundo_reporte);
+
                         foreach($casillas_segundo_reporte as $cp){
                         ?>
                             <div class="col-lg-2 col-sm-12">
@@ -39,7 +39,7 @@
                                         <div class="footer">
                                             <hr />
                                                 <div class="text-center">
-                                                    <a href="tel:9999999999">
+                                                    <a href="tel:<?=$cp['rc_telefono']?>">
                                                         <span class="ti-mobile"></span>
                                                     </a>
                                                     &nbsp;

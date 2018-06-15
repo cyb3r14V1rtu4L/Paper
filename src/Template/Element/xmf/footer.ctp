@@ -10,8 +10,9 @@
 </footer>
 <?php
 $url = explode("/",$this->request->url);
+
 if($url[0] != ''){
-  $method = $url[1];
+  $method = (isset($url[1])) ? $url[1] : null;
   switch ($method)
   {
     case 'monitor-casillas':
@@ -37,6 +38,36 @@ if($url[0] != ''){
         </script>
     <?php
     break;
+  }
+}else {
+  if(isset($_SESSION['Auth']['User']['role_id']))
+  {
+    if($_SESSION['Auth']['User']['role_id'] == '80687266-6761-43a2-bd98-f42349a9bb63')
+    {
+      ?>
+      <script>
+      $(document).ready(function () {
+        window.location ='/xmf';
+      });
+      </script>
+      <?php
+    }else{
+      ?>
+      <script>
+      $(document).ready(function () {
+        window.location ='/xmf-casillas/monitor-casillas';
+      });
+      </script>
+      <?php
+    }
+  }else{
+    ?>
+    <script>
+    $(document).ready(function () {
+      window.location ='/users/logout';
+    });
+    </script>
+    <?php
   }
 }
   ?>
