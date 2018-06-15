@@ -16,38 +16,6 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `users`
---
-
-DROP TABLE IF EXISTS `users`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `users` (
-  `id` char(36) NOT NULL,
-  `username` varchar(255) NOT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `password` varchar(255) NOT NULL,
-  `first_name` varchar(50) DEFAULT NULL,
-  `last_name` varchar(50) DEFAULT NULL,
-  `token` varchar(255) DEFAULT NULL,
-  `token_expires` datetime DEFAULT NULL,
-  `api_token` varchar(255) DEFAULT NULL,
-  `activation_date` datetime DEFAULT NULL,
-  `secret` varchar(32) DEFAULT NULL,
-  `secret_verified` tinyint(1) DEFAULT NULL,
-  `tos_date` datetime DEFAULT NULL,
-  `active` tinyint(1) NOT NULL DEFAULT 0,
-  `is_superuser` tinyint(1) NOT NULL DEFAULT 0,
-  `role_id` char(36) DEFAULT NULL,
-  `created` datetime NOT NULL,
-  `modified` datetime NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `role_id` (`role_id`),
-  CONSTRAINT `users_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `users`
 --
 
