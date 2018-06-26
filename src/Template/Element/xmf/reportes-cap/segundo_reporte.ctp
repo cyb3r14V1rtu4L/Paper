@@ -47,7 +47,7 @@ function addSecondReport()
 
             $.notify ({
                  icon: 'ti-package',
-                 message: "<b>Segundo Reporte</b> Enviado."
+                 message: "<b>Primer Reporte</b> Enviado."
 
                },{
                    type: 'danger',

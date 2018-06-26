@@ -91,13 +91,13 @@
                           <?= $this->Form->end(); ?>
                         </div>
                         <hr/>
-                        <div class="row">
+                        <!--<div class="row">
                           <br/>
                           <div class="col-md-6 col-lg-6 col-sm-12">
                             <?php
-                            $type_btn = (!empty($userCasillas['hora_presencia'])) ? 'button' : 'post' ;
+                            #$type_btn = (!empty($userCasillas['hora_presencia'])) ? 'button' : 'post' ;
                             ?>
-                                <button id="btn_presencia" type="button" class="btn btn-warning" onclick="window.location='<?php echo $this->Url->build('/Xmf/CapturaReporte'); ?>'"><small>ENVIAR REPORTES <i class="ti-stats-up"></i></small></button>
+                                <button id="btn_presencia" type="button" class="btn btn-warning" onclick="window.location='<?php #echo $this->Url->build('/Xmf/CapturaReporte'); ?>'"><small>ENVIAR REPORTES <i class="ti-stats-up"></i></small></button>
                                 <br/>
                                 <h5><small>Generar Reportes</small></h5>
                           </div>
@@ -107,7 +107,7 @@
                           <h5><small>Notificar Incidencia</small></h5>
                         </div>
                       </div>
-
+                        -->
                     </div>
 
                 </div>

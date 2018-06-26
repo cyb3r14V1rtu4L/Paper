@@ -80,7 +80,7 @@
 
             $.notify ({
                  icon: 'ti-package',
-                 message: "<b>Cuarto Reporte</b> Enviado."
+                 message: "<b>Tercer Reporte</b> Enviado."
 
                },{
                    type: 'danger',

@@ -7,438 +7,539 @@
     <div class="col-sm-12">
         <h5 class="info-text">INSTALACIÓN DE LA CASILLA</h5>
     </div>
-    <!--
-    <div class="col-sm-6 ">
-        <div class="form-group">
-            <label>HORA INICIO DE INSTALACIÓN</label>
-            <input type="text" name="hora_instalacion" id="hora_instalacion" class="form-control clockpicker" value="" >
-        </div>
-    </div>
-  -->
+
     <div class="col-sm-12 col-lg-3">
-        <div class="tim-title">
-            <input type="hidden" name="casilla_id" id="casilla_id" class="form-control" value="<?= (isset($id)) ? $id : $_SESSION['Casilla']['id'];?>">
-            <h5><small>CASILLA SE INSTALÓ EN EL LUGAR INDICADO POR EL IEQROO?</small></h5>
-        </div>
+
             <?php
             $checked_si='';
             $checked_no='';
             if(isset($casillas_primer_reporte))
             {
-              $checked_si = ($casillas_primer_reporte['lugar_indicado']==1) ? 'checked' : '';
-              $checked_no = ($casillas_primer_reporte['lugar_indicado']==0) ? 'checked' : '';
+              $checked_si = ($casillas_primer_reporte['Casilla']['lugar_indicado']==1) ? 'checked' : '';
+              $checked_no = ($casillas_primer_reporte['Casilla']['lugar_indicado']==0) ? 'checked' : '';
             }
             ?>
-            <label class="radio">
-            <input type="radio" name="lugar_indicado" data-toggle="radio" id="lugar_indicado" value="1" <?=$checked_si;?> >
-            <i></i>SI
-            </label>
-            <label class="radio">
-            <input type="radio" name="lugar_indicado" data-toggle="radio" id="lugar_indicado" value="0" <?=$checked_no;?>>
-            <i></i>NO
-            </label>
+
     </div>
     <div class="col-sm-2 col-lg-2"></div>
     <div class="col-sm-12 col-lg-2">
-        <div class="tim-title">
-            <h5><small>SE TOMÓ GENTE DE LA FILA?</small></h5>
-        </div>
+
         <?php
           $checked_si='';
           $checked_no='';
           if(isset($casillas_primer_reporte))
           {
-            $checked_si = ($casillas_primer_reporte['lugar_indicado']==1) ? 'checked' : '';
-            $checked_no = ($casillas_primer_reporte['lugar_indicado']==0) ? 'checked' : '';
+            $checked_si = ($casillas_primer_reporte['Casilla']['lugar_indicado']==1) ? 'checked' : '';
+            $checked_no = ($casillas_primer_reporte['Casilla']['lugar_indicado']==0) ? 'checked' : '';
           }
         ?>
-          <label class="radio" >
-          <input type="radio" onchange="genteFila();" name="gente_fila" data-toggle="radio" id="gente_fila" value="1" <?=$checked_si;?>>
-          <i></i>SI
-          </label>
-          <label class="radio">
-          <input type="radio" name="gente_fila" data-toggle="radio" id="gente_fila" value="0" <?=$checked_no;?>>
-          <i></i>NO
-          </label>
+
     </div>
-    <div class="col-sm-12 col-lg-5" id="personas_fila" style="display:none;">
-      <h5><small>NOMBRE PERSONAS EN LA FILA</small></h5>
-      <textarea id="nombres_fila" rows="8" cols="40"></textarea>
-    </div>
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="content">
+                <ul class="list-unstyled team-members">
+                    <li>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <div class="avatar">
+                                    <img src="<?php echo $this->request->webroot?>paper/img/casilla.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                </div>
+                            </div>
+                            <div class="col-xs-5">
+                                    <div class=" pull-left">CASILLA SE INSTALÓ EN EL LUGAR INDICADO POR EL IEQROO?</div>
+                                </div>
+                                <div class="col-xs-2 text-right">
+                                    <label class="checkbox" for="checkbox1">
+                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span>
+                                          <span class="second-icon fa fa-check-square fa-base"></span>
+                                        </span>
+                                        <input name="lugar_indicado" id="lugar_indicado" data-toggle="checkbox" type="checkbox">
+                                    </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <div class="avatar">
+                                    <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                </div>
+                            </div>
+                            <div class="col-xs-5">
+                                SE TOMÓ GENTE DE LA FILA?
+                            </div>
+                            <div class="col-xs-2 text-right">
+                                <label class="checkbox <?=$checked_si;?>" for="checkbox1">
+                                    <span class="icons">
+                                      <span class="first-icon fa fa-square fa-base"></span>
+                                      <span class="second-icon fa fa-check-square fa-base"></span>
+                                    </span>
+                                    <input  name="gente_fila" id="gente_fila" data-toggle="checkbox" type="checkbox"  onchange="genteFila();">
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+  </div>
+  <?php
+  $display = ($casillas_primer_reporte['Casilla']['gente_fila']==0) ? 'none' : 'block';
+  ?>
+
+  <div class="col-lg-6" id="personas_fila" style="display:<?=$display;?>">
+      <div class="card">
+          <div class="content">
+              <ul class="list-unstyled team-members">
+                  <li>
+                      <div class="row">
+                          <div class="col-xs-3">
+                            <div class="avatar">
+                                <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                            </div>
+                          </div>
+                          <div class="col-xs-9">
+                            <h5><small>NOMBRE COMPLETO PERSONA(S) EN LA FILA</small></h5>
+                            <textarea class="form-control" rows="3" id="nombres_fila" ><?=$casillas_primer_reporte['Casilla']['nombres_fila']?></textarea>
+                          </div>
+
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      </div>
+</div>
+
 </div>
 <div class="row">
-   <!--
-    <div class="col-sm-6 ">
-        <div class="form-group">
-            <label>HORA INICIO DE VOTACIÓN</label>
-            <input type="text" name="hora_inicio" id="hora_inicio" class="form-control clockpicker" value="" >
-        </div>
-    </div>
-    -->
+
 
 </div>
 <hr/>
 <div class="row">
     <h5 class="text-center">REPRESENTANTES PRESENTES:</h5>
-    <div class="col-lg-4">
+    <?php
+if(isset($casillas_primer_reporte) && count($casillas_primer_reporte['PrimerReporte'])>0)
+{
+    foreach($casillas_primer_reporte['PrimerReporte'] as $bloques=>$presencias)
+    {
+    ?>
+        <div class="col-lg-4">
             <div class="card">
                 <div class="content">
                     <ul class="list-unstyled team-members">
+                        <?php
+                        foreach($presencias as $presencia)
+                        {
+                          $img_name = ($presencia['bloque']>=4) ? "user" : "partidos_png/".$presencia['nombre'];
+                        ?>
                         <li>
                             <div class="row">
                                 <div class="col-xs-3">
                                     <div class="avatar">
-                                        <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PAN.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                        <img src="<?php echo $this->request->webroot?>paper/img/<?=$img_name;?>.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                                     </div>
                                 </div>
                                 <div class="col-xs-5">
-                                    Nombre Representante
+                                  <div class="pull-left">
+                                    <?php
+                                    #echo $funcionario = ($presencia['bloque']>=4) ? $presencia['nombre'] : $presencia['representante'];
+                                    echo 'Nombre Representante';
+                                    ?>
+                                  </div>
                                 </div>
                                 <div class="col-xs-2 text-right">
-                                    <label class="checkbox" for="checkbox1">
-                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input id="funcionario_1"  name="funcionario_1" data-toggle="checkbox" type="checkbox" >
+                                    <?php
+                                    $is_present = ($presencia['is_present'] == 1) ? 'checked' : '' ;
+                                    ?>
+                                    <label class="checkbox <?=$is_present?>" for="checkbox1">
+                                        <span class="icons">
+                                          <span class="first-icon fa fa-square fa-base"></span>
+                                          <span class="second-icon fa fa-check-square fa-base"></span>
+                                        </span>
+                                        <input id="funcionario_<?=$presencia['xmf_partidos_id'];?>"  name="funcionario_1" data-toggle="checkbox" type="checkbox" >
                                     </label>
                                 </div>
                             </div>
                         </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <div class="avatar">
-                                        <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PRI.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
-                                    </div>
-                                </div>
-                                <div class="col-xs-5">
-                                    Nombre Representante
-                                </div>
-                                <div class="col-xs-2 text-right">
-                                    <label class="checkbox" for="checkbox2">
-                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input id="funcionario_2"  name="funcionario_2" data-toggle="checkbox" type="checkbox">
-                                    </label>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <div class="avatar">
-                                        <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PRD.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
-                                    </div>
-                                </div>
-                                <div class="col-xs-5">
-                                    Nombre Representante
-                                </div>
-                                <div class="col-xs-2 text-right">
-                                    <label class="checkbox" for="checkbox1">
-                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input id="funcionario_3"  name="funcionario_3"data-toggle="checkbox" type="checkbox">
-                                    </label>
-                                </div>
-                            </div>
-                        </li>
-
+                        <?php
+                        }
+                        ?>
                     </ul>
                 </div>
             </div>
-    </div>
-    <div class="col-lg-4">
-        <div class="card">
-            <div class="content">
-                <ul class="list-unstyled team-members">
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PVE.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                    Nombre Representante
-                                </div>
-                                <div class="col-xs-2 text-right">
-                                    <label class="checkbox" for="checkbox1">
-                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input  id="funcionario_4"  name="funcionario_4" data-toggle="checkbox" type="checkbox">
-                                    </label>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PT.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                    Nombre Representante
-                                </div>
-                                <div class="col-xs-2 text-right">
-                                    <label class="checkbox" for="checkbox1">
-                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input  id="funcionario_5"  name="funcionario_5" data-toggle="checkbox" type="checkbox">
-                                    </label>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/MOV.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                    Nombre Representante
-                                </div>
-                                <div class="col-xs-2 text-right">
-                                    <label class="checkbox" for="checkbox1">
-                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input  id="funcionario_6"  name="funcionario_6" data-toggle="checkbox" type="checkbox">
-                                    </label>
-                            </div>
-                        </div>
-                    </li>
+        </div>
+    <?php
+    }
+  }else{
 
-                </ul>
-            </div>
-        </div>
-    </div>
+    ?>
     <div class="col-lg-4">
-        <div class="card">
-            <div class="content">
-                <ul class="list-unstyled team-members">
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/NA.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                    Nombre Representante
-                                </div>
-                                <div class="col-xs-2 text-right">
-                                    <label class="checkbox" for="checkbox1">
-                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input  id="funcionario_7"  name="funcionario_7" data-toggle="checkbox" type="checkbox">
-                                    </label>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/MOR.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                    Nombre Representante
-                                </div>
-                                <div class="col-xs-2 text-right">
-                                    <label class="checkbox" for="checkbox1">
-                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input  id="funcionario_8"  name="funcionario_8" data-toggle="checkbox" type="checkbox">
-                                    </label>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/SOL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                    Nombre Representante
-                                </div>
-                                <div class="col-xs-2 text-right">
-                                    <label class="checkbox" for="checkbox1">
-                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input  id="funcionario_9"  name="funcionario_9" data-toggle="checkbox" type="checkbox">
-                                    </label>
-                            </div>
-                        </div>
-                    </li>
+              <div class="card">
+                  <div class="content">
+                      <ul class="list-unstyled team-members">
+                          <li>
+                              <div class="row">
+                                  <div class="col-xs-3">
+                                      <div class="avatar">
+                                          <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PAN.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                      </div>
+                                  </div>
+                                  <div class="col-xs-7">
+                                      Nombre Representante
+                                  </div>
+                                  <div class="col-xs-2 text-right">
+                                      <label class="checkbox" for="checkbox1">
+                                          <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input id="funcionario_1"  name="funcionario_1" data-toggle="checkbox" type="checkbox" >
+                                      </label>
+                                  </div>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="row">
+                                  <div class="col-xs-3">
+                                      <div class="avatar">
+                                          <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PRI.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                      </div>
+                                  </div>
+                                  <div class="col-xs-7">
+                                      Nombre Representante
+                                  </div>
+                                  <div class="col-xs-2 text-right">
+                                      <label class="checkbox" for="checkbox2">
+                                          <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input id="funcionario_2"  name="funcionario_2" data-toggle="checkbox" type="checkbox">
+                                      </label>
+                                  </div>
+                              </div>
+                          </li>
+                          <li>
+                              <div class="row">
+                                  <div class="col-xs-3">
+                                      <div class="avatar">
+                                          <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PRD.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                      </div>
+                                  </div>
+                                  <div class="col-xs-7">
+                                      Nombre Representante
+                                  </div>
+                                  <div class="col-xs-2 text-right">
+                                      <label class="checkbox" for="checkbox1">
+                                          <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input id="funcionario_3"  name="funcionario_3"data-toggle="checkbox" type="checkbox">
+                                      </label>
+                                  </div>
+                              </div>
+                          </li>
 
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-4">
-        <div class="card">
-            <div class="content">
-                <ul class="list-unstyled team-members">
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                    Presidente
-                                </div>
-                                <div class="col-xs-2 text-right">
-                                    <label class="checkbox" for="checkbox1">
-                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input  id="funcionario_10"  name="funcionario_10" data-toggle="checkbox" type="checkbox">
-                                    </label>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                    Secretario I
-                                </div>
-                                <div class="col-xs-2 text-right">
-                                    <label class="checkbox" for="checkbox1">
-                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input  id="funcionario_11"  name="funcionario_11" data-toggle="checkbox" type="checkbox">
-                                    </label>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                    Secretario II
-                                </div>
-                                <div class="col-xs-2 text-right">
-                                    <label class="checkbox" for="checkbox1">
-                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span>
-                                        <input  id="funcionario_17"  name="funcionario_17" data-toggle="checkbox" type="checkbox">
-                                    </label>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-4">
-        <div class="card">
-            <div class="content">
-                <ul class="list-unstyled team-members">
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                    Escrutador I
-                                </div>
-                                <div class="col-xs-2 text-right">
-                                    <label class="checkbox" for="checkbox1">
-                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input id="funcionario_12"  name="funcionario_12" data-toggle="checkbox" type="checkbox">
-                                    </label>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                    Escrutador II
-                                </div>
-                                <div class="col-xs-2 text-right">
-                                    <label class="checkbox" for="checkbox1">
-                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input  id="funcionario_13"  name="funcionario_13" data-toggle="checkbox" type="checkbox">
-                                    </label>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                    Escrutador III
-                                </div>
-                                <div class="col-xs-2 text-right">
-                                    <label class="checkbox" for="checkbox1">
-                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input  id="funcionario_18"  name="funcionario_18" data-toggle="checkbox" type="checkbox">
-                                    </label>
-                            </div>
-                        </div>
-                    </li>
+                      </ul>
+                  </div>
+              </div>
+      </div>
+      <div class="col-lg-4">
+          <div class="card">
+              <div class="content">
+                  <ul class="list-unstyled team-members">
+                      <li>
+                          <div class="row">
+                              <div class="col-xs-3">
+                                  <div class="avatar">
+                                      <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PVE.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                  </div>
+                              </div>
+                              <div class="col-xs-7">
+                                      Nombre Representante
+                                  </div>
+                                  <div class="col-xs-2 text-right">
+                                      <label class="checkbox" for="checkbox1">
+                                          <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input  id="funcionario_4"  name="funcionario_4" data-toggle="checkbox" type="checkbox">
+                                      </label>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="row">
+                              <div class="col-xs-3">
+                                  <div class="avatar">
+                                      <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/MOV.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                  </div>
+                              </div>
+                              <div class="col-xs-7">
+                                      Nombre Representante
+                                  </div>
+                                  <div class="col-xs-2 text-right">
+                                      <label class="checkbox" for="checkbox1">
+                                          <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input  id="funcionario_6"  name="funcionario_6" data-toggle="checkbox" type="checkbox">
+                                      </label>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="row">
+                              <div class="col-xs-3">
+                                  <div class="avatar">
+                                      <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PT.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                  </div>
+                              </div>
+                              <div class="col-xs-7">
+                                      Nombre Representante
+                                  </div>
+                                  <div class="col-xs-2 text-right">
+                                      <label class="checkbox" for="checkbox1">
+                                          <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input  id="funcionario_5"  name="funcionario_5" data-toggle="checkbox" type="checkbox">
+                                      </label>
+                              </div>
+                          </div>
+                      </li>
 
-                </ul>
-            </div>
-        </div>
+
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-4">
+          <div class="card">
+              <div class="content">
+                  <ul class="list-unstyled team-members">
+                      <li>
+                          <div class="row">
+                              <div class="col-xs-3">
+                                  <div class="avatar">
+                                      <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/NA.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                  </div>
+                              </div>
+                              <div class="col-xs-7">
+                                      Nombre Representante
+                                  </div>
+                                  <div class="col-xs-2 text-right">
+                                      <label class="checkbox" for="checkbox1">
+                                          <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input  id="funcionario_7"  name="funcionario_7" data-toggle="checkbox" type="checkbox">
+                                      </label>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="row">
+                              <div class="col-xs-3">
+                                  <div class="avatar">
+                                      <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/MOR.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                  </div>
+                              </div>
+                              <div class="col-xs-7">
+                                      Nombre Representante
+                                  </div>
+                                  <div class="col-xs-2 text-right">
+                                      <label class="checkbox" for="checkbox1">
+                                          <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input  id="funcionario_8"  name="funcionario_8" data-toggle="checkbox" type="checkbox">
+                                      </label>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="row">
+                              <div class="col-xs-3">
+                                  <div class="avatar">
+                                      <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/SOL.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                  </div>
+                              </div>
+                              <div class="col-xs-7">
+                                      Nombre Representante
+                                  </div>
+                                  <div class="col-xs-2 text-right">
+                                      <label class="checkbox" for="checkbox1">
+                                          <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input  id="funcionario_9"  name="funcionario_9" data-toggle="checkbox" type="checkbox">
+                                      </label>
+                              </div>
+                          </div>
+                      </li>
+
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-4">
+          <div class="card">
+              <div class="content">
+                  <ul class="list-unstyled team-members">
+                      <li>
+                          <div class="row">
+                              <div class="col-xs-3">
+                                  <div class="avatar">
+                                      <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                  </div>
+                              </div>
+                              <div class="col-xs-7">
+                                      Presidente
+                                  </div>
+                                  <div class="col-xs-2 text-right">
+                                      <label class="checkbox" for="checkbox1">
+                                          <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input  id="funcionario_10"  name="funcionario_10" data-toggle="checkbox" type="checkbox">
+                                      </label>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="row">
+                              <div class="col-xs-3">
+                                  <div class="avatar">
+                                      <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                  </div>
+                              </div>
+                              <div class="col-xs-7">
+                                      Secretario I
+                                  </div>
+                                  <div class="col-xs-2 text-right">
+                                      <label class="checkbox" for="checkbox1">
+                                          <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input  id="funcionario_11"  name="funcionario_11" data-toggle="checkbox" type="checkbox">
+                                      </label>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="row">
+                              <div class="col-xs-3">
+                                  <div class="avatar">
+                                      <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                  </div>
+                              </div>
+                              <div class="col-xs-7">
+                                      Secretario II
+                                  </div>
+                                  <div class="col-xs-2 text-right">
+                                      <label class="checkbox" for="checkbox1">
+                                          <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span>
+                                          <input  id="funcionario_17"  name="funcionario_17" data-toggle="checkbox" type="checkbox">
+                                      </label>
+                              </div>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-4">
+          <div class="card">
+              <div class="content">
+                  <ul class="list-unstyled team-members">
+                      <li>
+                          <div class="row">
+                              <div class="col-xs-3">
+                                  <div class="avatar">
+                                      <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                  </div>
+                              </div>
+                              <div class="col-xs-7">
+                                      Escrutador I
+                                  </div>
+                                  <div class="col-xs-2 text-right">
+                                      <label class="checkbox" for="checkbox1">
+                                          <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input id="funcionario_12"  name="funcionario_12" data-toggle="checkbox" type="checkbox">
+                                      </label>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="row">
+                              <div class="col-xs-3">
+                                  <div class="avatar">
+                                      <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                  </div>
+                              </div>
+                              <div class="col-xs-7">
+                                      Escrutador II
+                                  </div>
+                                  <div class="col-xs-2 text-right">
+                                      <label class="checkbox" for="checkbox1">
+                                          <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input  id="funcionario_13"  name="funcionario_13" data-toggle="checkbox" type="checkbox">
+                                      </label>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="row">
+                              <div class="col-xs-3">
+                                  <div class="avatar">
+                                      <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                  </div>
+                              </div>
+                              <div class="col-xs-7">
+                                      Escrutador III
+                                  </div>
+                                  <div class="col-xs-2 text-right">
+                                      <label class="checkbox" for="checkbox1">
+                                          <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input  id="funcionario_18"  name="funcionario_18" data-toggle="checkbox" type="checkbox">
+                                      </label>
+                              </div>
+                          </div>
+                      </li>
+
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-4">
+          <div class="card">
+              <div class="content">
+                  <ul class="list-unstyled team-members">
+                      <li>
+                          <div class="row">
+                              <div class="col-xs-3">
+                                  <div class="avatar">
+                                      <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                  </div>
+                              </div>
+                              <div class="col-xs-7">
+                                      Suplente I
+                                  </div>
+                                  <div class="col-xs-2 text-right">
+                                      <label class="checkbox" for="checkbox1">
+                                          <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input  id="funcionario_14"  name="funcionario_14" data-toggle="checkbox" type="checkbox">
+                                      </label>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="row">
+                              <div class="col-xs-3">
+                                  <div class="avatar">
+                                      <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                  </div>
+                              </div>
+                              <div class="col-xs-7">
+                                      Suplente II
+                                  </div>
+                                  <div class="col-xs-2 text-right">
+                                      <label class="checkbox" for="checkbox1">
+                                          <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input  id="funcionario_15"  name="funcionario_15" data-toggle="checkbox" type="checkbox">
+                                      </label>
+                              </div>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="row">
+                              <div class="col-xs-3">
+                                  <div class="avatar">
+                                      <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
+                                  </div>
+                              </div>
+                              <div class="col-xs-7">
+                                      Suplente III
+                                  </div>
+                                  <div class="col-xs-2 text-right">
+                                      <label class="checkbox" for="checkbox1">
+                                          <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input id="funcionario_16"  name="funcionario_16" data-toggle="checkbox" type="checkbox">
+                                      </label>
+                              </div>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+          </div>
     </div>
-    <div class="col-lg-4">
-        <div class="card">
-            <div class="content">
-                <ul class="list-unstyled team-members">
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                    Suplente I
-                                </div>
-                                <div class="col-xs-2 text-right">
-                                    <label class="checkbox" for="checkbox1">
-                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input  id="funcionario_14"  name="funcionario_14" data-toggle="checkbox" type="checkbox">
-                                    </label>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                    Suplente II
-                                </div>
-                                <div class="col-xs-2 text-right">
-                                    <label class="checkbox" for="checkbox1">
-                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input  id="funcionario_15"  name="funcionario_15" data-toggle="checkbox" type="checkbox">
-                                    </label>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <div class="avatar">
-                                    <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">&gt;
-                                </div>
-                            </div>
-                            <div class="col-xs-5">
-                                    Suplente III
-                                </div>
-                                <div class="col-xs-2 text-right">
-                                    <label class="checkbox" for="checkbox1">
-                                        <span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span><input id="funcionario_16"  name="funcionario_16" data-toggle="checkbox" type="checkbox">
-                                    </label>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    <?php
+
+  }
+  ?>
 
     <div class="row">
     <button type="button" id="btn_reporte_1" class="btn btn-fill btn-success" onclick="addFirstReport();">Enviar Reporte</button>
@@ -484,7 +585,7 @@ function addFirstReport()
 
             $.notify ({
                  icon: 'ti-package',
-                 message: "<b>Primer Reporte</b> Enviado."
+                 message: "<b>Reporte Apertura de Casilla</b> Enviado."
 
                },{
                    type: 'danger',

@@ -45,7 +45,7 @@
 
             $.notify ({
                  icon: 'ti-package',
-                 message: "<b>Tercer Reporte</b> Enviado."
+                 message: "<b>Segundo Reporte</b> Enviado."
 
                },{
                    type: 'danger',
