@@ -1807,9 +1807,8 @@ if($display === 'none')
         if(count($data_resFinalesS['noreg_nulos'])>0)
         {
             foreach ($data_resFinalesS['noreg_nulos'] as $bloques => $partidos) {
-                $id_pi = ($bloques == 0) ? 'partidos_independientes_senador' : '';
                 ?>
-                <div class="col-lg-4" id="<?=$id_pi;?>">
+                <div class="col-lg-4">
                     <div class="card">
                         <div class="header">
                             <h4 class="title"></h4>
@@ -2268,9 +2267,8 @@ if($display === 'none')
         if(count($data_resFinalesD['noreg_nulos'])>0)
         {
             foreach ($data_resFinalesD['noreg_nulos'] as $bloques => $partidos) {
-                $id_pi = ($bloques == 0) ? 'partidos_independientes_diputado' : '';
                 ?>
-                <div class="col-lg-4" id="<?=$id_pi;?>">
+                <div class="col-lg-4">
                     <div class="card">
                         <div class="header">
                             <h4 class="title"></h4>
@@ -2634,7 +2632,7 @@ if($display === 'none')
                                         MORENA - PT
                                         <br>
                                         <span class="text-info"><small>
-                                  <input class="input-resultados voto" id="xmf_ayuntamiento_26" data-id="36"  type="text"  size="8"/></small></span>
+                                  <input class="input-resultados voto" id="xmf_ayuntamiento_37" data-id="36"  type="text"  size="8"/></small></span>
                                     </div>
 
                                 </div>
@@ -2663,7 +2661,7 @@ if($display === 'none')
                                         MORENA - PT
                                         <br>
                                         <span class="text-info"><small>
-                                  <input class="input-resultados voto" id="xmf_ayuntamiento_27" data-id="36"  type="text"  size="8"/></small></span>
+                                  <input class="input-resultados voto" id="xmf_ayuntamiento_39" data-id="36"  type="text"  size="8"/></small></span>
                                     </div>
 
                                 </div>
@@ -2730,9 +2728,8 @@ if($display === 'none')
         if(count($data_resFinalesA['noreg_nulos'])>0)
         {
             foreach ($data_resFinalesA['noreg_nulos'] as $bloques => $partidos) {
-                $id_pi = ($bloques == 0) ? 'partidos_independientes_ayuntamiento' : '';
                 ?>
-                <div class="col-lg-4" id="<?=$id_pi;?>">
+                <div class="col-lg-4" >
                     <div class="card">
                         <div class="header">
                             <h4 class="title"></h4>
@@ -3028,7 +3025,43 @@ function addLastReport()
            xmf_partido_id_26:$('#xmf_'+tipo_voto+'_26').attr('data-id'),
 
            xmf_partido_27:$('#xmf_'+tipo_voto+'_27').val(),
-           xmf_partido_id_27:$('#xmf_'+tipo_voto+'_27').attr('data-id')
+           xmf_partido_id_27:$('#xmf_'+tipo_voto+'_27').attr('data-id'),
+
+           xmf_partido_28:$('#xmf_'+tipo_voto+'_28').val(),
+           xmf_partido_id_28:$('#xmf_'+tipo_voto+'_28').attr('data-id'),
+
+           xmf_partido_29:$('#xmf_'+tipo_voto+'_29').val(),
+           xmf_partido_id_29:$('#xmf_'+tipo_voto+'_29').attr('data-id'),
+
+           xmf_partido_30:$('#xmf_'+tipo_voto+'_30').val(),
+           xmf_partido_id_30:$('#xmf_'+tipo_voto+'_30').attr('data-id'),
+
+           xmf_partido_31:$('#xmf_'+tipo_voto+'_31').val(),
+           xmf_partido_id_31:$('#xmf_'+tipo_voto+'_31').attr('data-id'),
+
+           xmf_partido_32:$('#xmf_'+tipo_voto+'_32').val(),
+           xmf_partido_id_32:$('#xmf_'+tipo_voto+'_32').attr('data-id'),
+
+           xmf_partido_33:$('#xmf_'+tipo_voto+'_33').val(),
+           xmf_partido_id_33:$('#xmf_'+tipo_voto+'_33').attr('data-id'),
+
+           xmf_partido_34:$('#xmf_'+tipo_voto+'_34').val(),
+           xmf_partido_id_34:$('#xmf_'+tipo_voto+'_34').attr('data-id'),
+
+           xmf_partido_35:$('#xmf_'+tipo_voto+'_35').val(),
+           xmf_partido_id_35:$('#xmf_'+tipo_voto+'_35').attr('data-id'),
+
+           xmf_partido_36:$('#xmf_'+tipo_voto+'_36').val(),
+           xmf_partido_id_36:$('#xmf_'+tipo_voto+'_36').attr('data-id'),
+
+           xmf_partido_37:$('#xmf_'+tipo_voto+'_37').val(),
+           xmf_partido_id_37:$('#xmf_'+tipo_voto+'_37').attr('data-id'),
+
+           xmf_partido_38:$('#xmf_'+tipo_voto+'_38').val(),
+           xmf_partido_id_38:$('#xmf_'+tipo_voto+'_38').attr('data-id'),
+
+           xmf_partido_39:$('#xmf_'+tipo_voto+'_39').val(),
+           xmf_partido_id_39:$('#xmf_'+tipo_voto+'_39').attr('data-id')
        }
        ,
        success: function (json) {
