@@ -894,7 +894,7 @@ if($display === 'none')
 
                              </ul>
                              <?php
-                             if($bloques == 3)
+                             /*if($bloques == 3)
                              {
                                  ?>
                                  <ul class="list-unstyled team-members pt-mor_presidente" >
@@ -920,7 +920,7 @@ if($display === 'none')
                                      </li>
                                  </ul>
                              <?php
-                             }
+                             }*/
                              ?>
 
                          </div>
@@ -1167,7 +1167,7 @@ if($display === 'none')
                                          MORENA - PT
                                          <br>
                                          <span class="text-info"><small>
-                                  <input class="input-resultados voto" id="xmf_presidente_26" data-id="36"  type="text"  size="8"/></small></span>
+                                  <input class="input-resultados voto" id="xmf_presidente_26" data-id="29"  type="text"  size="8"/></small></span>
                                      </div>
 
                                  </div>
@@ -1177,35 +1177,7 @@ if($display === 'none')
                      </div>
                  </div>
              </div>
-             <div class="col-lg-4  pt-mor_presidente " >
-                 <div class="card">
-                     <div class="header">
-                         <h4 class="title " id="coalicion_title"><small class="text-info">COALICIÓN MORENA-PT</small></h4>
-                     </div>
-                     <div class="content">
 
-                         <ul class="list-unstyled team-members" >
-                             <li>
-                                 <div class="row">
-                                     <div class="col-xs-4">
-                                         <div class="avatar">
-                                             <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/MORENA-PT.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                                         </div>
-                                     </div>
-                                     <div class="col-xs-7">
-                                         MORENA - PT
-                                         <br>
-                                         <span class="text-info"><small>
-                                  <input class="input-resultados voto" id="xmf_presidente_27" data-id="36"  type="text"  size="8"/></small></span>
-                                     </div>
-
-                                 </div>
-                             </li>
-
-                         </ul>
-                     </div>
-                 </div>
-             </div>
              <div class="col-lg-4" id="partidos_independientes_presidente">
                  <div class="card">
                      <div class="header">
@@ -1397,7 +1369,7 @@ if($display === 'none')
 
                             </ul>
                             <?php
-                            if($bloques == 3)
+                            /*if($bloques == 3)
                             {
                                 ?>
                                 <ul class="list-unstyled team-members pt-mor_senador">
@@ -1423,7 +1395,7 @@ if($display === 'none')
                                     </li>
                                 </ul>
                                 <?php
-                            }
+                            }*/
                             ?>
 
                         </div>
@@ -1658,57 +1630,11 @@ if($display === 'none')
                             </li>
 
                         </ul>
-                        <ul class="list-unstyled team-members pt-mor_senador pt-mor_senador_senador" id="">
-                            <li>
-                                <div class="row">
-                                    <div class="col-xs-4">
-                                        <div class="avatar">
-                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/MORENA-PT.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-7">
-                                        MORENA - PT
-                                        <br>
-                                        <span class="text-info"><small>
-                                  <input class="input-resultados voto" id="xmf_senador_26" data-id="36"  type="text"  size="8"/></small></span>
-                                    </div>
 
-                                </div>
-                            </li>
-
-                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4  pt-mor_senador " >
-                <div class="card">
-                    <div class="header">
-                        <h4 class="title " id="coalicion_title"><small class="text-info">COALICIÓN MORENA-PT</small></h4>
-                    </div>
-                    <div class="content">
 
-                        <ul class="list-unstyled team-members" >
-                            <li>
-                                <div class="row">
-                                    <div class="col-xs-4">
-                                        <div class="avatar">
-                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/MORENA-PT.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-7">
-                                        MORENA - PT
-                                        <br>
-                                        <span class="text-info"><small>
-                                  <input class="input-resultados voto" id="xmf_senador_27" data-id="36"  type="text"  size="8"/></small></span>
-                                    </div>
-
-                                </div>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
             <div class="col-lg-4" id="partidos_independientes_senador">
                 <div class="card">
                     <div class="header">
@@ -1898,7 +1824,7 @@ if($display === 'none')
 
                             </ul>
                             <?php
-                            if($bloques == 3)
+                            /*if($bloques == 3)
                             {
                                 ?>
                                 <ul class="list-unstyled team-members pt-mor_diputado">
@@ -1924,7 +1850,7 @@ if($display === 'none')
                                     </li>
                                 </ul>
                                 <?php
-                            }
+                            }*/
                             ?>
 
                         </div>
@@ -2159,57 +2085,11 @@ if($display === 'none')
                             </li>
 
                         </ul>
-                        <ul class="list-unstyled team-members pt-mor_diputado" id="" >
-                            <li>
-                                <div class="row">
-                                    <div class="col-xs-4">
-                                        <div class="avatar">
-                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/MORENA-PT.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-7">
-                                        MORENA - PT
-                                        <br>
-                                        <span class="text-info"><small>
-                                  <input class="input-resultados voto" id="xmf_diputado_26" data-id="36"  type="text"  size="8"/></small></span>
-                                    </div>
 
-                                </div>
-                            </li>
-
-                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4  pt-mor_diputado ">
-                <div class="card">
-                    <div class="header">
-                        <h4 class="title " id="coalicion_title"><small class="text-info">COALICIÓN MORENA-PT</small></h4>
-                    </div>
-                    <div class="content">
 
-                        <ul class="list-unstyled team-members" >
-                            <li>
-                                <div class="row">
-                                    <div class="col-xs-4">
-                                        <div class="avatar">
-                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/MORENA-PT.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-7">
-                                        MORENA - PT
-                                        <br>
-                                        <span class="text-info"><small>
-                                  <input class="input-resultados voto" id="xmf_diputado_27" data-id="36"  type="text"  size="8"/></small></span>
-                                    </div>
-
-                                </div>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
             <div class="col-lg-4" id="partidos_independientes_diputado">
 
             </div>
@@ -2376,7 +2256,7 @@ if($display === 'none')
                                                 MORENA - PT
                                                 <br>
                                                 <span class="text-info"><small>
-                                            <input class="input-resultados voto" id="xmf_ayuntamiento_<?= $p['id']; ?>"
+                                            <input class="input-resultados voto" id="xmf_ayuntamiento_39"
                                                    data-id="<?= $p['id']; ?>" value="<?= $p['data']; ?>" type="text"
                                                    size="8"/></small></span>
                                             </div>
@@ -2632,7 +2512,7 @@ if($display === 'none')
                                         MORENA - PT
                                         <br>
                                         <span class="text-info"><small>
-                                  <input class="input-resultados voto" id="xmf_ayuntamiento_37" data-id="36"  type="text"  size="8"/></small></span>
+                                  <input class="input-resultados voto" id="xmf_ayuntamiento_37" data-id="29"  type="text"  size="8"/></small></span>
                                     </div>
 
                                 </div>
@@ -2661,7 +2541,7 @@ if($display === 'none')
                                         MORENA - PT
                                         <br>
                                         <span class="text-info"><small>
-                                  <input class="input-resultados voto" id="xmf_ayuntamiento_39" data-id="36"  type="text"  size="8"/></small></span>
+                                  <input class="input-resultados voto" id="xmf_ayuntamiento_36" data-id="36"  type="text"  size="8"/></small></span>
                                     </div>
 
                                 </div>

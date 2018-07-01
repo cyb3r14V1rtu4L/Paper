@@ -63,11 +63,12 @@
                         <h4>DATOS CASILLAS REPORTE II</h4>
                         <hr/>
                         <?php
-                        $votantes = 0;
-                        $promovidos = 0;
+
 
                         foreach($casillas_segundo_reporte as $cp)
                         {
+                            $votantes = 0;
+                            $promovidos = 0;
                         ?>
                             <div class="col-lg-2 col-sm-12">
                                 <div class="card ">
@@ -112,10 +113,10 @@
                         <h4>DATOS CASILLAS REPORTE III</h4>
                             <hr/>
                             <?php
-                            $votantes = 0;
-                            $promovidos = 0;
-                            #pr($casillas_segundo_reporte);
+
                             foreach($casillas_tercer_reporte as $cp){
+                                $votantes = 0;
+                                $promovidos = 0;
                             ?>
                                 <div class="col-lg-2 col-sm-12">
                                     <div class="card ">
