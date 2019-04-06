@@ -74,7 +74,7 @@
               text: '<h4 class="title">ACUMULADO DE VOTACIONES</h4>'
           },
           credits:{enabled:false},
-          colors:['#F3BB45','#68B3C8','#3398d6','#b4c973','#6c99bb'],
+          colors:['#D84500','#396607','#3398d6','#b4c973','#6c99bb'],
           subtitle: {
               text: '<p class="category">Monitoreo en tiempo real</p>'
           },

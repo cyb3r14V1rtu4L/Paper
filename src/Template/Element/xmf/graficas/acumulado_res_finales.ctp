@@ -39,9 +39,9 @@
                                         <div class="avatar">
                                           <?php
                                           $img = str_replace(" ","-",$tbvalue['name']);
-
+                                          $ext = ($tbvalue['name'] == 'No Registrados' || $tbvalue['name'] == 'Votos Nulos') ? 'png' : 'jpeg';
                                           ?>
-                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/<?= $img ?>.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/<?= $img ?>.<?= $ext ?>" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                                         </div>
                                     </div>
                                     <div class="col-xs-4">
@@ -74,7 +74,7 @@
                       text: 'FLUJO VOTACIÓN FINAL'
                   },
                   credits:{enabled:false},
-                  colors:['#F3BB45','#68B3C8','#3398d6','#b4c973','#6c99bb'],
+                  colors:['#D84500','#396607','#3398d6','#b4c973','#6c99bb'],
                   subtitle: {
                       text: 'Monitoreo en tiempo real'
                   },

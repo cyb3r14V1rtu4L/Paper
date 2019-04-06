@@ -54,7 +54,7 @@ switch ($method)
     </li>
 
     <li class="<?=$active_6;?>">
-        <a href="<?php echo $this->Url->build('/XmfViewReporteSegundosTerceros/lastReport'); ?>">
+        <a href="<?php echo $this->Url->build('/XmfViewReporteSegundosTerceros/lastReport/ayuntamiento'); ?>">
             <i class="ti-user"></i>
             <p>RESULTADOS FINALES</p>
         </a>

@@ -8,7 +8,7 @@
             <div class="nav-tabs-navigation">
                 <div class="nav-tabs-wrapper">
                     <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-                        <li class="active"><a href="#reporte_1" data-toggle="tab"  >APERTURA DE CASILLA</a></li>
+                        <!--<li class="active"><a href="#reporte_1" data-toggle="tab"  >APERTURA DE CASILLA</a></li>-->
                         <li><a href="#reporte_2" data-toggle="tab"  >REPORTE I</a></li>
                         <li><a href="#reporte_3" data-toggle="tab" >REPORTE II</a></li>
                         <li><a href="#reporte_4"  data-toggle="tab" >REPORTE III</a></li>
@@ -19,21 +19,21 @@
             </div>
 
             <div id="my-tab-content" class="tab-content text-center">
-                <div class="tab-pane active" id="reporte_1">
+                <!--<div class="tab-pane active" id="reporte_1">
                     <p>
                         <h4>DATOS CASILLAS REPORTE I</h4>
                         <hr/>
                         <?php
-                        foreach($casillas_representantes as $cp)
+/*                        foreach($casillas_representantes as $cp)
                         {
-                        ?>
+                        */?>
                             <div class="col-lg-2 col-sm-12">
                                 <div class="card ">
                                     <div class="content">
                                         <div class="row">
                                             <div class="col-xs-12">
                                                 <div class="">
-                                                    <div class="text-center"><?=$cp['name']?></div>
+                                                    <div class="text-center"><?/*=$cp['name']*/?></div>
                                                 </div>
                                             </div>
 
@@ -41,11 +41,11 @@
                                         <div class="footer">
                                             <hr />
                                                 <div class="text-center">
-                                                    <a href="tel:<?=$cp['rc_telefono']?>">
+                                                    <a href="tel:<?/*=$cp['rc_telefono']*/?>">
                                                         <span class="ti-mobile"></span>
                                                     </a>
                                                     &nbsp;
-                                                    <a href="<?php echo $this->Url->build('/XmfCasillas/CapturaResultados/'.$cp['xmf_casillas_id'].'/1'); ?>">
+                                                    <a href="<?php /*echo $this->Url->build('/XmfCasillas/CapturaResultados/'.$cp['xmf_casillas_id'].'/1'); */?>">
                                                         <span class="ti-package"></span>
                                                     </a>
                                                 </div>
@@ -54,13 +54,13 @@
                                 </div>
                             </div>
                         <?php
-                        }
-                        ?>
+/*                        }
+                        */?>
                     </p>
-                </div>
+                </div>-->
                 <div class="tab-pane" id="reporte_2">
                     <p>
-                        <h4>DATOS CASILLAS REPORTE II</h4>
+                        <h4>DATOS MUNICIPIO REPORTE I</h4>
                         <hr/>
                         <?php
 
@@ -110,7 +110,7 @@
                 </div>
                 <div class="tab-pane" id="reporte_3">
                     <p>
-                        <h4>DATOS CASILLAS REPORTE III</h4>
+                        <h4>DATOS MUNICIPIOS REPORTE II</h4>
                             <hr/>
                             <?php
 
@@ -158,7 +158,7 @@
                 </div>
                 <div class="tab-pane" id="reporte_4">
                     <p>
-                        <h4>DATOS CASILLAS REPORTE IV</h4>
+                        <h4>DATOS MUNICIPIOS REPORTE III</h4>
                             <hr/>
                             <?php
                             $votantes = 0;
@@ -215,17 +215,17 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-        <div class="col-lg-6 col-sm-6">
-            <div class="text-center">
-                <button type="submit" class="btn btn-info btn-fill btn-wd">Exportar PDF</button>
+        <!--<div class="row">
+            <div class="col-lg-6 col-sm-6">
+                <div class="text-center">
+                    <button type="submit" class="btn btn-info btn-fill btn-wd">Exportar PDF</button>
+                </div>
             </div>
-        </div>
-        <div class="col-lg-6 col-sm-6">
-            <div class="text-center">
-                <button type="submit" class="btn btn-info btn-fill btn-wd">Exportar XLS</button>
+            <div class="col-lg-6 col-sm-6">
+                <div class="text-center">
+                    <button type="submit" class="btn btn-info btn-fill btn-wd">Exportar XLS</button>
+                </div>
             </div>
-        </div>
-    </div>
+        </div>-->
     </div>
 </div>
