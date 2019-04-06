@@ -10,7 +10,7 @@
  */
 
 use Cake\Core\Configure;
-$cakeDescription = '.:: XMF Cristina ::.';
+$cakeDescription = '.:: SICEL Sistema Integral de Control Electoral ::.';
 ?>
 
 
@@ -130,7 +130,7 @@ font-weight: 500;
 
 					  <div class="row login">
 
-					  	<h5>INICIAR SESIÓN - S.I.E</h5>
+					  	<h5>INICIAR SESIÓN - SICEL</h5>
               <hr>
               <img src="<?php echo $this->request->webroot?>paper/img/partidos/poramoraplaya.jpg" alt="" class="responsive-img">
 					    <form class="col s12">
