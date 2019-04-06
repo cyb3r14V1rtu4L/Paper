@@ -42,8 +42,6 @@ if($display === 'none')
                         <div class="content">
                             <ul class="list-unstyled team-members">
                                 <?php
-
-
                                     $img = str_replace(" ","-",$p['name']);
                                     $ext = ($p['name'] == 'No Registrados' || $p['name'] == 'Votos Nulos') ? '.png' : '.jpeg';
                                     $img_name =  "partidos_png/".$img.$ext;
@@ -56,7 +54,7 @@ if($display === 'none')
                                         <div class="row">
                                             <div class="col-xs-12">
                                                 <div class="<?=$class;?>">
-                                                    <img src="<?php echo $this->request->webroot?>paper/img/<?=$img_name;?>" alt="PAN" class="<?=$class;?> img-no-padding img-responsive">
+                                                    <img src="<?php echo $this->request->webroot?>paper/img/<?=$img_name;?>" alt="" class="<?=$class;?> img-no-padding img-responsive">
                                                 </div>
                                             </div>
                                             <div class="col-xs-12">
@@ -87,8 +85,8 @@ if($display === 'none')
                             <li>
                                 <div class="row">
                                     <div class="col-xs-12">
-                                        <div class="avatar">
-                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PAN.png" alt="PAN" class="img-circle img-no-padding img-responsive">
+                                        <div class="">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/Diego-Alberto.jpeg" alt="Diego Alberto" class=" img-no-padding img-responsive">
                                         </div>
                                     </div>
                                     <div class="col-xs-12">
@@ -112,8 +110,8 @@ if($display === 'none')
                             <li>
                                 <div class="row">
                                     <div class="col-xs-12">
-                                        <div class="avatar">
-                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PRI.png" alt="PRI" class="img-circle img-no-padding img-responsive">
+                                        <div class="">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/Panchito-Torres.jpeg" alt="Panchito Torres" class=" img-no-padding img-responsive">
                                         </div>
                                     </div>
                                     <div class="col-xs-12">
@@ -138,8 +136,8 @@ if($display === 'none')
                             <li>
                                 <div class="row">
                                     <div class="col-xs-12">
-                                        <div class="avatar">
-                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PRD.png" alt="PRD" class="img-circle img-no-padding img-responsive">
+                                        <div class="">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/Panchito-Medina.jpeg" alt="Panchito Medina" class=" img-no-padding img-responsive">
                                         </div>
                                     </div>
                                     <div class="col-xs-12">
@@ -165,8 +163,8 @@ if($display === 'none')
                             <li>
                                 <div class="row">
                                     <div class="col-xs-12">
-                                        <div class="avatar">
-                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PVE.png" alt="PVE" class="img-circle img-no-padding img-responsive">
+                                        <div class="">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/Eloy-Quiroz.jpeg" alt="Eloy Quiroz" class=" img-no-padding img-responsive">
                                         </div>
                                     </div>
                                     <div class="col-xs-12">
@@ -194,7 +192,7 @@ if($display === 'none')
                                 <div class="row">
                                     <div class="col-xs-4">
                                         <div class="avatar">
-                                            <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="No Registrados" class=" img-no-padding img-responsive">
                                         </div>
                                     </div>
                                     <div class="col-xs-7">
@@ -210,7 +208,7 @@ if($display === 'none')
                                 <div class="row">
                                     <div class="col-xs-4">
                                         <div class="avatar">
-                                            <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Votos Nulos" class="img-circle img-no-padding img-responsive">
                                         </div>
                                     </div>
                                     <div class="col-xs-7">
