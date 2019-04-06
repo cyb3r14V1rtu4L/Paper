@@ -107,7 +107,7 @@ border: 1px solid transparent;
 -moz-user-select: none;
 touch-action: manipulation;
 cursor: pointer;
-border-color: #7AC29A;
+border-color: #086619;
 font-weight: 500;
 }
 
