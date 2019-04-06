@@ -13,7 +13,7 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = '.:: SICEL Sistema Integral de Control Electoral ::.';
+$cakeDescription = '.:: SICEL Sistema Integral para el Control Electoral ::.';
 ?>
 <!DOCTYPE html>
 <html lang="en">

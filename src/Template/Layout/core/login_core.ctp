@@ -10,7 +10,7 @@
  */
 
 use Cake\Core\Configure;
-$cakeDescription = '.:: SICEL Sistema Integral de Control Electoral ::.';
+$cakeDescription = '.:: SICEL Sistema Integral para el Control Electoral ::.';
 ?>
 
 
