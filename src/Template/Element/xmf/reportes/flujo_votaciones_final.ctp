@@ -19,7 +19,7 @@
                         <div class="col-xs-6">
                             VOTANTES
                             <br>
-                            <span class="text-warning"><h3><?=$votantes_s;?></h3></span>
+                            <span class="text-warning"><h3><?=number_format($votantes_s);?></h3></span>
                         </div>
 
                     </div>

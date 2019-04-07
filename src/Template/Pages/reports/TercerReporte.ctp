@@ -19,7 +19,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="header">
-                    <h4 class="title">TERCER REPORTE - FLUJO DE VOTACIONES</h4>
+                    <h4 class="title">SEGUNDO REPORTE - 12:00 - 15:00 HRS</h4>
                     <p class="category">
 
                     </p>
