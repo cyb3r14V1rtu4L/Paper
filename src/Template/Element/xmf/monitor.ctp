@@ -46,7 +46,7 @@
                                                     #$promovidos =$cp['votos']['promovidos_segundo']+$cp['votos']['promovidos_tercero'];
 
                                                     ?>
-                                                    <!--<a href="#" rel="tooltip" style="white-space: nowrap;" title="<?=$votantes?>/<?=$promovidos?>"><span class="pie"><?=$votantes?>/<?=$promovidos?></span></a> -->
+                                                    <!--<a href="#" rel="tooltip" style="white-space: nowrap;" title="<?=$votantes?>"><span class="pie"><?=$votantes?>/<?=$promovidos?></span></a> -->
 
                                                 </div>
                                         </div>
@@ -97,7 +97,7 @@
                                                         #$promovidos =$cp['votos']['promovidos_segundo']+$cp['votos']['promovidos_tercero'];
 
                                                         ?>
-                                                        <!--<a href="#" rel="tooltip" style="white-space: nowrap;" title="<?=$votantes?>/<?=$promovidos?>"><span class="pie"><?=$votantes?>/<?=$promovidos?></span></a> -->
+                                                        <!--<a href="#" rel="tooltip" style="white-space: nowrap;" title="<?=$votantes?>"><span class="pie"><?=$votantes?>/<?=$promovidos?></span></a> -->
 
                                                     </div>
                                             </div>
@@ -152,7 +152,7 @@
                                                         #$promovidos =$cp['votos']['promovidos_segundo']+$cp['votos']['promovidos_tercero'];
 
                                                         ?>
-                                                        <!--<a href="#" rel="tooltip" style="white-space: nowrap;" title="<?=$votantes?>/<?=$promovidos?>"><span class="pie"><?=$votantes?>/<?=$promovidos?></span></a> -->
+                                                        <!--<a href="#" rel="tooltip" style="white-space: nowrap;" title="<?=$votantes?>"><span class="pie"><?=$votantes?>/<?=$promovidos?></span></a> -->
 
                                                     </div>
                                             </div>
@@ -198,7 +198,7 @@
                                                         #$promovidos =$cp['votos']['promovidos_segundo']+$cp['votos']['promovidos_tercero'];
 
                                                         ?>
-                                                        <!--<a href="#" rel="tooltip" style="white-space: nowrap;" title="<?=$votantes?>/<?=$promovidos?>"><span class="pie"><?=$votantes?>/<?=$promovidos?></span></a> -->
+                                                        <!--<a href="#" rel="tooltip" style="white-space: nowrap;" title="<?=$votantes?>"><span class="pie"><?=$votantes?></span></a> -->
 
                                                     </div>
                                             </div>

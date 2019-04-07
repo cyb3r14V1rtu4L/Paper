@@ -63,11 +63,12 @@
               name: 'Votantes',
               data: <?= $votantes?>
 
-          }, {
+          },
+          /*{
               name: 'Promovidos',
               data: <?= $promovidos?>
 
-          }]
+          }*/]
       });
 
 

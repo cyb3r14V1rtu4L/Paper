@@ -49,15 +49,18 @@ if($display === 'none')
                                     $class = ($p['name'] == 'No Registrados' || $p['name'] == 'Votos Nulos') ? 'avatar' : '';
                                     $class_c = ($p['name'] == 'No Registrados' || $p['name'] == 'Votos Nulos') ? 'img-circle' : '';
 
+                                    $class_col_mpio = ($p['name'] == 'No Registrados' || $p['name'] == 'Votos Nulos') ? '4' : '12';
+                                    $class_col_voto = ($p['name'] == 'No Registrados' || $p['name'] == 'Votos Nulos') ? '7' : '12';
+
                                     ?>
                                     <li>
                                         <div class="row">
-                                            <div class="col-xs-12">
+                                            <div class="col-xs-<?=$class_col_mpio;?>">
                                                 <div class="<?=$class;?>">
                                                     <img src="<?php echo $this->request->webroot?>paper/img/<?=$img_name;?>" alt="" class="<?=$class;?> img-no-padding img-responsive">
                                                 </div>
                                             </div>
-                                            <div class="col-xs-12">
+                                            <div class="col-xs-<?=$class_col_voto;?>">
                                         <span class="text-info"><small>
                                           <input class="input-resultados voto" id="xmf_ayuntamiento_<?=$p['id'];?>" data-id="<?=$p['id'];?>" type="text" size="8" value="<?=$p['data'];?>"/></small></span>
                                             </div>
@@ -199,11 +202,23 @@ if($display === 'none')
                                         No Registrados
                                         <br>
                                         <span class="text-info"><small>
-                                  <input class="input-resultados voto" id="xmf_presidente_24" data-id="34"  type="text"  size="8"/></small></span>
+                                  <input class="input-resultados voto" id="xmf_ayuntamiento_24" data-id="34"  type="text"  size="8"/></small></span>
                                     </div>
 
                                 </div>
                             </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title"></h4>
+                    </div>
+                    <div class="content">
+                        <ul class="list-unstyled team-members">
                             <li>
                                 <div class="row">
                                     <div class="col-xs-4">
@@ -215,7 +230,7 @@ if($display === 'none')
                                         Votos Nulos
                                         <br>
                                         <span class="text-info"><small>
-                                  <input class="input-resultados voto" id="xmf_presidente_25" data-id="33"  type="text"  size="8"/></small></span>
+                                  <input class="input-resultados voto" id="xmf_ayuntamiento_25" data-id="33"  type="text"  size="8"/></small></span>
                                     </div>
 
                                 </div>

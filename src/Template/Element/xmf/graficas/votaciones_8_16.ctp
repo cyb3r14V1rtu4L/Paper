@@ -5,7 +5,7 @@ $promovidos_data = (isset($promovidos_s15)) ? $promovidos_s15:$promovidos_s;
 ?>
 <div class="card">
         <div class="header">
-            <h4 class="title">GR&Aacute;FICA VOTANTES Y PROMOVIDOS</h4>
+            <h4 class="title">GR&Aacute;FICA VOTANTES</h4>
             <p class="category">VOTACIONES 8:00HRS A 15:OOHRS</p>
         </div>
         <div class="content">
@@ -67,10 +67,10 @@ $promovidos_data = (isset($promovidos_s15)) ? $promovidos_s15:$promovidos_s;
                   "name": "VOTANTES",
                   "y": <?=$votantes_data;?>
                 },
-                {
+                /*{
                   "name": "PROMOVIDOS",
-                  "y": <?=$promovidos_data;?>
-                }
+                  "y":
+                }*/
               ]
             }
           ]

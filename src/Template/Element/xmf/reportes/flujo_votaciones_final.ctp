@@ -31,11 +31,7 @@
                                 <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                             </div>
                         </div>
-                        <div class="col-xs-6">
-                            PROMOVIDOS
-                            <br>
-                            <span class="text-info"><h3><?=$promovidos_s;?></h3></span>
-                        </div>
+
 
                     </div>
                 </li>

@@ -96,7 +96,7 @@
                                                     $promovidos +=$cp['votos']['promovidos_segundo'];
 
                                                     ?>
-                                                    <a href="#" rel="tooltip" style="white-space: nowrap;" title="<?='Votos: '.$votantes?> Prom: <?=$promovidos?>"><span class="pie"><?=$votantes?>/<?=$promovidos?></span></a>
+                                                    <a href="#" rel="tooltip" style="white-space: nowrap;" title="<?='Votos: '.$votantes?> "><span class="pie"><?=$votantes?></span></a>
 
                                                 </div>
                                         </div>
@@ -144,7 +144,7 @@
                                                         $promovidos +=$cp['votos']['promovidos_tercero'];
 
                                                         ?>
-                                                        <a href="#" rel="tooltip" style="white-space: nowrap;" title="<?='Votos: '.$votantes?> Prom: <?=$promovidos?>"><span class="pie"><?=$votantes?>/<?=$promovidos?></span></a>
+                                                        <a href="#" rel="tooltip" style="white-space: nowrap;" title="<?='Votos: '.$votantes?>"><span class="pie"><?=$votantes?></span></a>
 
                                                     </div>
                                             </div>
@@ -163,7 +163,6 @@
                             <?php
                             $votantes = 0;
                             $promovidos = 0;
-                            #pr($casillas_cuarto_reporte);
                             foreach($casillas_cuarto_reporte as $cp){
                             ?>
                                 <div class="col-lg-2 col-sm-12">
@@ -192,7 +191,7 @@
                                                         $promovidos = $cp['promovidos'];
 
                                                         ?>
-                                                        <a href="#" rel="tooltip" style="white-space: nowrap;" title="<?='Votos: '.$votantes?> Prom: <?=$promovidos?>"><span class="pie"><?=$votantes?>/<?=$promovidos?></span></a>
+                                                        <a href="#" rel="tooltip" style="white-space: nowrap;" title="<?='Votos: '.$votantes?>><span class="pie"><?=$votantes?></span></a>
 
                                                     </div>
                                             </div>
@@ -207,6 +206,48 @@
                 <div class="tab-pane" id="reporte_5">
                     <p>
                         <h4>RESULTADOS FINALES</h4>
+                        <hr/>
+                        <?php
+                        $votantes = 0;
+                        $promovidos = 0;
+                        foreach($casillas_finales_reporte as $cp){
+                            ?>
+                            <div class="col-lg-2 col-sm-12">
+                                <div class="card ">
+                                    <div class="content">
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <div class="">
+                                                    <div class="text-center"><?=$cp['CasillaDatos']['name']?></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="footer">
+                                            <hr />
+                                            <div class="text-center">
+                                                <a href="tel:9999999999">
+                                                    <span class="ti-mobile"></span>
+                                                </a>
+                                                &nbsp;
+                                                <a href="<?php echo $this->Url->build('/XmfCasillas/CapturaResultados/'.$cp['xmf_casillas_id'].'/4'); ?>">
+                                                    <span class="ti-package"></span>
+                                                </a>
+                                                &nbsp;
+                                                <?php
+                                                $votantes = $cp['votantes'];
+                                                $promovidos = $cp['promovidos'];
+
+                                                ?>
+                                                <a href="#" rel="tooltip" style="white-space: nowrap;" title="<?='Votos: '.$votantes?>"><span class="pie"><?=$votantes?></span></a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
+                        }
+                        ?>
                     </p>
                     <hr/>
                 </div>
