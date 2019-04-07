@@ -13,6 +13,7 @@ $url = explode("/",$this->request->url);
 
 if($url[0] != ''){
   $method = (isset($url[1])) ? $url[1] : null;
+  echo $method;
   switch ($method)
   {
     case 'monitor-casillas':
@@ -33,10 +34,33 @@ if($url[0] != ''){
                   }
               });
           }
-          setInterval(getMonitorCasillas, 30000);
+          setInterval(getMonitorCasillas, 10000);
         });
         </script>
     <?php
+    break;
+
+    case 'lastReport':
+        ?>
+        <script>
+            $(document).ready(function () {
+                function getMonitorCasillas()
+                {
+                    $.ajax({
+                        url:'/XmfViewReporteSegundosTerceros/lastReport/ayuntamiento',
+                        type: 'POST',
+                        dataType: "html",
+                        evalScripts:true,
+
+                        success:function (data, textStatus) {
+                            $("#divMonitorFinales").html(data);
+                        }
+                    });
+                }
+                setInterval(getMonitorCasillas, 10000);
+            });
+        </script>
+        <?php
     break;
   }
 }else {
