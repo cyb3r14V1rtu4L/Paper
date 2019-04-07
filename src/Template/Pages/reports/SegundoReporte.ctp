@@ -15,6 +15,44 @@
         <?= $this->element('Paper.xmf/counter_head_vertical'); ?>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="header">
+                    <h4 class="title">PRIMER REPORTE - VOTACIONES 08:00 - 12:00 HRS.</h4>
+                    <p class="category">
+
+                    </p>
+                </div>
+                <div class="content table-responsive table-full-width">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th><i class="ti-package"></i> CASILLA</th>
+                            <th><i class="ti-user"></i> VOTOS</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <?php
+                        foreach ($tabular as $tabata):
+                            ?>
+                            <tr >
+                                <td align="left"><?= h($tabata['name']) ?></td>
+                                <td><?= h($tabata['votantes_segundo']) ?></td>
+
+                            </tr>
+                        <?php endforeach; ?>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="row">
         <div class="col-lg-6 col-sm-6">
             <div class="text-center">
@@ -27,6 +65,7 @@
             </div>
         </div>
     </div>
+
 
 
 </div>   <!-- container-fluid -->
