@@ -13,7 +13,7 @@ $url = explode("/",$this->request->url);
 
 if($url[0] != ''){
   $method = (isset($url[1])) ? $url[1] : null;
-  echo $method;
+  #echo $method;
   switch ($method)
   {
     case 'monitor-casillas':
