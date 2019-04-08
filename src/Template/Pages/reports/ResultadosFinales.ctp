@@ -8,7 +8,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="header">
-                        <h4 class="title">SEGUNDO REPORTE - 12:00 - 15:00 HRS</h4>
+                        <h4 class="title">RESULTADOS FINALES - FLUJO FINAL DE VOTACIONES</h4>
                         <p class="category">
 
                         </p>
