@@ -231,7 +231,7 @@
                                                     <span class="ti-mobile"></span>
                                                 </a>
                                                 &nbsp;
-                                                <a href="<?php echo $this->Url->build('/XmfCasillas/CapturaResultados/'.$cp['xmf_casillas_id'].'/4'); ?>">
+                                                <a href="<?php echo $this->Url->build('/XmfCasillas/CapturaResultados/'.$cp['id'].'/4'); ?>">
                                                     <span class="ti-package"></span>
                                                 </a>
                                                 &nbsp;
