@@ -39,7 +39,7 @@
                             ?>
                             <tr >
                                 <td align="left"><?= h($tabata['name']) ?></td>
-                                <td><?= h(number_format($tabata['votantes_tercero'])); ?></td>
+                                <td align="right"><?= h(number_format($tabata['votantes_tercero'])); ?></td>
 
                             </tr>
                         <?php endforeach; ?>

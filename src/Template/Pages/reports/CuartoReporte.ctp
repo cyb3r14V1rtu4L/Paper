@@ -45,7 +45,7 @@
                             ?>
                             <tr >
                                 <td align="left"><?= h($tabata['name']) ?></td>
-                                <td><?= h(number_format($tabata['total_votos'])); ?></td>
+                                <td align="right"><?= h(number_format($tabata['total_votos'])); ?></td>
 
                             </tr>
                         <?php endforeach; ?>
