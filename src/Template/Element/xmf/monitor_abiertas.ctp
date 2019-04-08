@@ -210,7 +210,7 @@
                         <?php
                         $votantes = 0;
                         $promovidos = 0;
-                        foreach($casillas_finales_reporte as $cp){
+                        foreach($formulaMunicipios as $cp){
                             ?>
                             <div class="col-lg-2 col-sm-12">
                                 <div class="card ">
@@ -218,7 +218,7 @@
                                         <div class="row">
                                             <div class="col-xs-12">
                                                 <div class="">
-                                                    <div class="text-center"><?=$cp['CasillaDatos']['name']?></div>
+                                                    <div class="text-center"><?=$cp['name']?></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -234,7 +234,7 @@
                                                 </a>
                                                 &nbsp;
                                                 <?php
-                                                $votantes = $cp['votantes'];
+                                                $votantes = number_format($cp['votes']);
                                                 $promovidos = $cp['promovidos'];
 
                                                 ?>
