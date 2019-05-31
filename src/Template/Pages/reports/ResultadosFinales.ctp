@@ -1,9 +1,18 @@
 <?php //echo $this->element('Paper.xmf/resultados_finales_tab'); ?>
 <div id="divMonitorFinales">
     <div class="container-fluid">
+
+        <?= $this->element('Paper.xmf/graficas/acumulado_res_finales_coas_concentrado'); ?>
+        <hr/>
+        <?= $this->element('Paper.xmf/graficas/acumulado_res_finales_coas'); ?>
         <hr/>
         <?= $this->element('Paper.xmf/graficas/acumulado_res_finales'); ?>
         <hr/>
+
+
+    </div>
+    <div class="container-fluid">
+
         <div class="row">
             <div class="col-md-12">
                 <div class="card">

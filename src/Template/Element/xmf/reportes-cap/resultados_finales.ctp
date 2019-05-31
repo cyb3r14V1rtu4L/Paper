@@ -20,7 +20,7 @@
 if($display === 'none')
 {
 ?>
-  <small><h5 class="info-text btn-warning active">MUNICIPIO</h5></small>
+  <small><h5 class="info-text btn-warning active">Resultados Diputados Locales Distrito X</h5></small>
 <?php
 }
 ?>
@@ -33,52 +33,53 @@ if($display === 'none')
         {
             foreach($data_resFinalesA['partidos'] as $bloques=>$partidos)
             {
-                foreach($partidos as $p)
-                {
+                if($bloques<3) {
                 ?>
-
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <div class="card">
                         <div class="content">
-                            <ul class="list-unstyled team-members">
-                                <?php
-                                    $img = str_replace(" ","-",$p['name']);
-                                    $ext = ($p['name'] == 'No Registrados' || $p['name'] == 'Votos Nulos') ? '.png' : '.jpeg';
-                                    $img_name =  "partidos_png/".$img.$ext;
 
-                                    $class = ($p['name'] == 'No Registrados' || $p['name'] == 'Votos Nulos') ? 'avatar' : '';
-                                    $class_c = ($p['name'] == 'No Registrados' || $p['name'] == 'Votos Nulos') ? 'img-circle' : '';
+                                <ul class="list-unstyled team-members">
+                                    <?php
+                                    foreach ($partidos as $p) {
+                                        $img_name = "partidos_png/" . $p['name'];
+                                        if($p['id'] !== 33 && $p['id'] !== 34) {
+                                            ?>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-xs-4">
+                                                        <div class="avatar">
+                                                            <img src="<?php echo $this->request->webroot ?>paper/img/<?= $img_name; ?>.png"
+                                                                 alt="PAN"
+                                                                 class="img-circle img-no-padding img-responsive">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-4">
+                                                <span class="text-info"><small>
+                                                <input class="input-resultados voto" id="xmf_ayuntamiento_<?= $p['id']; ?>"
+                                                 data-id="<?= $p['id']; ?>" type="text" size="8"
+                                                 value="<?= $p['data']; ?>"/></small></span>
+                                                    </div>
 
-                                    $class_col_mpio = ($p['name'] == 'No Registrados' || $p['name'] == 'Votos Nulos') ? '4' : '12';
-                                    $class_col_voto = ($p['name'] == 'No Registrados' || $p['name'] == 'Votos Nulos') ? '7' : '12';
-
-                                    ?>
-                                    <li>
-                                        <div class="row">
-                                            <div class="col-xs-<?=$class_col_mpio;?>">
-                                                <div class="<?=$class;?>">
-                                                    <img src="<?php echo $this->request->webroot?>paper/img/<?=$img_name;?>" alt="" class="<?=$class;?> img-no-padding img-responsive">
                                                 </div>
-                                            </div>
-                                            <div class="col-xs-<?=$class_col_voto;?>">
-                                        <span class="text-info"><small>
-                                          <input class="input-resultados voto" id="xmf_ayuntamiento_<?=$p['id'];?>" data-id="<?=$p['id'];?>" type="text" size="8" value="<?=$p['data'];?>"/></small></span>
-                                            </div>
+                                            </li>
+                                            <?php
+                                        }
+                                    }
+                                    ?>
+                                </ul>
 
-                                        </div>
-                                    </li>
-
-                            </ul>
                         </div>
                     </div>
                 </div>
+
                 <?php
                 }
 
             }
         }else{?>
 
-            <div class="col-lg-6">
+            <div class="col-lg-4">
                 <div class="card">
                     <div class="header">
                         <h4 class="title"></h4>
@@ -87,103 +88,131 @@ if($display === 'none')
                         <ul class="list-unstyled team-members">
                             <li>
                                 <div class="row">
-                                    <div class="col-xs-12">
-                                        <div class="">
-                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/Diego-Alberto.jpeg" alt="Diego Alberto" class=" img-no-padding img-responsive">
+                                    <div class="col-xs-4">
+                                        <div class="avatar">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PAN.png" alt="PAN" class="img-circle img-no-padding img-responsive">
                                         </div>
                                     </div>
-                                    <div class="col-xs-12">
+                                    <div class="col-xs-4">
                                     <span class="text-info"><small>
                                       <input class="input-resultados voto" id="xmf_ayuntamiento_1" data-id="1" type="text" size="8"/></small></span>
                                     </div>
                                 </div>
                             </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="card">
-                    <div class="header">
-                        <h4 class="title"></h4>
-                    </div>
-                    <div class="content">
-                        <ul class="list-unstyled team-members">
                             <li>
                                 <div class="row">
-                                    <div class="col-xs-12">
-                                        <div class="">
-                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/Panchito-Torres.jpeg" alt="Panchito Torres" class=" img-no-padding img-responsive">
+                                    <div class="col-xs-4">
+                                        <div class="avatar">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PRI.png" alt="PRI" class="img-circle img-no-padding img-responsive">
                                         </div>
                                     </div>
-                                    <div class="col-xs-12">
+                                    <div class="col-xs-4">
                                 <span class="text-info"><small>
                                   <input class="input-resultados voto" id="xmf_ayuntamiento_2" data-id="2"  type="text"  size="8"/></small></span>
                                     </div>
                                 </div>
                             </li>
-
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="card">
-                    <div class="header">
-                        <h4 class="title"></h4>
-                    </div>
-                    <div class="content">
-                        <ul class="list-unstyled team-members">
                             <li>
                                 <div class="row">
-                                    <div class="col-xs-12">
-                                        <div class="">
-                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/Panchito-Medina.jpeg" alt="Panchito Medina" class=" img-no-padding img-responsive">
+                                    <div class="col-xs-4">
+                                        <div class="avatar">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PRD.png" alt="PRD" class="img-circle img-no-padding img-responsive">
                                         </div>
                                     </div>
-                                    <div class="col-xs-12">
+                                    <div class="col-xs-4">
                                     <span class="text-info"><small>
                                       <input class="input-resultados voto" id="xmf_ayuntamiento_3" data-id="3" type="text"  size="8"/></small></span>
                                     </div>
 
                                 </div>
                             </li>
-
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="card">
-                    <div class="header">
-                        <h4 class="title"></h4>
-                    </div>
-                    <div class="content">
-                        <ul class="list-unstyled team-members">
                             <li>
                                 <div class="row">
-                                    <div class="col-xs-12">
-                                        <div class="">
-                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/Eloy-Quiroz.jpeg" alt="Eloy Quiroz" class=" img-no-padding img-responsive">
+                                    <div class="col-xs-4">
+                                        <div class="avatar">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PVE.png" alt="PVE" class="img-circle img-no-padding img-responsive">
                                         </div>
                                     </div>
-                                    <div class="col-xs-12">
+                                    <div class="col-xs-4">
                                     <span class="text-info"><small>
                                       <input class="input-resultados voto" id="xmf_ayuntamiento_4" data-id="4"  type="text"  size="8"/></small></span>
                                     </div>
 
                                 </div>
                             </li>
-
-
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title"></h4>
+                    </div>
+                    <div class="content">
+                        <ul class="list-unstyled team-members">
+
+
+                            <li>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="avatar">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/MOV.png" alt="MC" class="img-circle img-no-padding img-responsive">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                    <span class="text-info"><small>
+                                      <input class="input-resultados voto" id="xmf_ayuntamiento_6" data-id="6" type="text"  size="8"/></small></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="avatar">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PT.png" alt="PT" class="img-circle img-no-padding img-responsive">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                    <span class="text-info"><small>
+                                      <input class="input-resultados voto" id="xmf_ayuntamiento_5" data-id="5"  type="text"  size="8"/></small></span>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="avatar">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/MAS.png" alt="MAS" class="img-circle img-no-padding img-responsive">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                    <span class="text-info"><small>
+                                      <input class="input-resultados voto" id="xmf_ayuntamiento_7" data-id="7"  type="text"  size="8"/></small></span>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="avatar">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/MOR.png" alt="MORENA" class="img-circle img-no-padding img-responsive">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                    <span class="text-info"><small>
+                                      <input class="input-resultados voto" id="xmf_ayuntamiento_8" data-id="8"  type="text"  size="8"/></small></span>
+                                    </div>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
                 <div class="card">
                     <div class="header">
                         <h4 class="title"></h4>
@@ -195,53 +224,354 @@ if($display === 'none')
                                 <div class="row">
                                     <div class="col-xs-4">
                                         <div class="avatar">
-                                            <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="No Registrados" class=" img-no-padding img-responsive">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/SOL.png" alt="PES" class="img-circle img-no-padding img-responsive">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                    <span class="text-info"><small>
+                                      <input class="input-resultados voto" id="xmf_ayuntamiento_9" data-id="9"  type="text"  size="8"/></small></span>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="avatar">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/CQ.png" alt="CQ" class="img-circle img-no-padding img-responsive">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                    <span class="text-info"><small>
+                                      <input class="input-resultados voto" id="xmf_ayuntamiento_39" data-id="39"  type="text"  size="8"/></small></span>
+                                    </div>
+
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <?php
+        }
+        ?>
+    </div>
+</div>
+<div class="row">
+    <div id="bloquesCoalicionesA">
+        <?php
+
+        if(count($data_resFinalesA['coaliciones'])>0) {
+            foreach ($data_resFinalesA['coaliciones'] as $bloques => $partidos)
+            {
+                $display = ($bloques == 3) ? 'none' : 'block';
+                $id_col  = ($bloques == 2) ? 'pt-mor-pes_ayuntamiento' : ''; //COALICIÓN MORENA-PT-VDE
+                $id_col_lg  = ($bloques == 3) ? 'pt-mor_ayuntamiento' : '';  //COALICIÓN MORENA-PT-VDE
+                ?>
+                <div class="col-lg-4  <?=$id_col_lg;?>  <?=$id_col;?>" >
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title">
+                                <small class="text-info <?=$id_col;?>">COALICIÓN <?=$partidos[0]['name'];?></small>
+                            </h4>
+                        </div>
+                        <div class="content">
+                            <?php
+
+                            ?>
+                            <ul class="list-unstyled team-members <?=$id_col;?>" style="display: <?=$display;?>">
+                                <?php
+                                foreach($partidos as $p)
+                                {
+                                    ?>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-xs-4">
+                                                <div class="avatar">
+                                                    <img src="<?=$this->request->webroot;?>paper/img/partidos_png/<?=str_replace(" ","-",$p['name']);?>.png"
+                                                         alt="PAN-PRD-MC" class="img-circle img-no-padding img-responsive">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-7">
+                                                <?=$p['name'];?>
+                                                <br>
+                                                <span class="text-info"><small>
+                                      <input class="input-resultados voto" id="xmf_ayuntamiento_<?=$p['id'];?>" value="<?=$p['data'];?>" data-id="<?=$p['id'];?>" type="text"
+                                             size="8"/></small></span>
+                                            </div>
+
+                                        </div>
+                                    </li>
+                                    <?php
+                                }
+                                ?>
+
+                            </ul>
+
+
+                        </div>
+                    </div>
+                </div>
+                <?php
+            }
+        }else{
+            ?>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title"><small class="text-info">COALICIÓN PAN-PRD-PES</small></h4>
+                    </div>
+                    <div class="content">
+                        <ul class="list-unstyled team-members">
+                            <li>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="avatar">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PAN-PRD-MC.png" alt="PAN-PRD-MC" class="img-circle img-no-padding img-responsive">
                                         </div>
                                     </div>
                                     <div class="col-xs-7">
-                                        No Registrados
+                                        PAN - PRD - PES
                                         <br>
                                         <span class="text-info"><small>
+                                        <input class="input-resultados voto" id="xmf_ayuntamiento_10" data-id="10" type="text"  size="8"
+                                               onfocus="cuentaVotos()"/></small></span>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="avatar">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PAN-PRD.png" alt="PAN-PRD" class="img-circle img-no-padding img-responsive">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        PAN - PRD
+                                        <br>
+                                        <span class="text-info"><small>
+                                  <input class="input-resultados voto" id="xmf_ayuntamiento_11" data-id="11"  type="text"  size="8"/></small></span>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="avatar">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PAN-MC.png" alt="PAN-MC" class="img-circle img-no-padding img-responsive">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        PAN - PES
+                                        <br>
+                                        <span class="text-info"><small>
+                                  <input class="input-resultados voto" id="xmf_ayuntamiento_12" data-id="12" type="text"  size="8"/></small></span>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="avatar">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PRD-MC.png" alt="PRD-MC" class="img-circle img-no-padding img-responsive">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        PRD - PES
+                                        <br>
+                                        <span class="text-info"><small>
+                                  <input class="input-resultados voto" id="xmf_ayuntamiento_13" data-id="13"  type="text"  size="8"/></small></span>
+                                    </div>
+
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4  pt-mor_ayuntamiento "  >
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title " id="coalicion_title"><small class="text-info pt-mor-pes_ayuntamiento">COALICIÓN MORENA-PT-VDE</small></h4>
+                    </div>
+                    <div class="content">
+                        <ul class="list-unstyled team-members" id="">
+                            <li>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="avatar">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/MORENA-PT-PES.png" alt="PT-MOR-PES" class="img-circle img-no-padding img-responsive">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        MORENA - PT - VDE
+                                        <br>
+                                        <span class="text-info"><small>
+                                  <input class="input-resultados voto" id="xmf_ayuntamiento_18" data-id="27"  type="text"  size="8"/></small></span>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="avatar">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/MORENA-PT.png" alt="MORENA-PT" class="img-circle img-no-padding img-responsive">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        MORENA - PT
+                                        <br>
+                                        <span class="text-info"><small>
+                                  <input class="input-resultados voto" id="xmf_ayuntamiento_19" data-id="29"  type="text"  size="8"/></small></span>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="avatar">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/MOR-SOL.png" alt="MORENA-PES" class="img-circle img-no-padding img-responsive">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        MORENA - VDE
+                                        <br>
+                                        <span class="text-info"><small>
+                                  <input class="input-resultados voto" id="xmf_ayuntamiento_21" data-id="28" type="text"  size="8"/></small></span>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="avatar">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PT-PES.png" alt="PT-PES" class="img-circle img-no-padding img-responsive">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        PT - VDE
+                                        <br>
+                                        <span class="text-info"><small>
+                                  <input class="input-resultados voto" id="xmf_ayuntamiento_20" data-id="30" type="text"  size="8"/></small></span>
+                                    </div>
+
+                                </div>
+                            </li>
+
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div  id="partidos_independientes_ayuntamientos">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title"></h4>
+                        </div>
+                        <div class="content">
+                            <ul class="list-unstyled team-members">
+
+                                <li>
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <div class="avatar">
+                                                <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-7">
+                                            No Registrados
+                                            <br>
+                                            <span class="text-info"><small>
                                   <input class="input-resultados voto" id="xmf_ayuntamiento_24" data-id="34"  type="text"  size="8"/></small></span>
-                                    </div>
-
-                                </div>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="card">
-                    <div class="header">
-                        <h4 class="title"></h4>
-                    </div>
-                    <div class="content">
-                        <ul class="list-unstyled team-members">
-                            <li>
-                                <div class="row">
-                                    <div class="col-xs-4">
-                                        <div class="avatar">
-                                            <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Votos Nulos" class="img-circle img-no-padding img-responsive">
                                         </div>
+
                                     </div>
-                                    <div class="col-xs-7">
-                                        Votos Nulos
-                                        <br>
-                                        <span class="text-info"><small>
+                                </li>
+                                <li>
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <div class="avatar">
+                                                <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-7">
+                                            Votos Nulos
+                                            <br>
+                                            <span class="text-info"><small>
                                   <input class="input-resultados voto" id="xmf_ayuntamiento_25" data-id="33"  type="text"  size="8"/></small></span>
+                                        </div>
+
                                     </div>
+                                </li>
 
-                                </div>
-                            </li>
-
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <?php
+        }
+        ?>
+
+
+        <?php
+        if(count($data_resFinalesA['noreg_nulos'])>0)
+        {
+            foreach ($data_resFinalesA['noreg_nulos'] as $bloques => $partidos) {
+                ?>
+                <div class="col-lg-4" >
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title"></h4>
+                        </div>
+                        <div class="content">
+                            <ul class="list-unstyled team-members">
+                                <?php
+                                foreach($partidos as $p) {
+                                    if($p['id']==33 || $p['id']==34) {
+                                        ?>
+                                        <li>
+                                            <div class="row">
+                                                <div class="col-xs-4">
+                                                    <div class="avatar">
+                                                        <img src="<?php echo $this->request->webroot ?>paper/img/partidos_png/<?= $p['nombre'] . '.png'; ?>"
+                                                             alt="<?= $p['nombre']; ?>"
+                                                             class="img-circle img-no-padding img-responsive">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-7">
+                                                    <?= $p['nombre']; ?>
+                                                    <br>
+                                                    <span class="text-info"><small>
+                                            <input class="input-resultados voto" id="xmf_ayuntamiento_<?= $p['id']; ?>"
+                                                   data-id="<?= $p['id']; ?>" value="<?= $p['votes']; ?>" type="text"
+                                                   size="8"/></small></span>
+                                                </div>
+
+                                            </div>
+                                        </li>
+                                        <?php
+                                    }
+                                }
+                                ?>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <?php
+            }
         }
         ?>
     </div>
@@ -331,33 +661,33 @@ function setTypoVote(obj)
         $('.pt-mor-pes_'+tipo_voto).hide();
         //('#pt-mor_'+tipo_voto).show();
         $('.pt-mor_'+tipo_voto).show();
-        $('#coalicion_title').html('<small class="text-info">COALICIÓN MORENA-PT</small>');
-        $('#xmf_'+tipo_voto+'_18').val('0');
-        $('#xmf_'+tipo_voto+'_18').attr('disabled',true);
+        $('#coalicion_title').html('<small class="text-info">COALICIÓN MORENA-PT-VDE</small>');
+        //$('#xmf_'+tipo_voto+'_18').val('0');
+        //$('#xmf_'+tipo_voto+'_18').attr('disabled',true);
 
         $('#xmf_'+tipo_voto+'_8').attr("data-id","37");
         $('#xmf_'+tipo_voto+'_5').attr("data-id","38");
 
-        $('#xmf_'+tipo_voto+'_19').val('0');
-        $('#xmf_'+tipo_voto+'_19').attr('disabled',true);
+        //$('#xmf_'+tipo_voto+'_19').val('0');
+        //$('#xmf_'+tipo_voto+'_19').attr('disabled',true);
 
-        $('#xmf_'+tipo_voto+'_20').val('0');
-        $('#xmf_'+tipo_voto+'_20').attr('disabled',true);
+        //$('#xmf_'+tipo_voto+'_20').val('0');
+        //$('#xmf_'+tipo_voto+'_20').attr('disabled',true);
 
-        $('#xmf_'+tipo_voto+'_21').val('0');
-        $('#xmf_'+tipo_voto+'_21').attr('disabled',true);
+        //$('#xmf_'+tipo_voto+'_21').val('0');
+        //$('#xmf_'+tipo_voto+'_21').attr('disabled',true);
 
-        $('#xmf_'+tipo_voto+'_22').val('0');
-        $('#xmf_'+tipo_voto+'_22').attr('disabled',true);
+        //$('#xmf_'+tipo_voto+'_22').val('0');
+        //$('#xmf_'+tipo_voto+'_22').attr('disabled',true);
 
-        $('#xmf_'+tipo_voto+'_23').val('0');
-        $('#xmf_'+tipo_voto+'_23').attr('disabled',true);
-        $('#xmf_'+tipo_voto+'_26').val('0');
+        //$('#xmf_'+tipo_voto+'_23').val('0');
+        //$('#xmf_'+tipo_voto+'_23').attr('disabled',true);
+        //$('#xmf_'+tipo_voto+'_26').val('0');
 
     }else{
         $('.pt-mor-pes_'+tipo_voto).show();
         $('.pt-mor_'+tipo_voto).hide();
-        $('#coalicion_title').html('<small class="text-info">COALICIÓN MORENA-PT-PES</small>');
+        $('#coalicion_title').html('<small class="text-info">COALICIÓN MORENA-PT-VDE</small>');
         $('#xmf_'+tipo_voto+'_8').attr("data-id","8");
         $('#xmf_'+tipo_voto+'_5').attr("data-id","5");
     }
@@ -536,7 +866,10 @@ function addLastReport()
            xmf_partido_id_38:$('#xmf_'+tipo_voto+'_38').attr('data-id'),
 
            xmf_partido_39:$('#xmf_'+tipo_voto+'_39').val(),
-           xmf_partido_id_39:$('#xmf_'+tipo_voto+'_39').attr('data-id')
+           xmf_partido_id_39:$('#xmf_'+tipo_voto+'_39').attr('data-id'),
+
+           xmf_partido_40:$('#xmf_'+tipo_voto+'_40').val(),
+           xmf_partido_id_40:$('#xmf_'+tipo_voto+'_40').attr('data-id')
        }
        ,
        success: function (json) {
