@@ -28,10 +28,14 @@
                     <div class="row">
                         <div class="col-xs-3">
                             <div class="avatar">
-                                <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                                <img src="<?php echo $this->request->webroot?>paper/img/user.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">>
                             </div>
                         </div>
-
+                        <div class="col-xs-6">
+                            PROMOVIDOS
+                            <br>
+                            <span class="text-warning"><h3><?=number_format($promovidos_s);?></h3></span>
+                        </div>
 
                     </div>
                 </li>
