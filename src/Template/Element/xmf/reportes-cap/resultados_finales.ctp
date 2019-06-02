@@ -328,7 +328,7 @@ if($display === 'none')
                                 <div class="row">
                                     <div class="col-xs-4">
                                         <div class="avatar">
-                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PAN-PRD-MC.png" alt="PAN-PRD-MC" class="img-circle img-no-padding img-responsive">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PAN-PRD-PES.png" alt="PAN-PRD-MC" class="img-circle img-no-padding img-responsive">
                                         </div>
                                     </div>
                                     <div class="col-xs-7">
@@ -377,7 +377,7 @@ if($display === 'none')
                                 <div class="row">
                                     <div class="col-xs-4">
                                         <div class="avatar">
-                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PRD-MC.png" alt="PRD-MC" class="img-circle img-no-padding img-responsive">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PRD-PES.png" alt="PRD-MC" class="img-circle img-no-padding img-responsive">
                                         </div>
                                     </div>
                                     <div class="col-xs-7">
@@ -405,7 +405,7 @@ if($display === 'none')
                                 <div class="row">
                                     <div class="col-xs-4">
                                         <div class="avatar">
-                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/MORENA-PT-PES.png" alt="PT-MOR-PES" class="img-circle img-no-padding img-responsive">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/MORENA-PT-VDE.png" alt="PT-MOR-PES" class="img-circle img-no-padding img-responsive">
                                         </div>
                                     </div>
                                     <div class="col-xs-7">
@@ -437,7 +437,7 @@ if($display === 'none')
                                 <div class="row">
                                     <div class="col-xs-4">
                                         <div class="avatar">
-                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/MOR-SOL.png" alt="MORENA-PES" class="img-circle img-no-padding img-responsive">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/MORENA-VDE.png" alt="MORENA-PES" class="img-circle img-no-padding img-responsive">
                                         </div>
                                     </div>
                                     <div class="col-xs-7">
@@ -453,7 +453,7 @@ if($display === 'none')
                                 <div class="row">
                                     <div class="col-xs-4">
                                         <div class="avatar">
-                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PT-PES.png" alt="PT-PES" class="img-circle img-no-padding img-responsive">
+                                            <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/PT-VDE.png" alt="PT-PES" class="img-circle img-no-padding img-responsive">
                                         </div>
                                     </div>
                                     <div class="col-xs-7">
