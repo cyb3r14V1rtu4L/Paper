@@ -1,7 +1,7 @@
 <?= $this->Form->create('ThirdReport',array('id'=>'ThirdReport'));?>
 <h5 class="info-text">FLUJO DE VOTACIÓN 12:00 - 15:00 HRS</h5>
 <div class="row">
-    <div class="col-sm-12 text-center">
+    <div class="col-sm-6 text-center">
             <div class="form-group">
                 <label>VOTANTES</label>
                 <input id="votantes_tercero" name="votantes_tercer"
@@ -12,10 +12,10 @@
         </div>
         <div class="col-sm-6 text-center ">
             <div class="form-group">
-                <!--<label>PROMOVIDOS</label>-->
+                <label>PROMOVIDOS</label>
                 <input id="promovidos_tercero" name="promovidos_tercero"
                   value="<?=(isset($casillas_tercero_reporte['promovidos_tercero'])) ? $casillas_tercero_reporte['promovidos_tercero']: ''?>"
-                 class="form-control valid"  aria-invalid="false" type="hidden">
+                 class="form-control valid"  aria-invalid="false" type="text">
             </div>
         </div>
     </div>

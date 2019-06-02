@@ -71,7 +71,7 @@
               text: 'CONCENTRADO TOTAL COALICIONES'
           },
           credits:{enabled:false},
-          colors:['#D84500','#396607','#3398d6','#b4c973','#6c99bb'],
+          colors:['#D84500','#990000','#3398d6','#b4c973','#6c99bb'],
           subtitle: {
               text: 'Monitoreo en tiempo real'
           },

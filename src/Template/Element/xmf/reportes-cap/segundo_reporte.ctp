@@ -2,7 +2,7 @@
 
 <h5 class="info-text">FLUJO DE VOTACIÓN 9:00 - 12:00 HRS</h5>
 <div class="row">
-    <div class="col-sm-12 text-center">
+    <div class="col-sm-6 text-center">
         <div class="form-group">
             <label>VOTANTES</label>
             <input id="votantes_segundo" name="votantes_segundo"
@@ -13,10 +13,10 @@
     </div>
     <div class="col-sm-6 text-center ">
         <div class="form-group">
-            <!--<label>PROMOVIDOS</label>-->
+            <label>PROMOVIDOS</label>
             <input id="promovidos_segundo" name="promovidos_segundo"
             value="<?=(isset($casillas_segundo_reporte['promovidos_segundo'])) ? $casillas_segundo_reporte['promovidos_segundo']: ''?>"
-            class="form-control valid"  aria-invalid="false" type="hidden">
+            class="form-control valid"  aria-invalid="false" type="text">
         </div>
     </div>
 </div>

@@ -35,7 +35,7 @@
 
 </div>
 <div class="row">
-    <div class="col-sm-12 text-center">
+    <div class="col-sm-6 text-center">
         <div class="form-group">
             <label>VOTANTES</label>
             <input id="votantes" name="votantes"
@@ -45,10 +45,10 @@
     </div>
     <div class="col-sm-6 text-center ">
             <div class="form-group">
-                <!--<label>PROMOVIDOS</label>-->
+                <label>PROMOVIDOS</label>
                 <input id="promovidos" name="promovidos"
                 value="<?=(isset($casillas_cuarto_reporte[0]['promovidos'])) ? $casillas_cuarto_reporte[0]['promovidos']: ''?>"
-                class="form-control valid"  aria-invalid="false" type="hidden">
+                class="form-control valid"  aria-invalid="false" type="text">
             </div>
         </div>
 
@@ -73,7 +73,7 @@
             /*hr_cierre:$('#hr_cierre').val(),
             habia_gente_fila:$('#habia_gente_fila').is(':checked'),*/
             votantes:$('#votantes').val(),
-            //promovidos:$('#promovidos').val(),
+            promovidos:$('#promovidos').val(),
         }
         ,
         success: function (json) {

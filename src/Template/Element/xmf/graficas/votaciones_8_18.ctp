@@ -35,7 +35,7 @@
             text: 'Flujo de Votaciones'
           },
           credits:{enabled:false},
-          colors:['#D84500','#396607','#3398d6','#b4c973','#6c99bb'],
+          colors:['#D84500','#990000','#3398d6','#b4c973','#6c99bb'],
           subtitle: {
             text: 'Monitoreo de votos'
           },
@@ -62,10 +62,10 @@
                   "name": "VOTANTES",
                   "y": <?=$votantes_s;?>
                 },
-                /*{
+                {
                   "name": "PROMOVIDOS",
-                  "y":
-                }*/
+                  "y":<?=$promovidos_s;?>
+                }
               ]
             }
           ]
