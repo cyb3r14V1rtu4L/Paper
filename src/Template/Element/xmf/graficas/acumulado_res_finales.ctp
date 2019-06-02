@@ -39,7 +39,7 @@
                                         <div class="avatar">
                                           <?php
                                           $img = str_replace(" ","-",$tbvalue['name']);
-                                          $ext = ($tbvalue['name'] == 'No Registrados' || $tbvalue['name'] == 'Votos Nulos') ? 'png' : 'jpeg';
+                                          $ext = ($tbvalue['name'] == 'No Registrados' || $tbvalue['name'] == 'Votos Nulos') ? 'png' : 'png';
                                           ?>
                                             <img src="<?php echo $this->request->webroot?>paper/img/partidos_png/<?= $img ?>.<?= $ext ?>" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                                         </div>

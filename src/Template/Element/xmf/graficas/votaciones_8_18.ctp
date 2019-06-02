@@ -1,7 +1,7 @@
 <div class="card">
         <div class="header">
             <h4 class="title">GR&Aacute;FICA VOTANTES</h4>
-            <p class="category">VOTACIONES 9:00HRS A 16:OOHRS</p>
+            <p class="category">VOTACIONES 8:00HRS A 18:OOHRS</p>
         </div>
         <div class="content">
             <div id="chart8-18" class="ct-chart ct-perfect-fourth"></div>
