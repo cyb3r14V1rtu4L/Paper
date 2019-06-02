@@ -1,4 +1,5 @@
-<div class="container-fluid">
+<div id ="divMonitorCasillas">
+    <div class="container-fluid">
     <!-- <div class="alert alert-danger">Resultados Preliminares</div>
     <div class="alert alert-warning">Resultados Validados</div> -->
     <div class="row">
@@ -78,3 +79,4 @@
 
 
 </div>   <!-- container-fluid -->
+</div>

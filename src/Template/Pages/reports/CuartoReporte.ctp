@@ -1,5 +1,6 @@
-<?= $this->element('Paper.xmf/counter_head_vertical'); ?>
-<div class="container-fluid">
+<div id ="divMonitorCasillas">
+    <?= $this->element('Paper.xmf/counter_head_vertical'); ?>
+    <div class="container-fluid">
 
     <div class="row">
         <div class="col-md-12">
@@ -81,3 +82,4 @@
     </div>
 
 </div>   <!-- container-fluid -->
+</div>
