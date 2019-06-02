@@ -20,7 +20,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="header">
-                    <h4 class="title">PRIMER REPORTE - VOTACIONES 08:00 - 12:00 HRS.</h4>
+                    <h4 class="title">PRIMER REPORTE - VOTACIONES 08:00 - 11:30 HRS.</h4>
                     <p class="category">
 
                     </p>
@@ -36,6 +36,7 @@
                         <tbody>
 
                         <?php
+                        $x=0;
                         foreach ($tabular as $tabata):
                             ?>
                             <tr >
@@ -43,9 +44,17 @@
                                 <td align="right"><?= h(number_format($tabata['votantes_segundo'])); ?></td>
 
                             </tr>
-                        <?php endforeach; ?>
+                        <?php
+                            $x++;
+                        endforeach;
+                        ?>
+                        <tr>
+                            <td align="right">TOTAL CASILLAS <B><?=$x;?></B></td>
+                            <td align="right"></td>
+                        </tr>
 
                         </tbody>
+
                     </table>
 
                 </div>

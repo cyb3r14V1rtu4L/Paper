@@ -25,7 +25,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="header">
-                    <h4 class="title">TERCER REPORTE - FLUJO DE VOTACIONES</h4>
+                    <h4 class="title">TERCER REPORTE - 15:00 - 18:00</h4>
                     <p class="category">
 
                     </p>
@@ -41,6 +41,7 @@
                         <tbody>
 
                         <?php
+                        $x=0;
                         foreach ($graf_data as $tabata):
                             ?>
                             <tr >
@@ -48,8 +49,14 @@
                                 <td align="right"><?= h(number_format($tabata['total_votos'])); ?></td>
 
                             </tr>
-                        <?php endforeach; ?>
-
+                        <?php
+                            $x++;
+                        endforeach;
+                        ?>
+                        <tr>
+                            <td align="right">TOTAL CASILLAS <B><?=$x;?></B></td>
+                            <td align="right"></td>
+                        </tr>
                         </tbody>
                     </table>
 
