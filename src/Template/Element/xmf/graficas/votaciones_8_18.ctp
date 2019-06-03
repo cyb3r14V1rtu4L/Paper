@@ -7,11 +7,11 @@
             <div id="chart8-18" class="ct-chart ct-perfect-fourth"></div>
 
             <div class="footer">
-                <!-- <div class="chart-legend">
+                <div class="chart-legend">
                     <i class="fa fa-circle text-warning"></i> VOTANTES
                     <i class="fa fa-circle text-info"></i> PROMOVIDOS
 
-                </div> -->
+                </div>
                 <hr>
                 <div class="stats">
                     <i class="ti-timer"></i> Información Actualizada

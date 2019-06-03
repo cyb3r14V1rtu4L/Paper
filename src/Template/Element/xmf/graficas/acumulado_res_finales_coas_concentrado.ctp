@@ -44,7 +44,7 @@
                                 </div>
                             </div>
                             <div class="col-xs-4">
-                                <span class="text-danger"><h5><b><?= $tbl['votes']?></b></h5></span>
+                                <span class="text-danger"><h5><b><?= number_format($tbl['votes']);?></b></h5></span>
 
                             </div>
                             <div class="col-xs-5">

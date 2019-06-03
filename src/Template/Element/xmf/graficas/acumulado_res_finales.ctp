@@ -45,7 +45,7 @@
                                         </div>
                                     </div>
                                     <div class="col-xs-4">
-                                        <span class="text-success"><h5><b><?= number_format($tbvalue['data']);?></b></h5></span>
+                                        <span class="text-danger"><h5><b><?= number_format($tbvalue['data']);?></b></h5></span>
                                     </div>
                                     <div class="col-xs-5">
                                         <span class="text-info"><small><?= $tbvalue['name']?></small></span>
