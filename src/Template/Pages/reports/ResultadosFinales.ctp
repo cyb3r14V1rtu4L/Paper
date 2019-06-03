@@ -33,6 +33,7 @@
                             <tbody>
 
                             <?php
+                            $x=0;
                             foreach ($formulaMunicipios as $tabata):
                                 ?>
                                 <tr >
@@ -40,7 +41,13 @@
                                     <td align="right"><?= h(number_format($tabata['votes'])); ?></td>
 
                                 </tr>
-                            <?php endforeach; ?>
+                            <?php
+                            $x++;
+                            endforeach; ?>
+                            <tr>
+                                <td align="right">TOTAL CASILLAS <B><?=$x;?></B></td>
+                                <td align="right"></td>
+                            </tr>
 
                             </tbody>
                         </table>
